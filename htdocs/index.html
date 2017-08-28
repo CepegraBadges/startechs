@@ -12,7 +12,7 @@
 <body>
 
 <!-- HEADER HOME -->
-<header>
+<header class="header_badge-creation">
     <h1>
         <!-- Intégrer ici le Logo du Cepegra-->
         <img src="" alt="Logo du Centre de Compétences Cepegra">
@@ -26,23 +26,23 @@
         <h2>Badge-toi !</h2>
         <form action="" method="post">
             <label for="">Votre pseudo</label>
-            <input type="text" name="pseudo" placeholder="Pseudo">
+            <input type="text" name="pseudo" placeholder="Pseudo" class="input_login">
             <label for="">Votre email</label>
-            <input type="email" name="email" placeholder="Email">
-            
-            <a href="">
-                <button>Commencer</button>
-            </a>
+            <input type="email" name="email" placeholder="Email" class="input_login">
+
+            <a href="pages/badge_creation.html" class="btn_arcade btn_start">Go</a>
         </form>
+        <!-- bouton de dev à retirer-->
+        <a href="pages/badge_creation.html" class="btn_arcade btn_start">O</a>
     </div>
 
     <!-- DIV HIDDEN LOGIN PERSONNEL DU CENTRE-->
-    <div>
-        <h2>Accès personnel du centre</h2>
+    <div class="container_admin shadows">
+        <h2 class="title_admin">Accès personnel du centre</h2>
         <form action="" method="post">
-            <input type="text" name="login" placeholder="identifiant">
-            <input type="password" name="password" placeholder="mot de passe">
-            <button>Connexion</button>
+            <input type="text" name="login" placeholder="identifiant" class="input_admin">
+            <input type="password" name="password" placeholder="mot de passe" class="input_admin">
+            <button class="btn btn__access-parameter">Connexion</button>
         </form>
     </div>
 
