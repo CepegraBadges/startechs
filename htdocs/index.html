@@ -12,18 +12,18 @@
 <body>
 
 <!-- HEADER HOME -->
-<header class="header_badge-creation">
+<header class="header_index-connexion">
     <h1>
         <!-- Intégrer ici le Logo du Cepegra-->
-        <img src="" alt="Logo du Centre de Compétences Cepegra">
+        <img src="" alt="Logo du Centre de Compétences Cepegra" class="logo">
     </h1>
 </header>
 
 <!-- MAIN HOME -->
 <main>
     <!-- DIV BADGE-TOI -->
-    <div>
-        <h2>Badge-toi !</h2>
+    <div class="container_login">
+        <h2 class="title_index">Badge-toi !</h2>
         <form action="" method="post">
             <label for="">Votre pseudo</label>
             <input type="text" name="pseudo" placeholder="Pseudo" class="input_login">
@@ -37,6 +37,7 @@
     </div>
 
     <!-- DIV HIDDEN LOGIN PERSONNEL DU CENTRE-->
+    <!-- voir l'injection en js de la connection avec l'imprimante -->
     <div class="container_admin shadows">
         <h2 class="title_admin">Accès personnel du centre</h2>
         <form action="" method="post">
@@ -47,8 +48,6 @@
     </div>
 
 </main>
-
-
 
 </body>
     <script src="scripts/script.min.js"></script>

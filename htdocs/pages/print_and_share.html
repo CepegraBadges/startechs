@@ -12,32 +12,36 @@
 <body>
 
 </body>
-     <header>
-         <a>modifier</a>
-         <h1><img src="" alt="Logo du Centre de Compétences Cepegra"></h1>
+     <header class="header_creation-and-finished">
+         <a href="">modifier</a>
+         <h1><img src="" alt="Logo du Centre de Compétences Cepegra" class="logo"></h1>
      </header>
      <main>
-         <div class="">
-             <p>Magnifique!!</p>
-             <p>Ton badge est terminé. N’hesite pas à partager ton design. Le cepegra te remercie ;)</p>
-             <div class=""></div>
-            <ul class="">
-                <li></li>
-                <li></li>
-                <li></li>
+         <!-- container principal -->
+         <div class="container_print-and-share">
+             <p class="title_print-and-share">Magnifique!!</p>
+             <p class="text_small">Ton badge est terminé. N’hesite pas à partager ton design. Le cepegra te remercie ;)</p>
+             <div class="badge__finished"></div>
+            <ul class="container_btn-print-and-share">
+                <li class="btn_print"></li>
+                <li class="btn_mail"></li>
+                <li class="btn_facebook"></li>
             </ul>
-            <button class="button">recommencer</button>
+            <button class="btn_next">recommencer</button>
          </div>
-
-         <div class="hidden">
-            <p>Félicitations!</p>
-            <p>Ton badge sera imprimé d'ici quelques minutess</p>
-            <p>N'oublie pas de partager ton design sur facebook</p>
-            <ul class="">
+         <!-- fin container principal -->
+         <!-- container pop up -->
+         <div class="container_print-and-share__fade-in hidden">
+            <p class="title_print-and-share">Félicitations!</p>
+            <!-- texte à insérer en js -->
+            <p class="text_big">Ton badge sera imprimé d'ici quelques minutes</p>
+            <p class="text_small">N'oublie pas de partager ton design sur facebook</p>
+            <ul class="container_btn-print-and-share">
+            <!-- boutons à générer en js -->
                 <li></li>
                 <li></li>
             </ul>
-            <button class="button">recommencer</button>
+            <button class="btn_next">recommencer</button>
          </div>
      </main>
     <script src="scripts/script.min.js"></script>
