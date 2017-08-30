@@ -10,15 +10,24 @@ header{
     a{
     display: flex;
     align-items: center;
-    font-family: sans-serif;
     text-decoration: none;
-    font-size: 18px;
     color: #E7376C;
     letter-spacing: 1.1px;
+    font-size: 18px;
+    font-family: sans-serif;
         img{
         width: 30px;
         padding-right: 20px;
         }
+    }
+    a:nth-child(2){
+    box-shadow: 0 8px 6px 0 rgba(240,58,0,0.26);
+    border-radius: 3px;
+    font-size: 20px;
+    color: #DE5B43;
+    padding: 10px 25px;
+    //border: 3px solid linear-gradient(-90deg, #ED1E79 0%, #F15A24 100%);
+    border: 3px solid #DE5B43;
     }
     h1{
       margin: 0;
