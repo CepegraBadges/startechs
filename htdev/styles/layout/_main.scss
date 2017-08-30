@@ -1,0 +1,40 @@
+//----------------------------- GENERAL ------------------------//
+body{
+    margin: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+ul{
+    padding-left: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+.hidden{
+    display: none;
+}
+
+
+//----------------------------- BADGE CREATION POSITIONNEMENT ------------------------//
+
+//----------------------- SECTION LEFT
+
+.container_page-badge{
+    display: flex;
+}
+
+section{
+    width: 50%;
+    border: solid 1px blue;
+}
+
+.section-left_header{
+    display: flex;
+    border: solid 1px blue;
+}
+
+//----------------------- SECTION RIGHT
