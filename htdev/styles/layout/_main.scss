@@ -18,7 +18,6 @@ ul{
     display: none;
 }
 
-
 //----------------------------- BADGE CREATION POSITIONNEMENT ------------------------//
 
 //----------------------- SECTION LEFT
@@ -32,9 +31,43 @@ section{
     border: solid 1px blue;
 }
 
+.section-left-main, .section-left-main-bottom, .section-left_header{
+    padding: 1.5rem;
+}
+
+//----- SECTION L HEADER
+
 .section-left_header{
     display: flex;
     border: solid 1px blue;
+    justify-content: space-between;
 }
+
+//----- SECTION L MAIN
+
+.section-left{
+    background-color: grey;
+
+}
+
+.drop-zone{
+    background-color: green;
+    height: 45vh;
+}
+
+.drag-zone{
+    width: 18rem;
+    height: 18rem;
+    border-radius: 300px;
+    background-color: white;
+}
+
+//- SECTION L THUMBNAIL
+
+.container_global_thumbnail{
+    background-color: blue;
+
+}
+
 
 //----------------------- SECTION RIGHT

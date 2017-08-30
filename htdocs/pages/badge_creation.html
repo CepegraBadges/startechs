@@ -59,31 +59,40 @@
                 </div><!-- fin container_global-palettes -->
             </div><!-- fin section left-header-->
 
-            <div class="drop-zone">
-                <!-- BADGE -->
-                <div class="drag-zone"></div>
+            <div class="section-left-main">
+                <div class="section-left-main-top"></div>
+                    <div class="drop-zone">
+                        <!-- BADGE -->
+                        <div class="drag-zone"></div>
 
-                <button class="btn_photo"></button>
-                <div class="container_photo-parameters shadows hidden">
-                    <button class="btn_photo-parameters btn_photo-parameters__modif">Modifier</button>
-                    <button class="btn_photo-parameters btn_photo-parameters__del">Supprimer</button>
-                </div><!-- fin container_photo-parameters -->
-            </div><!-- fin section drop-zone -->
-            <div class="container_global_thumbnail">
-                <button class="btn_reset"></button>
-                <ul class="container_items_thumbnail">
-                    <li class="box_thumbnail"> <!-- juste pour l'exemple --> <div class="item_thumbnail item thumbnail__selected"></div></li>
-                    <li class="box_thumbnail"></li>
-                    <li class="box_thumbnail"></li>
-                </ul>
-            </div><!-- fin container_global_thumbnail -->
-            <!-- dispotition et structure trash à définir -->
-            <button class="btn_trash"></button>
-            <button class="btn_validate">Valider</button>
-            <!-- lien de navigation dev à retirer -->
-            <a href="print_and_share.html">O</a>
+                        <button class="btn_photo"></button>
+                        <div class="container_photo-parameters shadows hidden">
+                            <button class="btn_photo-parameters btn_photo-parameters__modif">Modifier</button>
+                            <button class="btn_photo-parameters btn_photo-parameters__del">Supprimer</button>
+                        </div><!-- fin container_photo-parameters -->
+                    </div><!-- fin section drop-zone -->
+                    <div class="container_global_thumbnail">
+                        <button class="btn_reset"></button>
+                        <ul class="container_items_thumbnail">
+                            <li class="box_thumbnail"> <!-- juste pour l'exemple --> <div class="item_thumbnail item thumbnail__selected"></div></li>
+                            <li class="box_thumbnail"></li>
+                            <li class="box_thumbnail"></li>
+                        </ul>
+                    </div><!-- fin container_global_thumbnail -->
+                    <!-- dispotition et structure trash à définir -->
+                    <button class="btn_trash"></button>
+                </div>
+                <!-- fin section-left-main-top -->
+                <div class="section-left-main-bottom">
+                <button class="btn_validate">Valider</button>
+                <!-- lien de navigation dev à retirer -->
+                <a href="print_and_share.html">O</a>
+                </div>
+                <!-- fin section-main-left-bottom -->
+            <div>
+            <!-- fin section-left-main -->
          </section><!-- fin section left -->
-
+        <!-- ______________________________________________________________________ -->
          <section class="section-right">
             <nav>
                 <ul class="container_categories">
@@ -117,7 +126,7 @@
                 <li class="box_item"><img src=".svg" alt="eye8" class="item_eye_8"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="eye9" class="item_eye_9"><span class="delete_cross hidden"></span></li>
             </ul> <!-- fin eye -->
-            <ul class="container_items container_items-hair">
+            <ul class="container_items container_items-hair hidden">
                 <li class="box_item"><img src=".svg" alt="hair1" class="item_hair_1"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="hair2" class="item_hair_2"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="hair3" class="item_hair_3"><span class="delete_cross hidden"></span></li>
@@ -128,7 +137,7 @@
                 <li class="box_item"><img src=".svg" alt="hair8" class="item_hair_8"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="hair9" class="item_hair_9"><span class="delete_cross hidden"></span></li>
             </ul><!-- fin hair -->
-            <ul class="container_items container_items-mouth">
+            <ul class="container_items container_items-mouth hidden">
                 <li class="box_item"><img src=".svg" alt="mouth1" class="item_mouth_1"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="mouth2" class="item_mouth_2"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="mouth3" class="item_mouth_3"><span class="delete_cross hidden"></span></li>
@@ -139,7 +148,7 @@
                 <li class="box_item"><img src=".svg" alt="mouth8" class="item_mouth_8"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="mouth9" class="item_mouth_9"><span class="delete_cross hidden"></span></li>
             </ul><!-- fin mouth -->
-            <ul class="container_items container_items-accessory">
+            <ul class="container_items container_items-accessory hidden">
                 <li class="box_item"><img src=".svg" alt="accessory1" class="item_accessory_1"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="accessory2" class="item_accessory_2"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="accessory3" class="item_accessory_3"><span class="delete_cross hidden"></span></li>
@@ -154,6 +163,6 @@
 
      </main>
 
-     <script src="scripts/script.min.js"></script>
+     <script src="../scripts/script.min.js"></script>
 </body>
 </html>
