@@ -1,0 +1,43 @@
+header{
+  box-sizing: border-box;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 1px 50px;
+  background: #FFFFFF;
+  box-shadow: 1px 6px 9px 0 rgba(0,0,0,0.13);
+    a{
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    color: #E7376C;
+    letter-spacing: 1.1px;
+        img{
+        width: 30px;
+        padding-right: 20px;
+        }
+    }
+    h1{
+      margin: 0;
+      img{
+      width: 150px;
+      margin-top: 1vh;
+      padding: 10px 0;
+    }
+  }
+}
+
+.header_index-setting{
+    h1{
+      text-align: center;
+      margin: 0;
+      img{
+      width: 150px;
+      margin-top: 1vh;
+      padding: 10px 0;
+        }
+    }
+}
