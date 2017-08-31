@@ -1,24 +1,27 @@
 //-------------------------------------  COLORS  -------------------------------------//
-
-
 //-------------------------------------  GENERAL
+$color_bg_light: #F2F2F2;
 
-
-$color_red: #E7376C;
-$color_dark_grey: #666666;
-$color_grey: rgba(218,224,231,0.28);
+$color_h1: #EEF1F3; 
+$color_b1: #EDEFF1;
+   
+$color_h2: #DAE0E7;
+$color_b2: #FDFDFD;    
+ 
 $color_light_grey: #EDEFF1;
 $color_light_blue: #EFFEFF;
+
 $color_active_blue: #00C6FF;
 
 //-------------------------------------  GRADIANT
 $color_red_gradiant: linear-gradient(-45deg, #FAD961 0%, #F76B1C 30%, #E94E95 100%);
-$color_active_gradiant_blue: linear-gradient(-134deg, #00FFF9 0%, #009CFF 100%);
+$color_active_blue_gradiant: linear-gradient(-134deg, #00FFF9 0%, #009CFF 100%);
 //-------------------------------------  FONTS
 
 $color_light_font: #FFFFFF;
 $color_dark_font: #747474;
 $color_active_font: #00C6FF;
+$color_red: #E7376C; 
 
 //-------------------------------------  OUTLINE
 
