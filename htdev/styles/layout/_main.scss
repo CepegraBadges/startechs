@@ -2,6 +2,7 @@
     box-sizing : border-box;
     font-family: 'woodford_bourneregular';
     font-weight: normal;
+    color : $color_dark_font;
 }
 
 //-------------------------------------  FONTS COLORS
@@ -46,7 +47,7 @@
 .container_admin{
 
     // INPUT
-    input, input::placeholder, .btn__access-parameter{
+    input, input::placeholder, .btn_admin{
        font-family: 'woodford_bourneregular';
     }
     input::placeholder{
