@@ -40,49 +40,6 @@
     font-style: normal;
 }
 
-// Woodford______________________________________________________
-
-@font-face {
-    font-family: 'woodford_bournebold';
-    src: url('vendor/webfonts/woodford/woodfordbourne-bold-webfont.woff2') format('woff2'),
-         url('vendor/webfonts/woodford/woodfordbourne-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'woodford_bournebold_italic';
-    src: url('vendor/webfonts/woodford/woodfordbourne-bolditalic-webfont.woff2') format('woff2'),
-         url('vendor/webfonts/woodford/woodfordbourne-bolditalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'woodford_bourneregular';
-    src: url('vendor/webfonts/woodford/woodfordbourne-regular-webfont.woff2') format('woff2'),
-         url('vendor/webfonts/woodford/woodfordbourne-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'woodford_bournethin';
-    src: url('vendor/webfonts/woodford/woodfordbourne-thin-webfont.woff2') format('woff2'),
-         url('vendor/webfonts/woodford/woodfordbourne-thin-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'woodford_bournethin_italic';
-    src: url('vendor/webfonts/woodford/woodfordbourne-thinitalic-webfont.woff2') format('woff2'),
-         url('vendor/webfonts/woodford/woodfordbourne-thinitalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 // Choplin_____________________________________________________________________
 
 @font-face {
@@ -99,4 +56,40 @@
          url('vendor/webfonts/choplin/rene_bieder_-_choplin_medium-demo-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+// avenir____________________________________
+@font-face {
+    font-family: 'Avenir Next LT Pro Demi';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avenir Next LT Pro Demi'), url('vendor/webfonts/avenir/AvenirNextLTPro-Demi.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avenir Next LT Pro Regular'), url('vendor/webfonts/avenir/AvenirNextLTPro-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avenir Next LT Pro Bold'), url('vendor/webfonts/avenir/AvenirNextLTPro-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Demi Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avenir Next LT Pro Demi Italic'), url('vendor/webfonts/avenir/AvenirNextLTPro-DemiIt.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Avenir Next LT Pro Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avenir Next LT Pro Italic'), url('vendor/webfonts/avenir/AvenirNextLTPro-It.woff') format('woff');
 }

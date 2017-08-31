@@ -29,36 +29,6 @@
   font-style: normal; }
 
 @font-face {
-  font-family: 'woodford_bournebold';
-  src: url("vendor/webfonts/woodford/woodfordbourne-bold-webfont.woff2") format("woff2"), url("vendor/webfonts/woodford/woodfordbourne-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'woodford_bournebold_italic';
-  src: url("vendor/webfonts/woodford/woodfordbourne-bolditalic-webfont.woff2") format("woff2"), url("vendor/webfonts/woodford/woodfordbourne-bolditalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'woodford_bourneregular';
-  src: url("vendor/webfonts/woodford/woodfordbourne-regular-webfont.woff2") format("woff2"), url("vendor/webfonts/woodford/woodfordbourne-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'woodford_bournethin';
-  src: url("vendor/webfonts/woodford/woodfordbourne-thin-webfont.woff2") format("woff2"), url("vendor/webfonts/woodford/woodfordbourne-thin-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'woodford_bournethin_italic';
-  src: url("vendor/webfonts/woodford/woodfordbourne-thinitalic-webfont.woff2") format("woff2"), url("vendor/webfonts/woodford/woodfordbourne-thinitalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
   font-family: 'choplinextralight-demo';
   src: url("vendor/webfonts/choplin/rene_bieder_-_choplin_extralight-demo-webfont.woff2") format("woff2"), url("vendor/webfonts/choplin/rene_bieder_-_choplin_extralight-demo-webfont.woff") format("woff");
   font-weight: normal;
@@ -69,6 +39,36 @@
   src: url("vendor/webfonts/choplin/rene_bieder_-_choplin_medium-demo-webfont.woff2") format("woff2"), url("vendor/webfonts/choplin/rene_bieder_-_choplin_medium-demo-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+
+@font-face {
+  font-family: 'Avenir Next LT Pro Demi';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Avenir Next LT Pro Demi"), url("vendor/webfonts/avenir/AvenirNextLTPro-Demi.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Avenir Next LT Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Avenir Next LT Pro Regular"), url("vendor/webfonts/avenir/AvenirNextLTPro-Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Avenir Next LT Pro Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Avenir Next LT Pro Bold"), url("vendor/webfonts/avenir/AvenirNextLTPro-Bold.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Avenir Next LT Pro Demi Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Avenir Next LT Pro Demi Italic"), url("vendor/webfonts/avenir/AvenirNextLTPro-DemiIt.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Avenir Next LT Pro Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Avenir Next LT Pro Italic"), url("vendor/webfonts/avenir/AvenirNextLTPro-It.woff") format("woff"); }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -463,23 +463,25 @@ template {
 
 * {
   box-sizing: border-box;
-  font-family: 'woodford_bourneregular';
-  font-weight: normal;
-  color: #747474; }
+  font-family: 'Avenir Next LT Pro Regular';
+  font-weight: normal; }
 
-.container_login, .input_login::-webkit-input-placeholder {
+body li {
+  list-style: none; }
+
+.container_login, .input_login::-webkit-input-placeholder, .input_login {
   color: #FFFFFF; }
 
-.container_login, .input_login::-moz-placeholder {
+.container_login, .input_login::-moz-placeholder, .input_login {
   color: #FFFFFF; }
 
-.container_login, .input_login:-ms-input-placeholder {
+.container_login, .input_login:-ms-input-placeholder, .input_login {
   color: #FFFFFF; }
 
-.container_login, .input_login::placeholder {
+.container_login, .input_login::placeholder, .input_login {
   color: #FFFFFF; }
 
-.container_admin, .input_admin {
+.container_admin, .input_admin, .print_infos, .btn_photo-parameters, .category_tab {
   color: #747474; }
 
 .container_login .title_index {
@@ -496,16 +498,16 @@ template {
   text-transform: uppercase; }
 
 .container_admin input, .container_admin input::-webkit-input-placeholder, .container_admin .btn_admin {
-  font-family: 'woodford_bourneregular'; }
+  font-family: 'Avenir Next LT Pro Demi'; }
 
 .container_admin input, .container_admin input::-moz-placeholder, .container_admin .btn_admin {
-  font-family: 'woodford_bourneregular'; }
+  font-family: 'Avenir Next LT Pro Demi'; }
 
 .container_admin input, .container_admin input:-ms-input-placeholder, .container_admin .btn_admin {
-  font-family: 'woodford_bourneregular'; }
+  font-family: 'Avenir Next LT Pro Demi'; }
 
 .container_admin input, .container_admin input::placeholder, .container_admin .btn_admin {
-  font-family: 'woodford_bourneregular'; }
+  font-family: 'Avenir Next LT Pro Demi'; }
 
 .container_admin input::-webkit-input-placeholder {
   opacity: 0.67; }
@@ -519,24 +521,25 @@ template {
 .container_admin input::placeholder {
   opacity: 0.67; }
 
+.print_infos {
+  font-family: 'Avenir Next LT Pro Italic'; }
+  .print_infos span {
+    font-family: 'Avenir Next LT Pro Demi Italic'; }
+
 .container_pseudo ::-webkit-input-placeholder {
-  font-family: 'woodford_bourneregular';
-  font-style: italic; }
+  font-family: 'Avenir Next LT Pro Demi Italic'; }
 
 .container_pseudo ::-moz-placeholder {
-  font-family: 'woodford_bourneregular';
-  font-style: italic; }
+  font-family: 'Avenir Next LT Pro Demi Italic'; }
 
 .container_pseudo :-ms-input-placeholder {
-  font-family: 'woodford_bourneregular';
-  font-style: italic; }
+  font-family: 'Avenir Next LT Pro Demi Italic'; }
 
 .container_pseudo ::placeholder {
-  font-family: 'woodford_bourneregular';
-  font-style: italic; }
+  font-family: 'Avenir Next LT Pro Demi Italic'; }
 
-.btn_photo-parameters {
-  font-family: 'woodford_bourneregular'; }
+.btn_photo-parameters, .category_tab {
+  font-family: 'Avenir Next LT Pro Demi'; }
 
 /* COMPONENTS */
 /* BUTTON GENERAL */
@@ -852,7 +855,7 @@ header {
     font-size: 18px;
     font-family: sans-serif; }
     header a img {
-      width: 30px;
+      width: 50px;
       padding-right: 20px; }
   header a:nth-child(2) {
     box-shadow: 0 8px 6px 0 rgba(240, 58, 0, 0.26);
@@ -964,11 +967,10 @@ header {
       justify-content: center;
       width: 100%; }
       #swipe .container_admin form input {
-        color: green;
         width: 300px;
         padding: 20px 25px;
         margin: 10px auto;
-        background-color: #EDEFF1;
+        background-color: #EDECF3;
         border: none;
         border-radius: 3px; }
       #swipe .container_admin form button {
@@ -1010,5 +1012,3 @@ header {
     position: absolute;
     bottom: 50%;
     right: 20px; }
-
-/*# sourceMappingURL=styles.min.css.map */
