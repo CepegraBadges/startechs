@@ -17,7 +17,7 @@
 
      </header>
     <!-- création du badge -->
-     <main>
+     <main class="container_page-badge">
      <!-- panneau de gauche -->
          <section class="section-left">
             <div class="section-left_header">
@@ -38,7 +38,7 @@
                                     <g id="12" transform="translate(-466.000000, -190.000000)" fill="#2E2E2E">
                                         <path d="M478.268826,202.478778 C483.919252,196.724209 493.080397,196.724209 498.730823,202.478778 C504.381248,208.233347 504.381248,217.563341 498.730823,223.31791 C493.080397,229.072479 483.919252,229.072479 478.268826,223.31791 C472.618401,217.563341 472.618401,208.233347 478.268826,202.478778 L478.268826,202.478778 Z M504.41003,229.101791 C513.196306,220.152861 513.197008,205.643826 504.41003,196.695611 C495.644816,187.76813 481.354833,187.76813 472.589619,196.695611 C463.803343,205.643826 463.803343,220.152861 472.590321,229.101791 C476.102444,232.678646 480.486455,234.824903 485.045266,235.542704 C486.702696,235.802943 488.242189,236.572936 489.427873,237.780473 L492.196575,240.60092 C492.451402,240.860444 492.86418,240.860444 493.119007,240.60092 L504.41003,229.101791 Z" id="Fill-1"></path>
                                     </g>
-                                </g> 
+                                </g>
                             </svg></div>
                         </div>
                         <ul class="container_palette-outline">
@@ -67,9 +67,11 @@
                 </div><!-- fin container_global-palettes -->
             </div><!-- fin section left-header-->
 
-            <div class="drop-zone">
-                <!-- BADGE -->
-                <div class="drag-zone"></div>
+            <div class="section-left-main">
+                <div class="section-left-main-top">
+                    <div class="drop-zone">
+                        <!-- BADGE -->
+                        <div class="drag-zone"></div>
 
                 <button class="btn btn_photo btn_photo__editor"></button>
                 <div class="container_photo-parameters shadows hidden">
@@ -87,8 +89,14 @@
             </div><!-- fin container_global_thumbnail -->
             <!-- dispotition et structure trash à définir -->
             <button class="btn btn_trash"></button>
+            </div><!-- fin section-left-main-top -->
+                <div class="section-left-main-bottom">
+                    <a class="btn_arcade btn_validate" href="print_and_share.html">Valider</a>
+                </div>
+                <!-- fin section-main-left-bottom -->
+            </div><!-- fin section-left-main -->
          </section><!-- fin section left -->
-
+        <!-- ______________________________________________________________________ -->
          <section class="section-right">
             <nav>
                 <ul class="container_categories">
@@ -122,7 +130,7 @@
                 <li class="box_item"><img src=".svg" alt="eye8" class="item_eye_8"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="eye9" class="item_eye_9"><span class="delete_cross hidden"></span></li>
             </ul> <!-- fin eye -->
-            <ul class="container_items container_items-hair">
+            <ul class="container_items container_items-hair hidden">
                 <li class="box_item"><img src=".svg" alt="hair1" class="item_hair_1"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="hair2" class="item_hair_2"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="hair3" class="item_hair_3"><span class="delete_cross hidden"></span></li>
@@ -133,7 +141,7 @@
                 <li class="box_item"><img src=".svg" alt="hair8" class="item_hair_8"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="hair9" class="item_hair_9"><span class="delete_cross hidden"></span></li>
             </ul><!-- fin hair -->
-            <ul class="container_items container_items-mouth">
+            <ul class="container_items container_items-mouth hidden">
                 <li class="box_item"><img src=".svg" alt="mouth1" class="item_mouth_1"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="mouth2" class="item_mouth_2"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="mouth3" class="item_mouth_3"><span class="delete_cross hidden"></span></li>
@@ -144,7 +152,7 @@
                 <li class="box_item"><img src=".svg" alt="mouth8" class="item_mouth_8"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="mouth9" class="item_mouth_9"><span class="delete_cross hidden"></span></li>
             </ul><!-- fin mouth -->
-            <ul class="container_items container_items-accessory">
+            <ul class="container_items container_items-accessory hidden">
                 <li class="box_item"><img src=".svg" alt="accessory1" class="item_accessory_1"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="accessory2" class="item_accessory_2"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="accessory3" class="item_accessory_3"><span class="delete_cross hidden"></span></li>
@@ -155,7 +163,6 @@
                 <li class="box_item"><img src=".svg" alt="accessory8" class="item_accessory_8"><span class="delete_cross hidden"></span></li>
                 <li class="box_item"><img src=".svg" alt="accessory9" class="item_accessory_9"><span class="delete_cross hidden"></span></li>
             </ul><!-- fin accessory -->
-            <a class="btn_arcade btn_validate" href="print_and_share.html">Valider</a>
          </section><!-- fin section-right -->
 
      </main>
