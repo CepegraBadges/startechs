@@ -44,21 +44,24 @@
                 <img src="images/logo-cepegra.svg" alt="Logo du Centre de Compétences Cepegra" class="logo">
             </h1>
         </header>
-        <h2 class="title_index">Badge-toi !</h2>
         <form action="" method="post">
-            <label for="">Votre pseudo</label>
-            <input type="text" name="pseudo" placeholder="Pseudo" class="input_login">
-            <label for="">Votre email</label>
-            <input type="email" name="email" placeholder="Email" class="input_login">
-
+            <div>
+                <h2 class="title_index">Badge-toi !</h2>
+                <div class="form_pseudo">
+                    <label for="">Votre pseudo</label>
+                    <input type="text" name="pseudo" size="25" placeholder="#Pseudo" class="input_login">
+                </div>
+                <div class="form_email">
+                    <label for="">Votre email</label>
+                    <input type="email" name="email" size="30" placeholder="user@cepegra.com" class="input_login" id="input_login_email">
+                </div>
+            </div>
             <a href="pages/badge_creation.html" class="btn_arcade btn_start">Go</a>
         </form>
     </div>
-
 </main>
-
-</body>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="scripts/scripts.min.js"></script>
     <script src="scripts/vendor/dragend.js"></script>
+    <script src="scripts/scripts.min.js"></script>
+</body>
 </html>
