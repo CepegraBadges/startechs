@@ -1,16 +1,21 @@
 * {
     box-sizing : border-box;
-    font-family: 'woodford_bourneregular';
+    font-family: 'Avenir Next LT Pro Regular';
     font-weight: normal;
-    color : $color_dark_font;
+}
+
+body{
+    li{
+        list-style: none;
+    }
 }
 
 //-------------------------------------  FONTS COLORS
-.container_login, .input_login::placeholder{
+.container_login, .input_login::placeholder, .input_login{
     color: $color_light_font;
 }
 
-.container_admin, .input_admin{
+.container_admin, .input_admin, .print_infos, .btn_photo-parameters, .category_tab{
     color: $color_dark_font;
 }
 
@@ -48,24 +53,31 @@
 
     // INPUT
     input, input::placeholder, .btn_admin{
-       font-family: 'woodford_bourneregular';
+       font-family: 'Avenir Next LT Pro Demi';
     }
     input::placeholder{
         opacity:0.67;
     }
 }
 
+.print_infos{
+    font-family: 'Avenir Next LT Pro Italic';
+        span{
+            font-family: 'Avenir Next LT Pro Demi Italic';
+        }
+}
+
 //// CREATION--------------------------
 .container_pseudo{
     ::placeholder{
-        font-family: 'woodford_bourneregular';
-        font-style: italic;
+        font-family: 'Avenir Next LT Pro Demi Italic';
     }
 }
 
-.btn_photo-parameters{
-            font-family: 'woodford_bourneregular';
+.btn_photo-parameters, .category_tab{
+        font-family: 'Avenir Next LT Pro Demi';
 }
+
 
 // PRINT & SHARE-----------------------
 
