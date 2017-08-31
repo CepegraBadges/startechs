@@ -25,10 +25,6 @@
 
 .btn_start{
   animation: color 1s infinite;
-  font-family: 'roboto';
-  font-weight:700;
-  font-style: italic;
-  text-transform:uppercase;
   text-decoration:none;
   color: #00ABF6;
   font-size:2.1em;
@@ -129,10 +125,6 @@
 }
 
 .btn_validate{
-  font-family: 'roboto';
-  font-weight:700;
-  font-style: italic;
-  text-transform:uppercase;
   text-decoration:none;
   color: #00ABF6;
   font-size:1.750em;
@@ -199,6 +191,10 @@
 }
 
 /* OPEN COLOR PALETTE */
+.container_btn-palette {
+  display : flex;
+}
+
 .btn_palette {
   width : 40px; height : 40px;
   border-radius : 50%;
@@ -208,9 +204,13 @@
 }
 
 .btn_palette-fill {
-  background: #E6E6E6; 
+  width : 95px; height : 70px;
+  padding : 15px;
+  background: #E6E6E6;
+  box-shadow: inset -4px -3px 7px 0 rgba(0,0,0,0.11);
   span {
     display : block;
+    margin : 0 auto;
     width : 40px; height : 40px;
     border-radius : 50%;
     background: #F5A623;
@@ -218,17 +218,21 @@
 }
 
 .btn_palette-outline {
-  background: #E6E6E6; 
-  span {
-    display : block;
-    width : 40px; height : 40px;
-    border-radius : 50%;
-    background: #F5A623;
+  position : relative;
+  width : 95px;
+  background: #E6E6E6;
+  box-shadow: inset 4px -3px 7px 0 rgba(0,0,0,0.11);
+  svg {
+    position : absolute;
+    left : 50%;
+    top : 50%;
+    transform : translate(-50%, -50%);
   }
 }
 
 .btn_palette__selected {
   background : white;
+  box-shadow : none;
 }
 
 /* PHOTO AND PHOTO EDITION */
@@ -243,6 +247,113 @@
 
 .btn_photo__editor {
   background: url('images/photo_edition.svg') no-repeat 50% 50%, linear-gradient(134deg, #00FFF9 0%, #009CFF 100%);
+}
+
+/* PAREMETRES PHOTO */
+.container_photo-parameters {
+  width : 140px;
+  background : white;  
+  box-shadow: 0 10px 18px 0 rgba(0,0,0,0.21);
+}
+
+.btn_photo-parameters {
+  padding-left : 15px;
+  line-height : 41px;
+  font-size : 16px;
+}
+
+.btn_photo-parameters:first-child {
+  border-bottom: 2px solid #E6E6E6;
+}
+
+/* RESET BUTTON */
+.btn_reset {
+  width : 70px; height : 70px;
+  background : url('images/reset.svg') no-repeat 50% 50%;
+}
+
+/* TRASH BUTTON */
+.btn_trash {
+  width : 30px; height : 30px;
+  background : url('images/trash.svg') no-repeat 50% 50%;
+}
+
+/* SHARE BUTTONS */
+$bg: #F2F2F2;
+
+@mixin btn-share($push-size, $push-color){
+  width : $push-size;
+  height : $push-size;
+  background-color : $push-color;
+
+  box-shadow: 
+  inset 0 $push-size/32 0 lighten($push-color, 5%),
+  inset 0 (-$push-size/32) 0 darken($push-color, 5%),
+  inset 0 0 0 $push-size/32 darken($push-color, 3%),
+  inset 0 0 0 $push-size/12 $push-color,
+  inset 0 0 0 $push-size/10 darken($push-color, 20%),
+  inset 0 0 0 $push-size/9.2 darken($push-color, 50%),
+  inset 0 0 0 $push-size/7.5 transparentize(lighten($push-color, 30%), .3),
+  inset 0 0 0 $push-size/5.5 $push-color,
+  inset 0 $push-size/2.5 $push-size/7.5 darken($push-color, 5%),
+  inset 0 0 $push-size/10 $push-size/6 darken($push-color, 10%),
+  0 $push-size/20 0 rgba(0, 0, 0, .3);
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: $push-size/20;
+    left: $push-size/10;
+    display: block;
+    width: $push-size/1.25;
+    height: $push-size/1.25;
+    border: $push-size/15 solid rgba(0, 0, 0, .3);
+    border-width: 0 0 $push-size/15;
+    border-radius: 50%;
+    transition-duration: 200ms;
+  }
+}
+
+.btn_share {
+    position: relative;
+    display: inline-block;
+    border: 0;
+    margin: 1em;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow 200ms;
+
+    &:before {
+      content : '';
+      position : absolute;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+      z-index : 10;
+      width : 60px; height : 60px;
+    }
+  }
+
+.btn_print {
+  @include btn-share(115px, lightgrey);
+  &:before {
+    background : url('images/printer.svg')no-repeat 50% 50%;
+  }
+}
+
+.btn_mail {
+  @include btn-share(86px, lightgrey);
+  &:before {
+    background : url('images/mail.svg')no-repeat 50% 50%;
+  }
+}
+
+.btn_facebook {
+  @include btn-share(86px, lightgrey);
+  &:before {
+    background : url('images/facebook.svg')no-repeat 50% 50%;
+  }
 }
 
 
