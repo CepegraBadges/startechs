@@ -51,19 +51,20 @@ body{
 
 .container_admin{
 
-    // INPUT
-    input, input::placeholder, .btn_admin{
-       font-family: 'Avenir Next LT Pro Demi';
+    .btn_admin{
+        font-family: 'Avenir Next LT Pro Demi';
     }
     input::placeholder{
-        opacity:0.67;
+        opacity:0.72;
     }
 }
 
 .print_infos{
-    font-family: 'Avenir Next LT Pro Italic';
+    font-family: 'Avenir Next LT Pro Demi Italic';
+    color: #B4B6BA;
         span{
             font-family: 'Avenir Next LT Pro Demi Italic';
+            color: #95979B;
         }
 }
 

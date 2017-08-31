@@ -497,34 +497,27 @@ body li {
   font-family: 'ralewayblack_italic';
   text-transform: uppercase; }
 
-.container_admin input, .container_admin input::-webkit-input-placeholder, .container_admin .btn_admin {
-  font-family: 'Avenir Next LT Pro Demi'; }
-
-.container_admin input, .container_admin input::-moz-placeholder, .container_admin .btn_admin {
-  font-family: 'Avenir Next LT Pro Demi'; }
-
-.container_admin input, .container_admin input:-ms-input-placeholder, .container_admin .btn_admin {
-  font-family: 'Avenir Next LT Pro Demi'; }
-
-.container_admin input, .container_admin input::placeholder, .container_admin .btn_admin {
+.container_admin .btn_admin {
   font-family: 'Avenir Next LT Pro Demi'; }
 
 .container_admin input::-webkit-input-placeholder {
-  opacity: 0.67; }
+  opacity: 0.72; }
 
 .container_admin input::-moz-placeholder {
-  opacity: 0.67; }
+  opacity: 0.72; }
 
 .container_admin input:-ms-input-placeholder {
-  opacity: 0.67; }
+  opacity: 0.72; }
 
 .container_admin input::placeholder {
-  opacity: 0.67; }
+  opacity: 0.72; }
 
 .print_infos {
-  font-family: 'Avenir Next LT Pro Italic'; }
+  font-family: 'Avenir Next LT Pro Demi Italic';
+  color: #B4B6BA; }
   .print_infos span {
-    font-family: 'Avenir Next LT Pro Demi Italic'; }
+    font-family: 'Avenir Next LT Pro Demi Italic';
+    color: #95979B; }
 
 .container_pseudo ::-webkit-input-placeholder {
   font-family: 'Avenir Next LT Pro Demi Italic'; }
@@ -652,7 +645,7 @@ body li {
 
 /* CONNEXION AND DECONNEXION ADMIN */
 .btn_admin {
-  width: 350px;
+  width: 300px;
   line-height: 50px;
   border-radius: 3px;
   font-size: 20px;
@@ -943,7 +936,7 @@ header {
     width: 40%;
     margin: 5% auto;
     border-radius: 5px;
-    padding: 10px 0 50px 0;
+    padding: 20px 0 35px 0;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -954,7 +947,9 @@ header {
     -ms-flex-pack: center;
     justify-content: center; }
     #swipe .container_admin h2 {
-      text-align: center; }
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: 700; }
     #swipe .container_admin form {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -975,6 +970,10 @@ header {
         border-radius: 3px; }
       #swipe .container_admin form button {
         margin: 20px auto; }
+      #swipe .container_admin form a {
+        text-align: center;
+        color: #747474;
+        font-size: .9em; }
   #swipe .parameters {
     background-image: linear-gradient(227deg, #D1D0DA 0%, #FFFFFF 100%); }
   #swipe .finger-scroll {
@@ -1011,4 +1010,5 @@ header {
   #swipe .print_infos {
     position: absolute;
     bottom: 50%;
-    right: 20px; }
+    right: 50px;
+    padding-bottom: 10px; }

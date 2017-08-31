@@ -7,13 +7,15 @@
         width : 40%;
         margin: 5% auto;
         border-radius: 5px;
-        padding : 10px 0 50px 0 ;
+        padding : 20px 0 35px 0 ;
 
         display: flex;
         flex-direction : column;
         justify-content: center;
         h2{
             text-align: center;
+            font-size: 1.2em;
+            font-weight: 700;
         }
         form{
             display: flex;
@@ -30,6 +32,11 @@
             }
             button{
                 margin : 20px auto;
+            }
+            a{
+                text-align: center;
+                color:$color-dark-font;
+                font-size: .9em;
             }
         }
     }
@@ -63,6 +70,7 @@
     .print_infos{
         position: absolute;
         bottom : 50%;
-        right : 20px;
+        right : 50px;
+        padding-bottom: 10px;
     }
 }
