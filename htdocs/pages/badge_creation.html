@@ -28,10 +28,18 @@
                 <div class="container_global-palettes">
                     <button class="btn btn_palette"></button>
                     <div class="container_palette shadows hidden">
-                        <div>
+                        <div class="container_btn-palette">
                         <!-- palette__selected ou selected? regarder si conflict -->
-                            <button class="btn btn_palette-outline palette__selected"><span></span></button>
-                            <button class="btn btn_palette-fill"><span></span></button>
+                            <div class="btn btn_palette-fill btn_palette__selected"><span></span></div>
+                            <div class="btn btn_palette-outline"><?xml version="1.0" encoding="UTF-8"?>
+                            <svg width="45px" height="50px" viewBox="0 0 45 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>icon outline</title>
+                                <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.608695652">
+                                    <g id="12" transform="translate(-466.000000, -190.000000)" fill="#2E2E2E">
+                                        <path d="M478.268826,202.478778 C483.919252,196.724209 493.080397,196.724209 498.730823,202.478778 C504.381248,208.233347 504.381248,217.563341 498.730823,223.31791 C493.080397,229.072479 483.919252,229.072479 478.268826,223.31791 C472.618401,217.563341 472.618401,208.233347 478.268826,202.478778 L478.268826,202.478778 Z M504.41003,229.101791 C513.196306,220.152861 513.197008,205.643826 504.41003,196.695611 C495.644816,187.76813 481.354833,187.76813 472.589619,196.695611 C463.803343,205.643826 463.803343,220.152861 472.590321,229.101791 C476.102444,232.678646 480.486455,234.824903 485.045266,235.542704 C486.702696,235.802943 488.242189,236.572936 489.427873,237.780473 L492.196575,240.60092 C492.451402,240.860444 492.86418,240.860444 493.119007,240.60092 L504.41003,229.101791 Z" id="Fill-1"></path>
+                                    </g>
+                                </g> 
+                            </svg></div>
                         </div>
                         <ul class="container_palette-outline">
                             <li class="color color_red_outline"></li>
@@ -65,12 +73,12 @@
 
                 <button class="btn btn_photo btn_photo__editor"></button>
                 <div class="container_photo-parameters shadows hidden">
-                    <button class="btn_photo-parameters btn_photo-parameters__modif">Modifier</button>
-                    <button class="btn_photo-parameters btn_photo-parameters__del">Supprimer</button>
+                    <div class="btn_photo-parameters btn_photo-parameters__modif">Modifier</div>
+                    <div class="btn_photo-parameters btn_photo-parameters__del">Supprimer</div>
                 </div><!-- fin container_photo-parameters -->
             </div><!-- fin section drop-zone -->
             <div class="container_global_thumbnail">
-                <button class="btn_reset"></button>
+                <button class="btn btn_reset"></button>
                 <ul class="container_items_thumbnail">
                     <li class="box_thumbnail"> <!-- juste pour l'exemple --> <div class="item_thumbnail item thumbnail__selected"></div></li>
                     <li class="box_thumbnail"></li>
@@ -78,7 +86,7 @@
                 </ul>
             </div><!-- fin container_global_thumbnail -->
             <!-- dispotition et structure trash à définir -->
-            <button class="btn_trash"></button>
+            <button class="btn btn_trash"></button>
          </section><!-- fin section left -->
 
          <section class="section-right">
