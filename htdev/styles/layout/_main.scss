@@ -15,12 +15,15 @@ ul{
 }
 
 .hidden{
-    /*display: none;*/
+    display: none;
 }
 
 //----------------------------- BADGE CREATION POSITIONNEMENT ------------------------//
 
 //----------------------- SECTION LEFT
+main{
+    height: calc(100vh - 10rem);
+}
 
 .container_page-badge{
     display: flex;
@@ -32,42 +35,58 @@ section{
 }
 
 .section-left-main, .section-left-main-bottom, .section-left_header{
-    padding: 1.5rem;
+    padding: 1.5rem 3rem;
 }
 
 //----- SECTION L HEADER
 
 .section-left_header{
     display: flex;
-    border: solid 1px blue;
     justify-content: space-between;
+    padding-top: 3rem;
 }
 
 //----- SECTION L MAIN
 
 .section-left{
     background-color: grey;
-
 }
 
+//-----  DRAG AND DROP ZONE
+
 .drop-zone{
-    background-color: green;
-    height: 45vh;
+
+    padding: 2rem;
 }
 
 .drag-zone{
-    width: 18rem;
-    height: 18rem;
+    width: 21rem;
+    height: 21rem;
     border-radius: 300px;
     background-color: white;
+    margin: auto;
 }
+
+.btn_photo{
+    position: absolute;
+    left: 40%;
+}
+
+/* light: */
 
 //- SECTION L THUMBNAIL
 
 .container_global_thumbnail{
     background-color: blue;
-
 }
 
+.container_items_thumbnail{
+
+}
+//------ VALIDATE
+.section-left-main-bottom{
+    display: flex;
+    justify-content: center;
+}
 
 //----------------------- SECTION RIGHT
