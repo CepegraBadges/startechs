@@ -1,3 +1,71 @@
 * {
-  box-sizing : border-box;
+    box-sizing : border-box;
+    font-family: 'woodford_bourneregular';
+    font-weight: normal;
 }
+
+//-------------------------------------  FONTS COLORS
+.container_login, .input_login::placeholder{
+    color: $color_light_font;
+}
+
+.container_admin, .input_admin{
+    color: $color_dark_font;
+}
+
+//-------------------------------------  FONTS
+
+// Index
+//// Home--------------------------
+.container_login{
+
+    // BADGE-TOI + Arcade
+    .title_index{
+        font-family: 'ralewayblack_italic';
+    }
+
+    // LABEL
+    label{
+        font-family: 'choplinextralight-demo';
+    }
+
+    // INPUT
+    input{
+        font-family: "Arial Black";
+    }
+}
+
+    // ARCADE
+    .btn_arcade{
+        font-family: 'ralewayblack_italic';
+        text-transform: uppercase;
+    }
+
+//// Admin--------------------------
+
+.container_admin{
+
+    // INPUT
+    input, input::placeholder, .btn__access-parameter{
+       font-family: 'woodford_bourneregular';
+    }
+    input::placeholder{
+        opacity:0.67;
+    }
+}
+
+//// CREATION--------------------------
+.container_pseudo{
+    ::placeholder{
+        font-family: 'woodford_bourneregular';
+        font-style: italic;
+    }
+}
+
+.btn_photo-parameters{
+            font-family: 'woodford_bourneregular';
+}
+
+// PRINT & SHARE-----------------------
+
+
