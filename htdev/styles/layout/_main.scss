@@ -1,0 +1,24 @@
+//-------------------------------------  FONTS
+// Index
+//// Home
+.container_login{
+
+    // DIV BADGE-TOI
+    .title_index{
+        font-family: 'ralewayblack_italic';
+    }
+
+    // LABEL
+    label{
+        font-family: 'choplinextralight-demo';
+    }
+
+    // INPUT
+    .input_login{
+        font-family: "Arial Black";
+    }
+}
+// COLOR
+.container_login, .input_login::placeholder{
+    color: $color_light_font;
+}
