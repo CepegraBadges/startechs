@@ -6,10 +6,12 @@ header{
   display: flex;
   align-items: center;
   margin: auto;
-  height: 8vh;
+  height: 9vh;
   padding: 1px 50px;
   background: #FFFFFF;
   box-shadow: 1px 6px 9px 0 rgba(0,0,0,0.13);
+  position: relative;
+  z-index: 10;
     a{
     display: flex;
     align-items: center;

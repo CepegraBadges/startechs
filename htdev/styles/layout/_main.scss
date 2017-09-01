@@ -97,7 +97,7 @@ ul{
 
 //----------------------- SECTION LEFT
 main{
-    height: calc(100vh - 10rem);
+    height: 91vh;
 }
 
 .container_page-badge{
@@ -106,7 +106,6 @@ main{
 
 section{
     width: 50%;
-    border: solid 1px blue;
 }
 
 .section-left-main, .section-left-main-bottom, .section-left_header{
@@ -118,23 +117,141 @@ section{
 .section-left_header{
     display: flex;
     justify-content: space-between;
-    padding-top: 3rem;
+    padding-top: 2rem;
+    background-color: $color_h1;
+}
+
+.container_palette{
+    position: absolute;
+    transform: translateX( calc(-50% + 20px));
+    margin-top: 1rem;
+}
+
+.pen{
+    width: 27px;
+    height: 27px;
+    position: relative;
+    top: 0.9rem;
+    left: 0.3rem;
+}
+
+.input_name-badge{
+    border: none;
+    padding-bottom: 0.5rem;
+    background: none;
+    color: $color_dark_font;
+    border-bottom: solid 2px $color_dark_font;
+}
+.input_name-badge:focus{
+    outline: none;
+}
+
+//--- PALETTE
+
+.palette{
+    height: 188px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 4px 4px;
+    margin: 0;
+    padding: 3%;
+}
+
+.container_palette-outline{
+   display: none;
+}
+
+.color{
+ @include size(17%);
+ margin: 6%;
+ border-radius: 4px;
+}
+
+.color_outline__selected, .color_fill__selected{
+@include size(27%);
+ margin: 1%;
+}
+
+//--ouline
+
+.color_red_outline{
+    background-color: $color_red_outline;
+}
+.color_orange_outline{
+    background-color: $color_orange_outline;
+}
+.color_yellow_outline{
+    background-color: $color_yellow_outline;
+}
+.color_pink_outline{
+    background-color: $color_pink_outline;
+}
+.color_white_outline{
+    background-color: $color_white_outline;
+}
+.color_green_outline{
+    background-color: $color_green_outline;
+}
+.color_black_outline{
+    background-color: $color_black_outline;
+}
+.color_turquoise_outline{
+    background-color: $color_turquoise_outline;
+}
+.color_blue_outline{
+    background-color: $color_blue_outline;
+}
+
+//--- fill
+
+.color_red_fill{
+    background-color: $color_red_fill;
+}
+.color_orange_fill{
+    background-color: $color_orange_fill;
+}
+.color_yellow_fill{
+    background-color: $color_yellow_fill;
+}
+.color_pink_fill{
+    background-color: $color_pink_fill;
+}
+.color_white_fill{
+    background-color: $color_white_fill;
+}
+.color_green_fill{
+    background-color: $color_green_fill
+}
+.color_black_fill{
+    background-color: $color_black_fill;
+}
+.color_turquoise_fill{
+    background-color: $color_turquoise_fill;
+}
+.color_blue_fill{
+    background-color: $color_blue_fill;
 }
 
 //----- SECTION L MAIN
 
 .section-left{
-    background-color: grey;
+    background-color: $color_b1;
 }
 
 //- SECTION L THUMBNAIL
 
+
 .container_global_thumbnail{
-    background-color: blue;
+    display: flex;
 }
 
 .container_items_thumbnail{
-
+    background-color: grey;
+    height: 3rem;;
+    width: 100%;
 }
 //------ VALIDATE
 .section-left-main-bottom{
