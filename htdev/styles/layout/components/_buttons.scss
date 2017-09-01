@@ -1,3 +1,19 @@
+/* VALIDATE */
+@mixin rainbow(){
+  background: repeating-linear-gradient(-135deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.43) 20%, #00FFF9 29%, #00C6FD 34%, rgba(255,255,255,0.52) 50%, rgba(0,212,252,0.00) 67%, rgba(255,57,0,0.70) 80%, rgba(255,0,96,0.93) 86%, rgba(255,255,255,0.00) 100%);
+	-webkit-animation:'slide' 1s infinite linear forwards;
+  background-size:100vw 100vw;
+}
+
+@keyframes slide{
+  0%{
+    background-position-x: 0%;
+  }
+  100%{
+    background-position-x: 800vw;
+  }
+}
+
 /* BUTTON GENERAL */
 .btn {
   background : none;
@@ -9,12 +25,8 @@
 }
 
 /* BUTTON ARCADE GENERAL */
-.btn_arcade {
-
-}
-
 /* GO */
-/*
+
 @keyframes flash{
     0%{opacity: 0.43;}
     50%{opacity: 0;}
@@ -22,16 +34,16 @@
 }
 
 @keyframes color{
-    0%{color: #00ABF6;}
+    0%{color: #2AAFE5;}
     50%{color: rgba(199, 199, 199, 0);}
-    100%{color: #00ABF6;}
-}*/
+    100%{color: #2AAFE5;}
+}
 
 .btn_start{
-  animation: color 1s infinite;
+  // animation: color 1s infinite;
   text-decoration:none;
-  color: #00ABF6;
-  font-size:2.1em;
+  color: #2AAFE5;
+  font-size:2.9em;
   text-shadow:
     0 0px 1px rgba(199,199,199,1),
     0 -1px 1px rgba(0,0,0,0.6),
@@ -47,85 +59,69 @@
     radial-gradient(ellipse closest-side,
     rgb(255,255,255) 25%,
     rgb(230,230,230) 50%,
-    rgb(250,250,250) 60%);
-  background-size:8em 4.000em;
+    rgb(250,250,250) 65%);
+  background-size:7em 4em;
   background-position: center;
   box-shadow:
-    0 -3px 1px 0px rgba(255, 259, 255,1),
+      0 -3px 10px 6px rgba(255, 259, 255,1),
     0 1px 6px 2px rgba(240, 240, 240,1),
-    0 1px 0px 10px rgba(227, 228, 228,1),
-    inset 0 10px 22px -7px rgba(0,0,0,0.4),
-    inset 0 -5px 7px 5px rgba(199,206,208,0.9),
+    0 1px 0px 17.5px rgba(227, 228, 228,1),
+    inset 0 10px 22px 10px rgba(199,200,205,.4),
+    inset 0 -5px 7px 7px rgba(199,206,208,0.4),
     inset 0 35px 25px -5px rgba(199,200,205,.2),
     inset 0 75px 10px -7px rgba(225,225,230,0.5),
-    0 -2px 1px 10px rgba(0,0,0,0.3),
-    0 12px 14px 5px rgba(0,0,0,0.20),
-    0 20px 20px 10px rgba(0,0,0,0.2);
 
+    0 -2px 10px 20px rgba(0,0,0,0.3),
+    0 12px 10px 20px rgba(0,0,0,0.20),
+    0 20px 20px 17.5px rgba(0,0,0,0.2);
 
   transition: all 0.07s ease-in;
 
 }
 
 .btn_start:before{
-  animation: flash 1s infinite;
+  /*animation: flash 1s infinite;*/
   position:absolute;
   display:block;
   content:"";
-  top:.67em;
-  left:.67em;
+  top:0.8em;
+  left:0.8em;
   margin: -1.929em;
-  width:6.6em;
-  height:6.6em;
-
+  width:6.3em;
+  height:6.3em;
   opacity: 0.43;
-  background-image: linear-gradient(-180deg, #F5515F 0%, #9F041B 100%);
+background-image: linear-gradient(45deg, #F0302B 0%, #EF2F47 100%);
+ 
   border-radius:inherit;
   z-index:-1;
 
 }
 
 
-.btn_start:active{
+.active{
   color: rgba(199, 199, 199, 0);
-  box-shadow:
-    0 -3px 1px 0px rgba(255, 255, 255,0.1),
-    0 1px 6px 2px rgba(240, 240, 240,0.7),
-     0 1px 0px 10px rgba(227, 228, 228,1),
-    inset 0 10px 22px -7px rgba(0,0,0,0.2),
-    inset 0 -5px 7px 5px rgba(199,206,208,0.9),
-    inset 0 35px 25px -5px rgba(199,200,205,0),
+
+    box-shadow:
+      0 -3px 10px 6px rgba(255, 259, 255,1),
+    0 1px 6px 2px rgba(240, 240, 240,1),
+    0 1px 0px 17.5px rgba(227, 228, 228,1),
+    inset 0 10px 22px 10px rgba(199,200,205,.4),
+    inset 0 -5px 7px 7px rgba(199,206,208,0.4),
+    inset 0 35px 25px -5px rgba(199,200,205,.2),
     inset 0 75px 10px -7px rgba(225,225,230,0.5),
-    0 -2px 1px 10px rgba(0,0,0,0.35),
-    0 5px 10px 8px rgba(0,0,0,0.20),
-    0 0px 10px 9px rgba(0,0,0,0.20),
-    0 5px 20px 0px rgba(0,0,0,0.20);
+    0 -2px 10px 20px rgba(0,0,0,0.3),
+    0 12px 10px 20px rgba(0,0,0,0.10),
+    0 20px 20px 17.5px rgba(0,0,0,0.1);
+
   animation: color 0s infinite;
 }
 
-.btn_start:active:before{
-  top:.95em;
-  left:.95em;
-  width:0;
-  height:0;
+.active:before{
+  top:1.1em;
+  left:1.1em;
+  width:5.7em; 
+  height:5.7em;
   animation: flash 0s infinite;
-}
-
-
-/* VALIDATE */
-@mixin rainbow(){
-  background: repeating-linear-gradient(-135deg, rgba(255,255,255,0.00) 0%, rgba(255,255,255,0.43) 20%, #00FFF9 29%, #00C6FD 34%, rgba(255,255,255,0.52) 50%, rgba(0,212,252,0.00) 67%, rgba(255,57,0,0.70) 80%, rgba(255,0,96,0.93) 86%, rgba(255,255,255,0.00) 100%);
-	-webkit-animation:'slide' 1s infinite linear forwards;
-  background-size:100vw 100vw;
-}
-
-@keyframes slide{
-  0%{
-    background-position-x: 0%;
-  }
-  100%{
-    background-position-x: 800vw;
-  }
 }
 
 .btn_validate{
