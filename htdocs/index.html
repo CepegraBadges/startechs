@@ -9,17 +9,16 @@
     <title>Badge-toi !</title>
     <link href="styles/styles.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="index">
 
 <!-- MAIN HOME -->
 <main id="swipe">
 
     <div class="dragend-page parameters">
-        <header class="header_index-setting">
-            <h1>
+            <h1 class="header_index-setting">
                 <img src="images/logo-cepegra.svg" alt="Logo du Centre de Compétences Cepegra" class="logo">
             </h1>
-        </header>
+
         <!-- DIV HIDDEN LOGIN PERSONNEL DU CENTRE-->
         <!-- voir l'injection en js de la connection avec l'imprimante -->
         <div class="container_admin shadows">
@@ -48,16 +47,16 @@
         <form action="" method="post">
             <div>
                 <h2 class="title_index">Badge-toi !</h2>
-                <div class="form_pseudo">
+                <div class="form form_pseudo">
                     <label for="">Votre pseudo</label>
-                    <input type="text" name="pseudo" size="25" placeholder="#Pseudo" class="input_login">
+                    <input type="text" name="pseudo" size="8" placeholder="#Pseudo" class="input_login">
                 </div>
-                <div class="form_email">
+                <div class="form form_email">
                     <label for="">Votre email</label>
-                    <input type="email" name="email" size="30" placeholder="user@cepegra.com" class="input_login">
+                    <input type="email" name="email" size="17" placeholder="user@cepegra.com" class="input_login">
                 </div>
             </div>
-            <a href="pages/badge_creation.html" class="btn_arcade btn_start">Go</a>
+            <a href="pages/badge_creation.html" class="btn_arcade btn_start active">Go</a>
         </form>
     </div>
 </main>
