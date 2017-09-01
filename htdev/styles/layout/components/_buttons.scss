@@ -2,6 +2,10 @@
 .btn {
   background : none;
   border : none;
+  
+  &:focus {
+    outline : none;
+  }
 }
 
 /* BUTTON ARCADE GENERAL */

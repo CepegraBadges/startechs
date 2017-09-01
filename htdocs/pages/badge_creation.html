@@ -71,14 +71,16 @@
                 <div class="section-left-main-top">
                     <div class="drop-zone">
                         <!-- BADGE -->
-                        <div class="drag-zone"></div>
-
-                <button class="btn btn_photo btn_photo__editor"></button>
-                <div class="container_photo-parameters shadows hidden">
-                    <div class="btn_photo-parameters btn_photo-parameters__modif">Reprendre</div>
-                    <div class="btn_photo-parameters btn_photo-parameters__del">Supprimer</div>
-                </div><!-- fin container_photo-parameters -->
-            </div><!-- fin section drop-zone -->
+                        <div class="container_badge">
+                          <div class="drag-zone"></div>
+                          <div class="light-badge"></div>
+                        </div>
+                        <button class="btn btn_photo btn_photo__take"></button>
+                        <div class="container_photo-parameters shadows hidden">
+                            <div class="btn_photo-parameters btn_photo-parameters__modif">Reprendre</div>
+                            <div class="btn_photo-parameters btn_photo-parameters__del">Supprimer</div>
+                        </div><!-- fin container_photo-parameters -->
+                    </div><!-- fin section drop-zone -->
             <div class="container_global_thumbnail">
                 <button class="btn btn_reset"></button>
                 <ul class="container_items_thumbnail">
@@ -166,7 +168,10 @@
          </section><!-- fin section-right -->
 
      </main>
-
-     <script src="../scripts/script.min.js"></script>
+     <script
+     src="https://code.jquery.com/jquery-2.2.4.min.js"
+     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+     crossorigin="anonymous"></script>
+     <script src="../scripts/scripts.min.js"></script>
 </body>
 </html>

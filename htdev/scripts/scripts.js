@@ -19,4 +19,6 @@ $(function() {
       //alert(this.value.length);
     });
   }
+
+  //@prepros-append components/_photo.js
 });
