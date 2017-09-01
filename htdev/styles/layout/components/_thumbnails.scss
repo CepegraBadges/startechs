@@ -1,0 +1,45 @@
+.container_global_thumbnail_btn{
+    display: flex;
+    align-items: center;
+    .container_global_thumbnail{
+        background: $color_h1;
+        display: flex;
+        height: 12vh;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        direction: ltr;
+        width: 310px;            
+        position: relative;
+        &::-webkit-scrollbar { 
+            position: absolute;
+            display: none;
+        }
+        .container_items_thumbnail{
+            display: flex;
+            padding: 0;
+            align-items: center;
+            .box_thumbnail{
+                background: $color_light_font;
+                width: 50px;
+                height: 50px;
+                margin-left : 10px;
+            }
+            .box_thumbnail.selected{
+                border: 5px solid transparent;
+                -moz-border-image: $color_active_blue_gradiant;
+                -webkit-border-image: $color_active_blue_gradiant;
+                border-image: $color_active_blue_gradiant;
+                border-image-slice: 1;
+                box-shadow: 0 6px 6px 0 rgba(0,0,0,0.15);
+            }
+        }
+    }
+}
+.btn_trash{
+    position: absolute;
+    margin: 5px 0 0 20px;
+}
+
+.section-left-main-bottom{
+    margin: 30px 0;
+}
