@@ -19,4 +19,12 @@ $(function() {
       //alert(this.value.length);
     });
   }
+
+    $( ".test" ).tabs();
+    
+      
 });
+
+
+
+
