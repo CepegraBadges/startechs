@@ -2,9 +2,8 @@
     display: flex;
     align-items: center;
     .container_global_thumbnail{
-        background: $color_h1;
+        margin : 20px 0;
         display: flex;
-        height: 12vh;
         overflow-x: scroll;
         -webkit-overflow-scrolling: touch;
         direction: ltr;
@@ -15,14 +14,16 @@
             display: none;
         }
         .container_items_thumbnail{
+          background: lightgrey;
+          margin : 0;
             display: flex;
-            padding: 0;
+           padding : 13px 0;
             align-items: center;
             .box_thumbnail{
                 background: $color_light_font;
-                width: 50px;
-                height: 50px;
-                margin-left : 10px;
+                width: 43px;
+                height: 43px;
+                margin-left : 13px;
                 box-shadow: 0 6px 6px 0 rgba(0,0,0,0.15);
             }
             .box_thumbnail.selected{
@@ -41,5 +42,5 @@
 }
 
 .section-left-main-bottom{
-    margin: 30px 0;
+    /*margin: 30px 0;*/
 }
