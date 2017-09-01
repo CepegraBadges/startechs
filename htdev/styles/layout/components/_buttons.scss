@@ -2,6 +2,7 @@
 .btn {
   background : none;
   border : none;
+  outline: none;
 }
 
 /* BUTTON ARCADE GENERAL */
@@ -127,7 +128,7 @@
 .btn_validate{
   text-decoration:none;
   color: #00ABF6;
-  font-size:1.750em;
+  font-size:1.300em;
   text-shadow:
     0 0px 1px rgba(199,199,199,1),
     0 -1px 1px rgba(0,0,0,0.6),
@@ -146,15 +147,15 @@
     0 -3px 1px 0px rgba(255, 259, 255,1),/*white line*/
     0 1px 6px 2px rgba(240, 240, 240,1),/*white line II*/
     0 1px 0px 10px rgba(227, 228, 228,1),/*white contour*/
-    inset 0 10px 22px -7px rgba(0,0,0,0.3),/*SUPER Shadow INSIDE UP*/
-    inset 0 -5px 20px 5px rgba(199,206,208,1),/*Shadow INSIDE UP I*/
+    inset 0 10px 22px -7px rgba(0,0,0,0.1),/*SUPER Shadow INSIDE UP*/
+    inset 0 -5px 20px 5px rgba(199,206,208,0.7),/*Shadow INSIDE UP I*/
     inset 0 28px 15px -15px rgba(199,200,205,.3),/*Shadow INSIDE UP II*/
     
     inset 0 75px 10px -7px rgba(255,255,255,0.6),/*BG white*/
     
-    0 -2px 5px 10px rgba(0,0,0,0.3), /*Shadow UP*/
+    0 -2px 5px 10px rgba(0,0,0,0.2), /*Shadow UP*/
     0 12px 14px 5px rgba(0,0,0,0.20),/*Shadow DOWN I*/
-    0 20px 20px 10px rgba(0,0,0,0.2);/*Shadow DOWN II*/
+    0 20px 20px 10px rgba(0,0,0,0.1);/*Shadow DOWN II*/
   
     transition: all 0.07s ease-in;
 }
