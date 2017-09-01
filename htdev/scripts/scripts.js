@@ -23,8 +23,8 @@ $(function() {
   $( ".section-right" ).tabs();
   
   $('.link_container_tab').on('click', function(){
-    $('.link_container_tab').removeClass('active');
-    $(this).addClass('active');
+    $('.link_container_tab').removeClass('active-tabs');
+    $(this).addClass('active-tabs');
   })
 
   $('.box_item').on('click', function(){

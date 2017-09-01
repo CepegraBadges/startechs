@@ -1,5 +1,8 @@
 .section-right{
     border : none;
+    .container_palette-photo__hidden{
+        display: none;
+    }
     .container_categories{
         background-color: $color_b2;
         margin:0;
@@ -14,6 +17,12 @@
             text-decoration: none;
             color : black;
             padding-bottom : 5px;
+            &.active-tabs{
+            background: $color_active_blue_gradiant;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border-bottom : 2px solid blue; 
+            }
                 &:focus{
                 outline : none;
                 }
@@ -44,12 +53,6 @@
 
 }//section-right
 
-.active{
-background: $color_active_blue_gradiant;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-border-bottom : 2px solid blue; 
-}
 
 .selected{
     background-color: $color_light_blue;
