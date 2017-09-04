@@ -37,7 +37,25 @@
             height: 160px;
             border : 1px solid $color_light_grey;
             position : relative;
-
+            &.active{
+                background: $color_light_blue;
+                box-shadow: none;
+            }
+            &.selected:before{
+                position: absolute;
+                content:'';
+                display: block;
+                border: 5px solid transparent;
+                -moz-border-image: $color_active_blue_gradiant;
+                -webkit-border-image: $color_active_blue_gradiant;
+                border-image: $color_active_blue_gradiant;  
+                border-image-slice: 1;
+                width: 80%;
+                height: 80%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
             svg{
                 width: 50%;
                 height: 50%;
@@ -50,7 +68,6 @@
             }
         }
     }
-
 }//section-right
 
 

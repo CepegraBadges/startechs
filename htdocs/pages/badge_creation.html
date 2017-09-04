@@ -17,12 +17,25 @@
 
      </header>
     <!-- création du badge -->
+    <!-- popup reset -->
+    <div class="popup" hidden>
+        <div class="reset-popup" >
+            <p>!</p>
+            <p>Effacer tous les éléments ?</p>
+            <div class="answer-popup">
+                <div class="answer-no">Annuler</div>
+                <div class="answer-yes">Ok</div>
+            </div>
+        </div>
+        <div class="background-popup1"></div>
+    </div>
+    
      <main class="container_page-badge">
      <!-- panneau de gauche -->
          <section class="section-left">
             <div class="section-left_header">
                 <div class="container_pseudo">
-                    <input type="text" name="name" placeholder="Votre prénom" class="input_name-badge"><span><svg class="pen"  viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <input type="text" name="name" placeholder="Votre prénom" class="input_name-badge"><span><svg data-item="item1" class="pen"  viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>pencil</title>
     <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="11" transform="translate(-280.000000, -127.000000)" stroke="#747474" stroke-width="0.8" fill="#747474" fill-rule="nonzero">
@@ -82,7 +95,7 @@
                         <!-- BADGE -->
                         <div class="container_badge">
                           <div class="drag-zone"></div>
-                          <div class="light-badge"></div>
+                          <div class="light-badge1"></div>
                         </div>
 
                         <button class="btn btn_photo btn_photo__take"></button>
@@ -96,12 +109,6 @@
                 <button class="btn btn_reset"></button>
                 <div class="container_global_thumbnail">
                     <ul class="container_items_thumbnail">
-                        <li class="box_thumbnail selected">1</li>
-                        <li class="box_thumbnail">2</li>
-                        <li class="box_thumbnail">3</li>
-                        <li class="box_thumbnail">4</li>
-                        <li class="box_thumbnail">5</li>
-                        <li class="box_thumbnail">6</li>
                     </ul>
                 </div><!-- fin container_global_thumbnail -->
             </div><!-- fin container_global_thumbnail_btn -->
