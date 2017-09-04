@@ -12,35 +12,47 @@
 <body>
      <header class="header_print-and-share">
          <a href="badge_creation.html"><img src="../images/arrow-left.svg"></a>
-         <a href="index.html">Terminer</a>
+         <a href="index.html" class="btn_finish">Terminer</a>
          <h1><img src="../images/logo-cepegra.svg" alt="Logo du Centre de Compétences Cepegra" class="logo"></h1>
      </header>
      <main>
          <!-- container principal -->
          <div class="container_print-and-share">
-             <p class="title_print-and-share">Magnifique!!</p>
-             <p class="text_small">Ton badge est terminé. N’hesite pas à partager ton design. Le cepegra te remercie ;)</p>
              <div class="badge__finished"></div>
             <ul class="container_btn-print-and-share">
-                <li class="btn_share btn_print"></li>
-                <li class="btn_share btn_mail"></li>
-                <li class="btn_share btn_facebook"></li>
+                <li class="container_print">
+                    <div class="container_text-print">
+                        <p class="text__pink">PRESSE POUR IMPRIMER</p>
+                        <span class=""></span>
+                    </div>
+                    <div class="btn btn_print"></div>
+                </li>
+                <li class="btn btn_mail"></li>
+                <li class="btn btn_facebook"></li>
             </ul>
-            <button class="btn_next">recommencer</button>
          </div>
          <!-- fin container principal -->
          <!-- container pop up -->
          <div class="container_print-and-share__fade-in hidden">
+            <span class=""></span>
             <p class="title_print-and-share">Félicitations!</p>
             <!-- texte à insérer en js -->
-            <p class="text_big">Ton badge sera imprimé d'ici quelques minutes</p>
-            <p class="text_small">N'oublie pas de partager ton design sur facebook</p>
-            <ul class="container_btn-print-and-share">
+            <div>
+                <p class="text_big texte_big_print">Ton badge sera imprimé d'ici quelques minutes</p>
+                <p class="text_big texte_big_mail">Ton avatar a été envoyé par email</p>
+                <p class="text_big texte_big_facebook">Ton avatar a été partagé sur facebook</p>
+                <p class="text_small">N'oublie pas de partager ton design sur facebook</p>
+                <p class="text_small">N'oublie pas de partager ton design sur facebook</p>
+                <p class="text_small">N'oublie pas de partager ton design sur facebook</p>
+                <ul class="container_btn-print-and-share">
             <!-- boutons à générer en js -->
-                <li></li>
-                <li></li>
-            </ul>
-            <button class="btn_next">recommencer</button>
+                    <li class="btn btn_print"></li>
+                    <li class="btn btn_mail"></li>
+                    <li class="btn btn_facebook"></li>
+                </ul>
+            </div>
+            <div>
+            <button class="btn btn_finish">Terminer</button>
          </div>
      </main>
     <script src="../scripts/script.min.js"></script>
