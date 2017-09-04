@@ -1,6 +1,6 @@
 .drop-zone {
   position : relative;
-  padding: 2rem;
+
 }
 
 .container_badge {
@@ -35,6 +35,7 @@
 
 .container_photo-parameters {
   position : absolute;
+  z-index : 20;
   right : -120px;
   bottom : -45px;
 

@@ -8,8 +8,10 @@ $(function() {
  $("#swipe").dragend({
    afterInitialize: function() {
      this.container.style.visibility = "visible";
+     $('.parameters').remove('hidden');
    }
  })
+ 
 
  /* ANIM INPUT PSEUDO + MAIL */
  myInput = document.querySelectorAll(".input_login");
