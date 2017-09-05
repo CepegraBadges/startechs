@@ -82,12 +82,10 @@ $('.box_item').on('click', function(){
 
 
 
-
-
 var svg = $( this ).find('img').attr("class");
 
 $('.box_item').on("click", function(){
-  $(".box_item active"+svg+"").clone().appendTo(".box_thumbnail img").css("background", "red");
+  $(".box_item active"+svg+"").clone().appendTo(".box_thumbnail img").css("background", "pink");
 });
 
 window.makeClone = function (){
@@ -97,8 +95,6 @@ window.makeClone = function (){
 window.removeClone = function (){
     $('svg:last').remove();
 }
-
-
 
 
 
@@ -129,7 +125,8 @@ $('.drag-zone').droppable({
 /////////
 
 $( ".btn_reset" ).click(function(shake){
-  $( ".container_items_thumbnail" ).children().addClass("shake");
+  $( ".container_items_thumbnail" ).children().addClass("shake"); 
+  $(".background-popup").removeAttr("hidden");
   $(".popup").removeAttr("hidden");
   return shake;
 });
@@ -141,12 +138,14 @@ $( ".answer-yes" ).click(function(yes){
   $(".box_item").removeClass('active selected');
   $('.drag').remove();
   $(".popup").attr("hidden", true);
+  $(".background-popup").attr("hidden", true);
 });
 
 // réponse non
 $( ".answer-no" ).click(function(no){
   //alert('clic yes');
   $(".popup").attr("hidden", true);
+  $(".background-popup").attr("hidden", true);
   $(".container_items_thumbnail").children().removeClass("shake");
 });
 
