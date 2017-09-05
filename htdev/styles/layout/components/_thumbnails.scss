@@ -23,21 +23,32 @@
             padding : 0 17px;
             align-items: center;
             .box_thumbnail{
+                position: relative;
                 background: $color_light_font;
                 width: 43px;
                 height: 43px;
                 margin-left : 13px;
                 box-shadow: 0 6px 6px 0 rgba(0,0,0,0.15);
-            }
-            .shake{ 
-                animation: shake 20ms infinite;
-            }
-            .box_thumbnail.selected{
+                &.selected{
                 border: 5px solid transparent;
                 -moz-border-image: $color_active_blue_gradiant;
                 -webkit-border-image: $color_active_blue_gradiant;
                 border-image: $color_active_blue_gradiant;
                 border-image-slice: 1;
+                }
+                svg{
+                    width: 100%;
+                    padding: 5px;
+                    height: 100%;
+                    position : absolute;
+                    display : block;
+                    top: 50%;
+                    left: 50%;
+                    transform : translate(-50%,-50%);
+                }
+            }
+            .shake{ 
+                animation: shake 20ms infinite;
             }
         }
     }
@@ -62,3 +73,10 @@
     transform: rotate(4eg);
   }
 }
+
+.box_thumbnail.selected{
+    background-color: $color_light_blue;
+    width: 0;
+}
+
+
