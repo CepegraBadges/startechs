@@ -30,7 +30,8 @@
                 margin-left : 13px;
                 box-shadow: 0 6px 6px 0 rgba(0,0,0,0.15);
                 &.selected{
-                border: 5px solid transparent;
+                border-width : 5px;
+                border-style : solid;
                 -moz-border-image: $color_active_blue_gradiant;
                 -webkit-border-image: $color_active_blue_gradiant;
                 border-image: $color_active_blue_gradiant;
