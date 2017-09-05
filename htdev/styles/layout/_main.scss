@@ -111,14 +111,31 @@ ul{
 .text_pop_title{
     font-family: 'ralewayextrabold_italic';
     font-size: 2.7em;
+    margin-top: 15px;
 }
 .text_pop_action{
     font-family: 'ralewayextrabold';
-    font-size: 1.1em;
-    text-decoration: underline ; 
+    font-size: 1.2em;
+    // text-decoration: underline ; 
+
+    &:after{
+        content:"";
+        position: absolute;
+        left:31.5%;
+        top: 345px;
+        width: 380px;
+        height: 3px;
+        background: #E44000;
+
+          transition:     width      0.5s 1s,
+
+
+    }
 }
 .text_pop_option{
 font-family: 'Avenir Next LT Pro Italic';
+ font-size: 1.1em;
+ padding-top: 25px;
 }
 
 //----------------------------- BADGE CREATION POSITIONNEMENT ------------------------//
