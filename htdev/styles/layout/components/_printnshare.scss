@@ -1,0 +1,79 @@
+.body_print-and-share{
+    background: url('images/admin-bg.svg')
+}
+
+
+.container_print-and-share{
+    height: 84vh;
+    display:flex;
+    align-items: center;
+  justify-content: center;
+
+        .text__pink{
+            font-size: 1.8em;
+            text-align: center;
+            width: 220px;
+            height: 145px;
+            padding: 10px;
+            position: relative;
+            -webkit-animation: updown 3s infinite;
+
+                    animation: updown 3s infinite;
+                    
+                    /* Safari 4.0 - 8.0 */
+                    @-webkit-keyframes updown {
+                        0%   {top: 0px;}
+                        50%  {top: 50px;}
+                        100% {top: 0;}
+                    }
+
+                    /* Standard syntax */
+                    @keyframes updown {
+                        0%   {top: 0px;}
+                        50%  {top: 50px;}
+                        100% {top: 0;}
+                    }
+
+            &:after{
+                content: '';
+                position:absolute;
+                margin-top: 85px;
+                top: 10%;
+                right:40%;
+        border-left: 22px solid transparent;
+        border-right: 22px solid transparent;
+        border-top: 25px solid #E7378C;
+        border-radius: 4px;
+            }
+        }
+
+        @mixin btn-share-place($bottom, $left){
+            position: absolute;
+            bottom: $bottom;
+            left: $left;
+        }
+
+        .badge__finished{
+            background: goldenrod;
+            width: 285px;
+            height: 285px;
+            border-radius: 100%;
+            position: relative;
+        align-self: center;
+        }
+
+
+        .container_print{
+            position: absolute;
+            bottom: 30px;
+            right: 35px;
+        }
+
+        .btn_mail{
+            @include btn-share-place(150px,35px)
+        }
+
+        .btn_facebook{
+            @include btn-share-place(30px,160px)
+        }
+}
