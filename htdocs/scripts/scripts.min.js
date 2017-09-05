@@ -63,12 +63,14 @@ $(function() {
 $('.box_item').on('click', function(){
   var itemSource = $( this ).find('img').attr("src");
   var itemClass = $(this).attr("data-item");
+  var d = $( this ).find("path").attr('d');
+  var viewBox = $( this ).find("svg").attr('viewBox');
   $('.box_item').removeClass('selected');
   $('.box_thumbnail').removeClass('selected');
  
   if(!$(this).hasClass('active')){
-    $('<img src="'+itemSource+'" class="drag '+itemClass+'" data-item="'+itemClass+'">').appendTo('.drag-zone').draggable({containment : $('main')});
-    $('<li class="box_thumbnail selected '+itemClass+'" data-item="'+itemClass+'"><img src="'+itemSource+'"></li>').appendTo('.container_items_thumbnail');
+    $('<div data-item="'+itemClass+'"><li class="box_thumbnail selected '+itemClass+'" data-item="'+itemClass+'"><svg viewBox="'+viewBox+'"><path class="cls-1" d="'+d+'" ></svg></li></div>').appendTo('.drag-zone').draggable({containment : $('main')});
+    $('<li class="box_thumbnail selected '+itemClass+'" data-item="'+itemClass+'"><svg viewBox="'+viewBox+'"><path class="cls-1" d="'+d+'" ></svg></li>').appendTo('.container_items_thumbnail');
     $(this).addClass('active selected');
   }
   else{
@@ -85,7 +87,7 @@ $('.box_item').on('click', function(){
 var svg = $( this ).find('img').attr("class");
 
 $('.box_item').on("click", function(){
-  $(".box_item active"+svg+"").clone().appendTo(".box_thumbnail img").css("background", "pink");
+  $(".box_item active"+svg+"").clone().appendTo(".box_thumbnail img");
 });
 
 window.makeClone = function (){
