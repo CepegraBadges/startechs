@@ -44,6 +44,7 @@ $(function() {
 
   //@prepros-append components/_photo.js
   //@prepros-append components/_print-and-share.js
+  //@prepros-append components/_admin.js
 });
 
 
