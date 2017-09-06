@@ -45,46 +45,44 @@
 </svg></span>
                 </div>
                 <!-- palette de sélection des couleurs -->
-                <div class="container_global-palettes">
-                    <button class="btn btn_palette"></button>
-                    <div class="container_palette shadows hidden">
-                        <div class="container_btn-palette">
-                        <!-- palette__selected ou selected? regarder si conflict -->
-                            <div class="btn btn_palette-fill btn_palette__selected"><span></span></div>
-                            <div class="btn btn_palette-outline"><?xml version="1.0" encoding="UTF-8"?>
-                            <svg width="45px" height="50px" viewBox="0 0 45 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>icon outline</title>
-                                <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.608695652">
-                                    <g id="12" transform="translate(-466.000000, -190.000000)" fill="#2E2E2E">
-                                        <path d="M478.268826,202.478778 C483.919252,196.724209 493.080397,196.724209 498.730823,202.478778 C504.381248,208.233347 504.381248,217.563341 498.730823,223.31791 C493.080397,229.072479 483.919252,229.072479 478.268826,223.31791 C472.618401,217.563341 472.618401,208.233347 478.268826,202.478778 L478.268826,202.478778 Z M504.41003,229.101791 C513.196306,220.152861 513.197008,205.643826 504.41003,196.695611 C495.644816,187.76813 481.354833,187.76813 472.589619,196.695611 C463.803343,205.643826 463.803343,220.152861 472.590321,229.101791 C476.102444,232.678646 480.486455,234.824903 485.045266,235.542704 C486.702696,235.802943 488.242189,236.572936 489.427873,237.780473 L492.196575,240.60092 C492.451402,240.860444 492.86418,240.860444 493.119007,240.60092 L504.41003,229.101791 Z" id="Fill-1"></path>
-                                    </g>
-                                </g>
-                            </svg></div>
-                        </div>
-                        <ul class="palette container_palette-outline hidden">
-                            <li class="color color_red_outline"></li>
-                            <li class="color color_orange_outline"></li>
-                            <li class="color color_yellow_outline"></li>
-                            <li class="color color_pink_outline"></li>
-                            <li class="color color_white_outline"></li>
-                            <li class="color color_green_outline"></li>
-                            <li class="color color_black_outline color_outline__selected"></li>
-                            <li class="color color_turquoise_outline"></li>
-                            <li class="color color_blue_outline"></li>
-                        </ul><!-- fin container_palette-outline -->
-                        <ul class="palette container_palette-fill">
-                            <li class="color color_red_fill"></li>
-                            <li class="color color_orange_fill color_fill__selected"></li>
-                            <li class="color color_yellow_fill"></li>
-                            <li class="color color_pink_fill"></li>
-                            <li class="color color_white_fill"></li>
-                            <li class="color color_green_fill"></li>
-                            <li class="color color_black_fill"></li>
-                            <li class="color color_turquoise_fill"></li>
-                            <li class="color color_blue_fill"></li>
-                        </ul><!-- fin container_palette-fill -->
-                    </div><!-- fin container_palette -->
-                </div><!-- fin container_global-palettes -->
+        <div class="container">
+        <button class="btn_palette-blue"></button>
+        </div>
+
+        <div class="container_btn-palette-test">
+        <ul class="container_btns-palette">
+            <li class="fill"><a data-color="color_orange_fill" class="fill-btn" href="#tabs-1"></a></li>
+            <li class="outline"><a class="outline-btn" href="#tabs-2">
+                <svg class="mini_logo-palette" width="45px" height="50px" viewBox="0 0 45 51">
+                    <g id="12" transform="translate(-466.000000, -190.000000)">
+                    <path d="M478.268826,202.478778 C483.919252,196.724209 493.080397,196.724209 498.730823,202.478778 C504.381248,208.233347 504.381248,217.563341 498.730823,223.31791 C493.080397,229.072479 483.919252,229.072479 478.268826,223.31791 C472.618401,217.563341 472.618401,208.233347 478.268826,202.478778 L478.268826,202.478778 Z M504.41003,229.101791 C513.196306,220.152861 513.197008,205.643826 504.41003,196.695611 C495.644816,187.76813 481.354833,187.76813 472.589619,196.695611 C463.803343,205.643826 463.803343,220.152861 472.590321,229.101791 C476.102444,232.678646 480.486455,234.824903 485.045266,235.542704 C486.702696,235.802943 488.242189,236.572936 489.427873,237.780473 L492.196575,240.60092 C492.451402,240.860444 492.86418,240.860444 493.119007,240.60092 L504.41003,229.101791 Z" id="Fill-1"></path>
+                    </g>
+                </svg></a></li>
+        </ul>
+        <ul id="tabs-1">
+            <li class="color-fill"data-color="color_red_fill"></li>
+            <li class="color-fill color-selected" data-color="color_orange_fill"></li>
+            <li class="color-fill"data-color="color_yellow_fill"></li>
+            <li class="color-fill"data-color="color_pink_fill"></li>
+            <li class="color-fill"data-color="color_white_fill"></li>
+            <li class="color-fill"data-color="color_green_fill"></li>
+            <li class="color-fill"data-color="color_black_fill"></li>
+            <li class="color-fill"data-color="color_turquoise_fill"></li>
+            <li class="color-fill"data-color="color_blue_fill"></li>
+        </ul>
+        <ul id="tabs-2">
+            <li class="color-outline"data-bg="color_red_outline" data-outline="color_red_outline" data-fill="color_red_outline"></li>
+            <li class="color-outline"data-bg="color_orange_outline"data-outline="color_orange_outline"data-fill="color_orange_outline"></li>
+            <li class="color-outline"data-bg="color_yellow_outline"data-outline="color_yellow_outline" data-fill="color_yellow_outline"></li>
+            <li class="color-outline"data-bg="color_pink_outline"data-outline="color_pink_outline"data-fill="color_pink_outline"></li>
+            <li class="color-outline"data-bg="color_white_outline"data-outline="color_white_outline" data-fill="color_white_outline"></li>
+            <li class="color-outline"data-bg="color_green_outline"data-outline="color_green_outline" data-fill="color_green_outline"></li>
+            <li class="color-outline color-selected"data-bg="color_black_outline" data-outline="color_black_outline" data-fill="color_black_outline"></li>
+            <li class="color-outline"data-bg="color_turquoise_outline"data-outline="color_turquoise_outline" data-fill="color_turquoise_outline"></li>
+            <li class="color-outline"data-bg="color_blue_outline"data-outline="color_blue_outline"data-fill="color_blue_outline"></li>
+        </ul>
+        </div> <!-- container_btn-palette-test-->
+
             </div><!-- fin section left-header-->
 
             <div class="section-left-main">
@@ -115,7 +113,7 @@
                             <circle id="bcgGrad" class="drag-zone" cx="157.5" cy="157.5" r="157.5" fill="#f39411" />
 
                             <!-- fill -->
-                            <svg x="52.25" y="50" width="209px" height="236px" viewBox="0 0 209 236" fill="#2E2E2E">
+                            <svg class="drag-zone_logo-badge"x="52.25" y="50" width="209px" height="236px" viewBox="0 0 209 236" fill="#2E2E2E">
                                 <g id="11" transform="translate(-153.000000, -285.000000)">
                                 <g id="Group" transform="translate(127.000000, 260.000000)">
                                     <path d="M83.3708501,83.3228875 C109.541515,56.6698706 151.972521,56.6698706 178.143186,83.3228875 C204.313851,109.975904 204.313851,153.188958 178.143186,179.841975 C151.972521,206.494992 109.541515,206.494992 83.3708501,179.841975 C57.2001855,153.188958 57.2001855,109.975904 83.3708501,83.3228875 L83.3708501,83.3228875 Z M204.447159,206.630757 C245.141908,165.18265 245.14516,97.9822123 204.447159,56.5374168 C163.849952,15.1886502 97.6640842,15.1886502 57.0668773,56.5374168 C16.3721279,97.9822123 16.3721279,165.18265 57.0701287,206.630757 C73.3369737,223.197417 93.64208,233.138075 114.756789,236.462665 C122.433388,237.667995 129.563748,241.234314 135.055393,246.827176 L147.878986,259.890432 C149.059251,261.09245 150.971085,261.09245 152.151349,259.890432 L204.447159,206.630757 Z" id="Fill-1"></path>
