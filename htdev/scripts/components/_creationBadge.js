@@ -6,22 +6,43 @@ $('.box_item').on('click', function(){
   $('.box_item').removeClass('selected');
   $('.box_thumbnail').removeClass('selected');
   $('.delete_cross').addClass('hidden');
-  $(this).children('.delete_cross').removeClass('hidden')  
- 
+  $(this).children('.delete_cross').removeClass('hidden');
+    
   if(!$(this).hasClass('active')){
+    // Cloner le svg et lui ajouter un data item
+    var cloneSvg = $(this).children('svg').clone()
+    cloneSvg = cloneSvg.data("item", itemClass);
 
-    var cloneSvg = $(this).children('svg').clone().data("item", itemClass);
-    var cloneSvgHtml = $('<div>').append($(cloneSvg).clone()).html();
-    cloneSvg.addClass('drag').insertBefore('#light-grad').draggable();
+    // Svg du thumbnail
+    var thumbnailSvg = $('<div>').append($(cloneSvg)).html();
 
-    $(this).children('svg').clone().appendTo('.badge-svg');
+    // Ajouter la classe drag + les attributs au Svg du badge
+    var badgeSvg = cloneSvg.addClass('drag');
+    badgeSvg = badgeSvg.attr('width', '30%');
+    badgeSvg = badgeSvg.attr('x', '35%');
+    badgeSvg = badgeSvg.draggable().on('drag', function(event, ui){
+      // update coordinates manually, since top/left style props don't work on SVG
+      event.target.setAttribute('x', ui.position.left - addSvg.data('osX') + addSvgX);
+      event.target.setAttribute('y', ui.position.top - addSvg.data('osY'));
+    });
+    
+    //.insertBefore('#light-grad').draggable();
 
-    $('<li class="box_thumbnail selected '+itemClass+'" data-item="'+itemClass+'">'+cloneSvgHtml+'</li>').appendTo('.container_items_thumbnail');
+    var addSvg = badgeSvg.appendTo('.badge-svg');
+    addSvg.data('osX', addSvg.offset().left);
+    addSvg.data('osY', addSvg.offset().top);
+    addSvgX = 315 * parseFloat(addSvg.attr('x')) / 100;
+
+    console.log(addSvgX)
+
+
+    $('<li class="box_thumbnail selected" data-item="'+itemClass+'">'+thumbnailSvg+'</li>').appendTo('.container_items_thumbnail');
+
     $(this).addClass('active selected');
     $('.btn_trash').removeAttr('hidden');
   }
   else{
-    $(this).add('.box_thumbnail.'+itemClass+'').addClass('selected');
+    $(this).add('.box_thumbnail[data-item='+itemClass+']').addClass('selected');
   }
 
   highLighter($(this));
@@ -42,7 +63,7 @@ $('main').droppable({
 })
 
 // Zone de drop - intérieur du badge
-$('.drag-zone').droppable({
+$('.container_badge').droppable({
   accept: ".drag",
   greedy: true,
   over: function(event, ui){
@@ -108,8 +129,6 @@ $('.btn_trash, .delete_cross').on('click', function(event){
 // Mettre en avant l'item manipulable
 function highLighter(item){
   var itemClass = item.attr('data-item');
-  $('.drag').css("zIndex", '1');
-  $('.drag.'+itemClass+'').css("zIndex", '10');
 }
 
 // Disparition de la poubelle quand il n'y a plus d'éléments

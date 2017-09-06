@@ -1,19 +1,6 @@
-.drop-zone {
-  position : relative;
-
-}
-
 .container_badge {
-  position : relative;
   width : 315px; height : 315px;
   margin : 0 auto;
-  
-  div {
-    position : absolute;
-    left : 0;
-    width : 100%; height : 100%;
-    border-radius: 100%;
-  }
 }
 
 .drag-zone {
