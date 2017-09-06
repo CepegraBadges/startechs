@@ -280,6 +280,22 @@ background-image: linear-gradient(45deg, #F0302B 0%, #EF2F47 100%);
   background : url('images/trash.svg') no-repeat 50% 50%;
 }
 
+/* CROSS BUTTON */
+.delete_cross{
+  width: 42px;
+  height: 42px;
+  background: #fff;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 10;
+  bottom: 5%;
+  right: 5%;
+  background-image: url('images/cross.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.11);
+}
+
 /* SHARE BUTTONS */
 $bg: #F2F2F2;
 

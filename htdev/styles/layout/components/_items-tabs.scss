@@ -51,7 +51,8 @@
                     position: absolute;
                     content:'';
                     display: block;
-                    border: 5px solid transparent;
+                    border-width : 5px;
+                    border-style : solid;
                     -moz-border-image: $color_active_blue_gradiant;
                     -webkit-border-image: $color_active_blue_gradiant;
                     border-image: $color_active_blue_gradiant;  
