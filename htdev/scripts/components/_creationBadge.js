@@ -80,6 +80,8 @@ $('.container_items_thumbnail').on("click", ".box_thumbnail", function(){
   var itemClass = $(this).attr("data-item");
   $('.box_thumbnail, .box_item').removeClass('selected');
   $('[data-item='+itemClass+']').addClass('selected');
+  $('.delete_cross').addClass('hidden');
+  $('.box_item[data-item='+itemClass+']').children('.delete_cross').removeClass('hidden');
   highLighter($(this));
 });
 
