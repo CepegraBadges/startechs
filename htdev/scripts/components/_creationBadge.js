@@ -19,10 +19,11 @@ $('.box_item').on('click', function(){
     // Ajouter la classe drag + les attributs au Svg du badge
     var badgeSvg = cloneSvg.addClass('drag');
     badgeSvg = badgeSvg.attr('width', '30%');
-    badgeSvg = badgeSvg.attr('x', '35%');
+    badgeSvg = badgeSvg.attr('x', '0');
+    badgeSvg = badgeSvg.attr('y', '0');
     badgeSvg = badgeSvg.draggable().on('drag', function(event, ui){
       // update coordinates manually, since top/left style props don't work on SVG
-      event.target.setAttribute('x', ui.position.left - addSvg.data('osX') + addSvgX);
+      event.target.setAttribute('x', ui.position.left - addSvg.data('osX'));
       event.target.setAttribute('y', ui.position.top - addSvg.data('osY'));
     });
     
@@ -49,6 +50,7 @@ $('.box_item').on('click', function(){
 })
 
 // Zone de drop - trash à l'extérieur du badge
+/*
 $('main').droppable({
   accept : ".drag",
   hoverClass : "active-trash",
@@ -61,8 +63,9 @@ $('main').droppable({
     hiddenTrash();
   }
 })
-
+*/
 // Zone de drop - intérieur du badge
+/*
 $('.container_badge').droppable({
   accept: ".drag",
   greedy: true,
@@ -73,6 +76,7 @@ $('.container_badge').droppable({
     $(ui.draggable).addClass('hover-trash').css("background", "green");
   }
 })
+*/
 
 // Click sur le reset - activation shake + popup
 $( ".btn_reset" ).on('click', function(){
