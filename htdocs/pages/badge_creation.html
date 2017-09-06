@@ -92,8 +92,48 @@
                     <div class="drop-zone">
                         <!-- BADGE -->
                         <div class="container_badge">
-                          <div class="drag-zone"></div>
-                          <div class="light-badge1"></div>
+                          <svg class="badge-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%">
+                            <!-- gradients -->
+                            <defs>
+                                <!-- background gradient -->
+                                <!--
+                                <linearGradient id="bcgGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:rgb(255,255,0)" />
+                                <stop offset="100%" style="stop-color:rgb(255,0,0)" />
+                                </linearGradient>
+                                -->
+                                <!-- light gradient -->
+                                
+                                <linearGradient id="light-grad" x1="100%" y1="85%" x2="0%" y2="15%" > 
+                                <stop offset="0" style="stop-color:white" stop-opacity="0" />
+                                <stop offset="1" style="stop-color:white" />
+                                </linearGradient> 
+                               
+                            </defs>
+
+                            <!-- background -->
+                            <circle id="bcgGrad" class="drag-zone" cx="157.5" cy="157.5" r="157.5" fill="#f39411" />
+
+                            <!-- fill -->
+                            <svg x="52.25" y="50" width="209px" height="236px" viewBox="0 0 209 236" fill="#2E2E2E">
+                                <g id="11" transform="translate(-153.000000, -285.000000)">
+                                <g id="Group" transform="translate(127.000000, 260.000000)">
+                                    <path d="M83.3708501,83.3228875 C109.541515,56.6698706 151.972521,56.6698706 178.143186,83.3228875 C204.313851,109.975904 204.313851,153.188958 178.143186,179.841975 C151.972521,206.494992 109.541515,206.494992 83.3708501,179.841975 C57.2001855,153.188958 57.2001855,109.975904 83.3708501,83.3228875 L83.3708501,83.3228875 Z M204.447159,206.630757 C245.141908,165.18265 245.14516,97.9822123 204.447159,56.5374168 C163.849952,15.1886502 97.6640842,15.1886502 57.0668773,56.5374168 C16.3721279,97.9822123 16.3721279,165.18265 57.0701287,206.630757 C73.3369737,223.197417 93.64208,233.138075 114.756789,236.462665 C122.433388,237.667995 129.563748,241.234314 135.055393,246.827176 L147.878986,259.890432 C149.059251,261.09245 150.971085,261.09245 152.151349,259.890432 L204.447159,206.630757 Z" id="Fill-1"></path>
+                                </g>
+                                </g>
+                            </svg>
+
+                            <!-- item -->
+                            <svg x="35%" y="0%" fill="#212121" alt="eye4" class="item_eye_4 item-badge drag" width="30%" viewBox="0 0 83.58 30.1">
+                                <path class="cls-1" d="M81.26,7.75C74.47-2.75,52-1.88,47.9,6.15c-2.8,5.43,3.21,13.35,4.16,14.61,4.23,5.58,12.68,11.22,21,8.74,1-.29,6.66-2.1,9.28-7.78A15,15,0,0,0,81.26,7.75Zm-78.95,0a15,15,0,0,0-1.07,14c2.61,5.68,8.3,7.49,9.27,7.78,8.32,2.48,16.77-3.16,21-8.74.95-1.25,7-9.17,4.16-14.61C31.55-1.88,9.11-2.75,2.32,7.75ZM42.15,3.41c-2.91-.11-5.23,2.85-5,3.27s1.89-1,4.81-1c2.75,0,4.35,1.22,4.55.86S44.78,3.5,42.15,3.41Z"/>
+                            </svg>
+
+                            <!-- light -->
+                            
+                            <circle id="light-grad" class="light-badge" cx="157.5" cy="157.5" r="157.5" fill="url(#light-grad)" style="mix-blend-mode:soft-light" />
+                            
+
+                            </svg>
                         </div>
 
                         <button class="btn btn_photo btn_photo__take"></button>
