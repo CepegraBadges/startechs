@@ -7,7 +7,7 @@
   position : relative;
   width : 315px; height : 315px;
   margin : 0 auto;
-  
+
   div {
     position : absolute;
     left : 0;
@@ -42,5 +42,9 @@
     overflow : hidden;
     transform : scale(0, 0);
   }
+}
+
+#text-badge{
+  font-family: "ralewayextrabold";
 }
 

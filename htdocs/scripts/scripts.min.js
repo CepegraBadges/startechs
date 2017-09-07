@@ -11,7 +11,7 @@ $(function() {
      $('.parameters').remove('hidden');
    }
  })
- 
+
 
  /* ANIM INPUT PSEUDO + MAIL */
  myInput = document.querySelectorAll(".input_login");
@@ -23,7 +23,7 @@ $(function() {
  }
 
   $( ".section-right" ).tabs();
-  
+
   $('.link_container_tab').on('click', function(){
     $('.link_container_tab').removeClass('active-tabs');
     $(this).addClass('active-tabs');
@@ -33,7 +33,7 @@ $(function() {
     $(this).addClass('selected');
   })
 
-  // PALETTE COULEUR 
+  // PALETTE COULEUR
 
   $( ".container_btn-palette-test" ).tabs();
   $(".container_btn-palette-test").hide();
@@ -78,6 +78,17 @@ $(function() {
       //alert(this.value.length);
     });
   }
+
+  // TEXT BAGDE
+
+  myInput = $(".input_name-badge");
+  myTxtCircle = $("#myPath");
+  myInput.on('keyup', function() {
+    myTxtCircle.text($(this).val());
+  })
+
+$(".input_name-badge").prop('maxLength', 20);
+
 
   //@prepros-append components/_photo.js
   //@prepros-append components/_print-and-share.js
