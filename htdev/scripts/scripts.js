@@ -33,6 +33,7 @@ $(function() {
     $(this).addClass('selected');
   })
 
+
   // PALETTE COULEUR 
 
   $( ".container_btn-palette-test" ).tabs();
@@ -69,18 +70,9 @@ $(function() {
   });
 
 
-
-  /* ANIM INPUT PSEUDO + MAIL */
-  myInput = document.querySelectorAll(".input_login");
-  for (element of myInput) {
-    element.addEventListener("keyup", function() {
-      this.size = this.value.length;
-      //alert(this.value.length);
-    });
-  }
-
   //@prepros-append components/_photo.js
   //@prepros-append components/_print-and-share.js
   //@prepros-append components/_creationBadge.js
   //@prepros-append components/_admin.js
+  //@prepros-append components/_touchnpunch.js
 });
