@@ -86,7 +86,8 @@ ul{
 }
 
 //// CREATION--------------------------
-.container_pseudo{
+.input_name-badge{
+    font-family: 'Avenir Next LT Pro Demi Italic';
     ::placeholder{
         font-family: 'Avenir Next LT Pro Demi Italic';
     }
@@ -94,6 +95,12 @@ ul{
 
 .btn_photo-parameters, .category_tab{
         font-family: 'Avenir Next LT Pro Demi';
+}
+
+.link_container_tab{
+    font-family: 'Avenir Next LT Pro Bold';
+    color: $color_dark_font;
+    letter-spacing: 1px;
 }
 
 
@@ -138,6 +145,9 @@ font-family: 'Avenir Next LT Pro Italic';
  padding-top: 25px;
 }
 
+
+
+
 //----------------------------- BADGE CREATION POSITIONNEMENT ------------------------//
 
 //----------------------- SECTION LEFT
@@ -154,19 +164,20 @@ section{
 }
 
 .section-left-main, .section-left-main-bottom, .section-left_header{
-    padding: 1.5rem 3rem;
+    padding: 1.3rem 3rem;
 }
 
-.section-left-main {
-  margin-top : 15px;
+.section-left-main, .container_global_thumbnail_btn {
+  margin-top : 13px;
 }
+
 
 //----- SECTION L HEADER
 
 .section-left_header{
     display: flex;
     justify-content: space-between;
-    padding-top: 2rem;
+    padding-top: 1.4rem;
     background-color: $color_h1;
 }
 
@@ -189,6 +200,7 @@ section{
 
 .input_name-badge{
     border: none;
+    border-radius: 0;
     padding-bottom: 0.5rem;
     background: none;
     color: $color_dark_font;

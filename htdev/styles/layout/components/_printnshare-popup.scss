@@ -80,10 +80,11 @@
 
         }
     }
+}
 
     .bop{
 
-                    animation: bop .8s ;
+                    animation: bop 1s ;
                     
                     /* Safari 4.0 - 8.0 */
                     @-webkit-keyframes bop {
@@ -99,4 +100,11 @@
                         100% {transform: scale(1);}
                     }
     }
-}
+
+    .container_print-and-share__fade-in:before{
+
+            -webkit-transition: bop 3s; /* Safari */
+            -webkit-transition-delay: 1s; /* Safari */
+            transition: bop 3s;
+            transition-delay: 1s;
+    }

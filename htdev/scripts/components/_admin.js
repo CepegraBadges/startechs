@@ -1,7 +1,7 @@
 $(function() {
-        var myButton = document.querySelector('#admin_login'); 
-
-	myButton.onclick = function (event){ 
+        var myButton =$('#admin_login'); 
+        // console.log(myButton);
+	myButton.on('click', function (event){ 
 		event.preventDefault(); 
 
 		myLogField = document.querySelector('#admin_pseudo'); 
@@ -31,31 +31,50 @@ $(function() {
 		else{
 			alert("Attention! L'identifiant ou le mot de passe est incorrect")
 		}
-	};
+	});
 
-    var check = localStorage.getItem("#switch-shadow");
 
-    if (check !== null) {
-        $("#switch-shadow").attr("checked", "checked");
-    }
     // Apparition input drive
     $(".input_drive").hide();
-    $("#switch-shadow").click(function(){
+    $("#switch-shadow").on('click', function(){
         $(".input_drive").toggle();
         if( $("#switch-shadow").is(':checked') ){
-            $("#switch-shadow").change($(".etat").html('activé')); // changement de txt
-            // localStorage.setItem("#switch-shadow", $(this).val());
-            // localStorage.setItem("checkbox_value", true);
+            $(".etat").html('activé'); // changement de txt
+            $('.container_print, .li_pop_1').css("visible", "visible");
         }else{ 
-            $("#switch-shadow").change($(".etat").html('désactivé'));
-            // localStorage.removeItem("#switch-shadow");
+            $(".etat").html('désactivé');
+             $('.container_print, .li_pop_1').css("visible", "hidden");
         }
     });
 
-    // localstorage mode impression ON/OFF
+// EMAIL verfication
+$("#email").focusout(function() {
+    var myRegex = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
+
+    if(!myRegex.test(this.value)){
+                $('.btn_start').addClass("active");
+                console.log('bad')
+                return false;
+              }
+              else{
+                $('.btn_start').removeClass("active");
+                console.log('bon')
+                return true;
+              }
+            });
 
 });
 
-// $( document ).ready(){
-//     localStorage.getItem(key)
+// function save() {	
+// 	var checkbox = document.getElementById("#switch-shadow");
+//     localStorage.setItem("print", checkbox.checked);	
 // }
+
+// //for loading
+// var checked = JSON.parse(localStorage.getItem("#switch-shadow"));
+//     document.getElementById("#switch-shadow").checked = checked;
+
+//     save();
+
+
+

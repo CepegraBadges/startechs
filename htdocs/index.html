@@ -56,7 +56,7 @@
                 <img src="images/logo-cepegra.svg" alt="Logo du Centre de Compétences Cepegra" class="logo">
             </h1>
         </header>
-        <form action="" method="post">
+        <form id="Verif" name="Verif" action="" method="post" onSubmit="return VerifMail();">
             <div>
                 <h2 class="title_index">Badge-toi !</h2>
                 <div class="form form_pseudo">
@@ -65,7 +65,7 @@
                 </div>
                 <div class="form form_email">
                     <label for="">Votre email</label>
-                    <input type="email" name="email" size="17" placeholder="user@cepegra.com" class="input_login">
+                    <input type="email" id="email" name="email" size="17" placeholder="user@cepegra.com" class="input_login" required aria-required="true">
                 </div>
             </div>
             <a href="pages/badge_creation.html" class="btn_arcade btn_start active">Go</a>
@@ -74,7 +74,7 @@
 </main>
 
     <script src="https://use.fontawesome.com/fb946b7104.js"></script>
-    <script
+<script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>

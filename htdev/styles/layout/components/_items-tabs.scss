@@ -3,25 +3,29 @@
     .container_palette-photo__hidden{
         display: none;
     }
+
+
     .container_categories{
-        background-color: $color_b2;
+        background-color: $color_h2;
         margin:0;
         display: flex;
         justify-content: space-around;
-        padding: 30px 0;
+        padding: 34px 0;
+        position: relative;
         li{
-            width: 20%;
+            // width: 20%;
             outline: none;
             text-align: center;
+            
             a{
             text-decoration: none;
-            color : black;
             padding-bottom : 5px;
             &.active-tabs{
             background: $color_active_blue_gradiant;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            border-bottom : 2px solid blue; 
+            // border-bottom : 2.5px solid $color_active_font;
+            // border-radius: 1px;
             }
                 &:focus{
                 outline : none;
@@ -29,13 +33,39 @@
             }
         }
     } // container_categories
+
+    hr {
+    position:absolute;
+    left: 28px;;
+  height: .2rem;
+  width: 8.1%;
+  bottom:26px;
+  margin: 0;
+  background: $color_active_blue_gradiant;
+  border: none;
+  transition: .3s ease-in-out;
+      &:after {
+      content: '';
+      position: absolute;
+      top: 2px;;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 4px;
+      outline: 1px solid #F03A00;
+      opacity: .2;
+      filter: blur(2px);
+      transform: translate(1px,6px);
+    }
+}
+
     .container_items{
         display: flex;
         flex-wrap: wrap;
         .box_item{
             width: 33%;
             height: 160px;
-            border : 1px solid $color_light_grey;
+            border : .5px solid #E9E9E9;
             position : relative;
             &.active{
                 background: $color_light_blue;
