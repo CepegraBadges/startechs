@@ -35,7 +35,6 @@ $(function() {
 
 
   // PALETTE COULEUR 
-
   $( ".container_btn-palette-test" ).tabs();
   $(".container_btn-palette-test").hide();
   $(".container").click(function(){
@@ -67,6 +66,14 @@ $(function() {
     var itemClass = $(this).attr("data-outline");
     $('#tabs-1, .color-outline').removeClass('color-selected');
     $(this).add('.color-outline.'+itemClass+'').addClass('color-selected');
+  });
+
+  /* SCROLL THUMBNAILS */
+  $('.container_global_thumbnail_btn').on('mousewheel', function(event, delta) {
+    alert('ok')
+    event.preventDefault();
+    this.scrollLeft -= (delta * 10);
+    return false;
   });
 
 
