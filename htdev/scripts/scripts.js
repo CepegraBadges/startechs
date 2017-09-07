@@ -74,5 +74,4 @@ $(function() {
   //@prepros-append components/_print-and-share.js
   //@prepros-append components/_creationBadge.js
   //@prepros-append components/_admin.js
-  //@prepros-append components/_touchnpunch.js
 });
