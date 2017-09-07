@@ -11,7 +11,8 @@
     box-shadow: 2px 2px 30px 2px $color_dark_font;
     p:nth-child(1){
         color: $color_red;
-        border: 2px solid transparent;
+        border: 2px;
+        border-style : solid;
         -moz-border-image: $color_red_gradiant;
         -webkit-border-image: $color_red_gradiant;
         border-image: $color_red_gradiant;

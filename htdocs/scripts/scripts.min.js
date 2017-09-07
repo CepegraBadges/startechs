@@ -69,10 +69,10 @@ $(function() {
   });
 
   /* SCROLL THUMBNAILS */
-  $('.container_global_thumbnail_btn').on('mousewheel', function(event, delta) {
-    alert('ok')
+  $('.container_global_thumbnail').on('mousewheel', function(event, delta) {
+    //alert('ok')
     event.preventDefault();
-    this.scrollLeft -= (delta * 10);
+    this.scrollLeft -= (delta * 20);
     return false;
   });
 
