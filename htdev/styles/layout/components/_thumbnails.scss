@@ -4,33 +4,15 @@
     .container_global_thumbnail{
         margin : 20px 0;
         display: flex;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
         direction: rtl;
         width: 305px;
         position: relative;
-        overflow-x : scroll;
-        white-space:nowrap;
-        ::-webkit-scrollbar {
-    -webkit-appearance: none;
-}
-
-::-webkit-scrollbar:vertical {
-    width: 12px;
-}
-
-::-webkit-scrollbar:horizontal {
-    height: 12px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, .5);
-    border-radius: 10px;
-    border: 2px solid #ffffff;
-}
-
-::-webkit-scrollbar-track {
-    border-radius: 10px;  
-    background-color: #ffffff; 
-}
+        &::-webkit-scrollbar { 
+            position: absolute;
+            display: none;
+        }
         .container_items_thumbnail{
             background: lightgrey; 
             height: 70px;
