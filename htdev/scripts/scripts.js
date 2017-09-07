@@ -12,7 +12,6 @@ $(function() {
    }
  })
 
-
  /* ANIM INPUT PSEUDO + MAIL */
  myInput = document.querySelectorAll(".input_login");
  for (element of myInput) {
@@ -68,8 +67,6 @@ $(function() {
     $(this).add('.color-outline.'+itemClass+'').addClass('color-selected');
   });
 
-
-
   /* ANIM INPUT PSEUDO + MAIL */
   myInput = document.querySelectorAll(".input_login");
   for (element of myInput) {
@@ -88,7 +85,6 @@ $(function() {
   })
 
 $(".input_name-badge").prop('maxLength', 20);
-
 
   //@prepros-append components/_photo.js
   //@prepros-append components/_print-and-share.js
