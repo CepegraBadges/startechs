@@ -10,7 +10,7 @@ $('.box_item').on('click', function(){
     
   if(!$(this).hasClass('active')){
     // Cloner le svg et lui ajouter un data item
-    var cloneSvg = $(this).children('svg').clone()
+    var cloneSvg = $(this).children('svg').clone();
     cloneSvg = cloneSvg.data("item", itemClass);
 
     // Svg du thumbnail
@@ -19,16 +19,15 @@ $('.box_item').on('click', function(){
     // Ajouter la classe drag + les attributs au Svg du badge
     var badgeSvg = cloneSvg.addClass('drag');
     badgeSvg = badgeSvg.attr('width', '30%');
-    badgeSvg = badgeSvg.attr('x', '0');
-    badgeSvg = badgeSvg.attr('y', '0');
+    badgeSvg = badgeSvg.attr('x', '110');
+    badgeSvg = badgeSvg.attr('y', '-20');
     badgeSvg = badgeSvg.draggable().on('drag', function(event, ui){
       // update coordinates manually, since top/left style props don't work on SVG
-      event.target.setAttribute('x', ui.position.left - addSvg.data('osX'));
-      event.target.setAttribute('y', ui.position.top - addSvg.data('osY'));
+      event.target.setAttribute('x', ui.position.left - addSvg.data('osX') + 110);
+      event.target.setAttribute('y', ui.position.top - addSvg.data('osY') -20);
     });
-    
-    //.insertBefore('#light-grad').draggable();
 
+    //.insertBefore('#light-grad').draggable();
     var addSvg = badgeSvg.appendTo('.badge-svg');
     addSvg.data('osX', addSvg.offset().left);
     addSvg.data('osY', addSvg.offset().top);
@@ -50,33 +49,28 @@ $('.box_item').on('click', function(){
 })
 
 // Zone de drop - trash à l'extérieur du badge
-/*
-$('main').droppable({
+$('body').droppable({
   accept : ".drag",
   hoverClass : "active-trash",
   drop: function(event, ui){
     var dragClass = $(ui.draggable).data("item");
-    $('.box_thumbnail.'+dragClass+'').remove();
+    // $('.box_thumbnail.'+dragClass+'').remove();
     $(ui.draggable).remove();
     $('[data-item='+dragClass+']').removeClass('active selected');
     $('[data-item='+dragClass+'] .delete_cross').addClass('hidden');
+    $('.box_thumbnail[data-item='+dragClass+']').remove();
+
     hiddenTrash();
   }
 })
-*/
+
+
 // Zone de drop - intérieur du badge
-/*
-$('.container_badge').droppable({
+$('.badge-svg').droppable({
   accept: ".drag",
-  greedy: true,
-  over: function(event, ui){
-    $(ui.draggable).removeClass('hover-trash').css("background", "red");
-  },
-  out: function(event, ui){
-    $(ui.draggable).addClass('hover-trash').css("background", "green");
-  }
+  greedy: true
 })
-*/
+
 
 // Click sur le reset - activation shake + popup
 $( ".btn_reset" ).on('click', function(){
@@ -91,6 +85,7 @@ $( ".answer-yes" ).on('click', function(){
   $('.drag').remove();
   $(".background-popup, .popup").attr("hidden", true);
   $('.delete_cross:not(.hidden)').addClass('hidden');
+
   hiddenTrash();
 });
 
@@ -107,6 +102,7 @@ $('.container_items_thumbnail').on("click", ".box_thumbnail", function(){
   $('[data-item='+itemClass+']').addClass('selected');
   $('.delete_cross').addClass('hidden');
   $('.box_item[data-item='+itemClass+']').children('.delete_cross').removeClass('hidden');
+
   highLighter($(this));
 });
 

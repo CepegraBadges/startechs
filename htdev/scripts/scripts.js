@@ -33,17 +33,11 @@ $(function() {
     $(this).addClass('selected');
   })
 
-  /* ANIM INPUT PSEUDO + MAIL */
-  myInput = document.querySelectorAll(".input_login");
-  for (element of myInput) {
-    element.addEventListener("keyup", function() {
-      this.size = this.value.length;
-      //alert(this.value.length);
-    });
-  }
+  /* TOUCH SCROLL */
+
 
   //@prepros-append components/_photo.js
   //@prepros-append components/_print-and-share.js
   //@prepros-append components/_creationBadge.js
-
+  //@prepros-append components/_touchnpunch.js
 });
