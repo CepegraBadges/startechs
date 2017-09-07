@@ -7,12 +7,6 @@
   background-image: linear-gradient(145deg, #FFFFFF 1%, rgba(255,255,255,0.00) 100%);
 }
 
-.container_photo {
-  position : absolute;
-  left : 40%;
-  top : 58%;
-}
-
 .container_photo-parameters {
   position : absolute;
   z-index : 20;
@@ -36,5 +30,10 @@
 }
 
 
+}
+.container_photo {
+  position : absolute;
+  left : 40%;
+  top : 58%;
 }
 
