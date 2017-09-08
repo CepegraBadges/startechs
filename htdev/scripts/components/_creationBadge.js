@@ -11,29 +11,40 @@ $('.box_item').on('click', function(){
   if(!$(this).hasClass('active')){
     // Cloner le svg et lui ajouter un data item
     var cloneSvg = $(this).children('svg').clone();
+    // Récupération des datas
+    var svgWidth = cloneSvg.attr('data-width');
+    var svgX = cloneSvg.attr('data-x');
+    var svgY = cloneSvg.attr('data-y');
+
     cloneSvg = cloneSvg.data("item", itemClass);
 
     // Svg du thumbnail
     var thumbnailSvg = $('<div>').append($(cloneSvg)).html();
 
     // Ajouter la classe drag + les attributs au Svg du badge
-    var badgeSvg = cloneSvg.addClass('drag');
-    badgeSvg = badgeSvg.attr('width', '30%');
-    badgeSvg = badgeSvg.attr('x', '110');
-    badgeSvg = badgeSvg.attr('y', '-20');
+    var badgeSvg = cloneSvg.addClass('drag '+itemClass+'');
+    badgeSvg = badgeSvg.attr('width', svgWidth);
+    badgeSvg = badgeSvg.attr('x', svgX);
+    badgeSvg = badgeSvg.attr('y', svgY);
+    badgeSvg = badgeSvg.attr('fill', $('.drag-zone_logo-badge').css('fill'))
     badgeSvg = badgeSvg.draggable().on('drag', function(event, ui){
       // update coordinates manually, since top/left style props don't work on SVG
-      event.target.setAttribute('x', ui.position.left - addSvg.data('osX') + 110);
-      event.target.setAttribute('y', ui.position.top - addSvg.data('osY') -20);
+      event.target.setAttribute('x', ui.position.left - addSvg.data('osX') +  parseFloat(svgX));
+      event.target.setAttribute('y', ui.position.top - addSvg.data('osY') + parseFloat(svgY));
     });
 
-    //.insertBefore('#light-grad').draggable();
-    var addSvg = badgeSvg.appendTo('.badge-svg');
+    // Si il y a déjà un élément devant la light, on le met derrière
+    if($('.light-badge').next('.drag').length > 0){
+      $('.light-badge').next('.drag').attr('stroke-width', '0px');
+      $('.light-badge').next('.drag').insertBefore('.light-badge');
+    }
+
+    // On insert le nouvel élément après la light
+    var addSvg = badgeSvg.insertAfter('.light-badge');
+
     addSvg.data('osX', addSvg.offset().left);
     addSvg.data('osY', addSvg.offset().top);
     addSvgX = 315 * parseFloat(addSvg.attr('x')) / 100;
-
-    console.log(addSvgX)
 
 
     $('<li class="box_thumbnail selected" data-item="'+itemClass+'">'+thumbnailSvg+'</li>').appendTo('.container_items_thumbnail');
@@ -43,18 +54,17 @@ $('.box_item').on('click', function(){
   }
   else{
     $(this).add('.box_thumbnail[data-item='+itemClass+']').addClass('selected');
+    highLighter(itemClass);
   }
-
-  highLighter($(this));
 })
 
 // Zone de drop - trash à l'extérieur du badge
-$('body').droppable({
+$('main').droppable({
   accept : ".drag",
   hoverClass : "active-trash",
   drop: function(event, ui){
     var dragClass = $(ui.draggable).data("item");
-    // $('.box_thumbnail.'+dragClass+'').remove();
+    $('.box_thumbnail.'+dragClass+'').remove();
     $(ui.draggable).remove();
     $('[data-item='+dragClass+']').removeClass('active selected');
     $('[data-item='+dragClass+'] .delete_cross').addClass('hidden');
@@ -63,7 +73,6 @@ $('body').droppable({
     hiddenTrash();
   }
 })
-
 
 // Zone de drop - intérieur du badge
 $('.badge-svg').droppable({
@@ -103,7 +112,7 @@ $('.container_items_thumbnail').on("click", ".box_thumbnail", function(){
   $('.delete_cross').addClass('hidden');
   $('.box_item[data-item='+itemClass+']').children('.delete_cross').removeClass('hidden');
 
-  highLighter($(this));
+  highLighter(itemClass);
 });
 
 // Click sur la poubelle pour jeter les éléments sélectionnés
@@ -127,8 +136,9 @@ $('.btn_trash, .delete_cross').on('click', function(event){
 /**** FUNCTIONS ****/
 
 // Mettre en avant l'item manipulable
-function highLighter(item){
-  var itemClass = item.attr('data-item');
+function highLighter(itemClass){
+  $('.light-badge').next('.drag').insertBefore('.light-badge');
+  $('.drag.'+itemClass+'').insertAfter('.light-badge');
 }
 
 // Disparition de la poubelle quand il n'y a plus d'éléments
