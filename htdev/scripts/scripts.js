@@ -86,6 +86,14 @@ $(function() {
 
 $(".input_name-badge").prop('maxLength', 20);
 
+// Print
+
+$('.btn_print').click(function(){
+  $('.badge-svg').print();
+});
+
+
+
   //@prepros-append components/_photo.js
   //@prepros-append components/_print-and-share.js
   //@prepros-append components/_creationBadge.js
