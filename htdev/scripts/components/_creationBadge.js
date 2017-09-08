@@ -71,6 +71,7 @@ $('main').droppable({
     $('.box_thumbnail[data-item='+dragClass+']').remove();
 
     hiddenTrash();
+    autoSelect();
   }
 })
 
@@ -115,9 +116,9 @@ $('.container_items_thumbnail').on("click", ".box_thumbnail", function(){
   highLighter(itemClass);
 });
 
-// Click sur la poubelle pour jeter les éléments sélectionnés
+// Click sur la POUBELLE + CROIX pour jeter les éléments sélectionnés
 $('.btn_trash, .delete_cross').on('click', function(event){
-  event.stopPropagation();
+  event.stopPropagation(dataItem);
   var dataItem = $('.box_thumbnail.selected').attr("data-item");
   $('.box_item.selected').removeClass('active selected');
   $('.box_thumbnail.selected').remove();
@@ -130,6 +131,7 @@ $('.btn_trash, .delete_cross').on('click', function(event){
   })
   
   hiddenTrash();
+  autoSelect();
 });
 
 
@@ -145,5 +147,19 @@ function highLighter(itemClass){
 function hiddenTrash(){
   if($('.box_thumbnail').length == 0){
     $('.btn_trash').attr('hidden', true);
+  }
+}
+
+// Auto séléction 
+function autoSelect(){
+  if($('.container_items_thumbnail').find('li').length > 0){
+    var lastLi = $('.box_thumbnail').last();
+    var lastLiData = lastLi.attr('data-item');
+    var theBox = $('.box_item[data-item='+lastLiData+']');
+    theBox.addClass('selected');
+    theBox.find('.delete_cross').removeClass('hidden');
+
+    lastLi.addClass('selected');
+    highLighter(lastLiData);
   }
 }
