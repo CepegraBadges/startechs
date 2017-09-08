@@ -2,14 +2,6 @@
 // Click sur le bouton valider
 $('.btn_validate').on('click', function(e){
   e.preventDefault();
-  var xml = $.parseXML($(".badge-svg")[0].outerHTML)
-  var s = new XMLSerializer().serializeToString(xml)
-  var encodedData = window.btoa(s);
-  var data = "data:image/svg+xml;base64,"+encodedData;
-  console.log("data:image/png;base64,"+encodedData)
-
-  // Supprimer la light
-  $('linearGradient, .light-badge').remove();
 
   // Couleur du fond + couleur outline
   var bcgColor = $('#bcgGrad').css('fill');
@@ -17,9 +9,22 @@ $('.btn_validate').on('click', function(e){
   var outlineColor = $('.drag-zone_logo-badge').css('fill');
   $('.drag-zone_logo-badge').attr('fill', outlineColor);
 
+/* SVG DANS LE LOCALSTORAGE POUR IMPRESSION */
   // Selectionner le svg conteneur
   var svgDiv = $(".badge-svg");
   var svg = svgDiv[0].outerHTML;
+
+  localStorage.setItem('myBadge', JSON.stringify(svg));
+
+/* SVG TO IMAGE POUR LE SHARE */
+  // Supprimer la light
+  $('linearGradient, .light-badge').remove();
+
+  //Supprimer le textPath
+  $('#myPath').remove();
+
+  svg = svgDiv[0].outerHTML;
+  console.log(svg)
 
   // Selectionner le canvas caché
   var canvas = document.getElementById('hiddenCanvas');
@@ -30,15 +35,10 @@ $('.btn_validate').on('click', function(e){
   // Conversion de l'image en data...
   var theImage = canvas.toDataURL('image/png');
 
-  $('#testImg').attr('src', data);
-
-  //'data:image/svg+xml;base64,'+encodedData
-
   // REQUETE AJAX
-  /*
   $.ajax({
     type: 'POST',
-    url: "script.php",
+    url: "svgToImg.php",
     data: {
       'dataUrl': theImage,
     },
@@ -46,5 +46,4 @@ $('.btn_validate').on('click', function(e){
       location.href='print_and_share.html';
     }
   })
-  */
 });

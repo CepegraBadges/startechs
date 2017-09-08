@@ -120,6 +120,10 @@ $('#pseudo, #mail').on('focusout', function() {
     return false;
   });
 
+  /* PUT SVG IN PRINT AND SHARe */
+    var myBadge = JSON.parse(localStorage.getItem('myBadge'));
+    $(".badge__finished").html(myBadge);
+
 
   //@prepros-append components/_photo.js
   //@prepros-append components/_print-and-share.js
