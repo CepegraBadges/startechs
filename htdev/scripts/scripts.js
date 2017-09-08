@@ -60,7 +60,7 @@ $('#pseudo, #mail').on('focusout', function() {
   })
 
 
-  // PALETTE COULEUR 
+  // PALETTE COULEUR
   $( ".container_btn-palette-test" ).tabs();
   $(".container_btn-palette-test").hide();
   $(".container").click(function(){
@@ -119,6 +119,14 @@ $('#pseudo, #mail').on('focusout', function() {
     this.scrollLeft -= (delta * 20);
     return false;
   });
+
+
+// Print
+
+$('.btn_print').click(function(){
+      $('img').jqprint();
+});
+
 
 
   //@prepros-append components/_photo.js

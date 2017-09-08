@@ -19,7 +19,7 @@
             -webkit-animation: updown 3s infinite;
 
                     animation: updown 3s infinite;
-                    
+
                     /* Safari 4.0 - 8.0 */
                     @-webkit-keyframes updown {
                         0%   {top: 0px;}
@@ -76,4 +76,13 @@
         .btn_facebook{
             @include btn-share-place(30px,160px)
         }
+}
+
+@media print{
+    main, header{
+        display: none;
+    }
+    .badge__finished{
+        display: block;
+    }
 }
