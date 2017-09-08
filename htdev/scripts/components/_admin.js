@@ -48,7 +48,7 @@ $(function() {
     });
 
 // EMAIL verfication
-$("#email").focusout(function() {
+$("#mail").focusout(function() {
     var myRegex = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
 
     if(!myRegex.test(this.value)){
