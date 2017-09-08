@@ -60,6 +60,15 @@ $('#pseudo, #mail').on('focusout', function() {
   })
 
 
+  /* ANIM INPUT PSEUDO + MAIL */
+  myInput = document.querySelectorAll(".input_login");
+  for (element of myInput) {
+    element.addEventListener("keyup", function() {
+      this.size = this.value.length;
+      //alert(this.value.length);
+    });
+  }
+
   // PALETTE COULEUR 
   $( ".container_btn-palette-test" ).tabs();
   $(".container_btn-palette-test").hide();
@@ -80,6 +89,9 @@ $('#pseudo, #mail').on('focusout', function() {
     $(".drag-zone_logo-badge").attr("data-fill", fill);
     $(".btn_palette-blue").attr("data-outline", outline);
     $(".mini_logo-palette").attr("data-fill", fill);
+    $("#cepegra").attr("data-fill", fill);
+    $("#text-badge").attr("data-fill", fill);
+    $(".drag").attr("data-fill", fill);
   })
 
   $('#tabs-1').on("click", ".color-fill", function(){
@@ -94,14 +106,6 @@ $('#pseudo, #mail').on('focusout', function() {
     $(this).add('.color-outline.'+itemClass+'').addClass('color-selected');
   });
 
-  /* ANIM INPUT PSEUDO + MAIL */
-  myInput = document.querySelectorAll(".input_login");
-  for (element of myInput) {
-    element.addEventListener("keyup", function() {
-      this.size = this.value.length;
-      //alert(this.value.length);
-    });
-  }
 
   // TEXT BAGDE
   myInput = $(".input_name-badge");
@@ -119,7 +123,6 @@ $('#pseudo, #mail').on('focusout', function() {
     this.scrollLeft -= (delta * 20);
     return false;
   });
-
 
   //@prepros-append components/_photo.js
   //@prepros-append components/_print-and-share.js
