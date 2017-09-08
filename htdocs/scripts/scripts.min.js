@@ -1,4 +1,9 @@
 $(function() {
+      $("a:not(#shareBtn, btn_start)").on('click', function (event) {
+        event.preventDefault();
+        window.location = $(this).attr("href");
+    });
+
  /* PREVENT SCROLL ON TABLET */
  document.ontouchmove = function(event){
      event.preventDefault();
