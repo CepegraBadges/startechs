@@ -27,3 +27,21 @@ $('.face').on('click', function(){
     $(".text_pop_action").replaceWith("<p class='text_pop text_pop_action'>Ton avatar a bien été publié sur facebook!</p>");
     $(".text_pop_option").replaceWith("<p class='text_pop text_pop_option'>N'oublie pas de te l'envoyer par email</p>");
 });
+
+$('.one').on('click', function(){
+    $('hr').css("left", "28px");
+    $('hr').css("width", "8.1%");
+});
+$('.two').on('click', function(){
+    $('hr').css("left", "125px");
+    $('hr').css("width", "14.5%");
+});
+$('.three').on('click', function(){
+    $('hr').css("left", "254px");
+    $('hr').css("width", "14.1%");
+});
+$('.four').on('click', function(){
+    $('hr').css("left", "381px");
+    $('hr').css("width", "20%");
+});
+
