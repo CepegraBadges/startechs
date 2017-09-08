@@ -72,6 +72,33 @@ $('#admin_delog').on('click', function(){
 
 
 
+
+ // INPUT DANS "VOTRE PRENOM"
+    myButton = document.querySelector(".btn_start");
+    var myLog = document.querySelector("#pseudo");
+    myName = document.querySelector("#myPath");
+    myFinish = document.querySelector(".btn_finish");
+    var myPseudoInput = document.querySelector("#myPath");
+
+    $(myButton).on('click',function(event){
+
+    window.localStorage.setItem("pseudo", myLog.value);
+    });
+
+    $(myFinish).on('click', function(event){
+    event.preventDefault();
+    window.localStorage.removeItem("pseudo", myLog.value);
+    });
+
+    // if (localStorage.getItem('pseudo') != null ) {
+    // myLog.value = localStorage.getItem("pseudo");
+// }
+
+// if (localStorage.getItem("pseudo").length > 0 && myPseudoInput.length > 0){
+//     myPseudoInput.value = localStorage.getItem("pseudo")
+// }
+
+
 // EMAIL verfication
 $("#mail").focusout(function() {
     var myRegex = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
