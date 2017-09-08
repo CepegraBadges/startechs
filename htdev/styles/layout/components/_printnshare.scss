@@ -83,6 +83,12 @@
         display: none;
     }
     .badge__finished{
+        .light-grad{
+            display: none,
+        }
+        margin: 20mm;
         display: block;
+        width: 57.5mm;
+        height: 57.5mm;
     }
 }

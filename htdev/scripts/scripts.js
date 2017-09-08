@@ -124,7 +124,7 @@ $('#pseudo, #mail').on('focusout', function() {
 // Print
 
 $('.btn_print').click(function(){
-      $('img').jqprint();
+      print();
 });
 
 
