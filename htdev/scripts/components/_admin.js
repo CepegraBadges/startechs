@@ -34,18 +34,43 @@ $(function() {
 	});
 
 
-    // Apparition input drive
+var data = localStorage.getItem('print');
+
+console.log(localStorage);
     $(".input_drive").hide();
     $("#switch-shadow").on('click', function(){
         $(".input_drive").toggle();
-        if( $("#switch-shadow").is(':checked') ){
+    });
+
+
+$('#admin_delog').on('click', function(){
+            if( $("#switch-shadow").is(':checked') = (data === true) ){
             $(".etat").html('activé'); // changement de txt
             $('.container_print, .li_pop_1').css("visible", "visible");
+            
         }else{ 
-            $(".etat").html('désactivé');
-             $('.container_print, .li_pop_1').css("visible", "hidden");
+            $(".etat").html('activé');
+            $('.container_print, .li_pop_1').css("visible", "hidden");
         }
-    });
+})
+//      function storebackground(swapstylesheet) {
+//     localStorage.setItem('print', true); //you need to give a key and value
+//  }
+
+//  function loadbackground(args) {
+//     document.getElementById("admin_delog").onclick = localStorage.getItem('print');
+// }
+
+    // if (localStorage.getItem('print') === true){
+    //     $("#switch-shadow").is(':checked')
+    //     console.log(localStorage);
+    //     console.log('ok');
+    // }else{
+    //     console.log(localStorage);
+    //     console.log('pas ok')
+    // }
+
+
 
 // EMAIL verfication
 $("#mail").focusout(function() {
@@ -65,16 +90,17 @@ $("#mail").focusout(function() {
 
 });
 
-// function save() {	
-// 	var checkbox = document.getElementById("#switch-shadow");
-//     localStorage.setItem("print", checkbox.checked);	
-// }
+/*
+function save() {	
+	var checkbox = document.getElementById("#switch-shadow");
+    localStorage.setItem("print", checkbox.checked);	
+}
 
-// //for loading
-// var checked = JSON.parse(localStorage.getItem("#switch-shadow"));
-//     document.getElementById("#switch-shadow").checked = checked;
+//for loading
+var checked = JSON.parse(localStorage.getItem("#switch-shadow"));
+    document.getElementById("#switch-shadow").checked = checked;
 
-//     save();
+    save();*/
 
 
 
