@@ -4,19 +4,19 @@ $(function() {
         window.location = $(this).attr("href");
     });
 
-//  /* PREVENT SCROLL ON TABLET */
-//  document.ontouchmove = function(event){
-//      event.preventDefault();
-//  };
+ /* PREVENT SCROLL ON TABLET */
+ $('#swipe').bind("touchmove",function(event){
+     event.preventDefault();
+ });
 
 
  /* SCROLL THUMBNAILS */
-$('.container_global_thumbnail').on('mousewheel', function(event, delta) {
-  //alert('ok')
-  event.preventDefault();
-  this.scrollLeft -= (delta * 20);
-  return false;
-});
+ $('.container_global_thumbnail').on('mousewheel', function(event, delta) {
+   //alert('ok')
+   event.preventDefault();
+   this.scrollLeft -= (delta * 20);
+   return false;
+ });
 
 
  /* SWIPE ADMIN */
