@@ -89,7 +89,7 @@ $(".input_name-badge").prop('maxLength', 20);
 // Print
 
 $('.btn_print').click(function(){
-  $('.badge-svg').print();
+      $('img').jqprint();
 });
 
 

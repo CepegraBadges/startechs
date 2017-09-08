@@ -15,15 +15,17 @@
          <a href="http://localhost:7896/badges/htdocs/index.html" class="btn_finish marge">Terminer</a>
          <h1><img src="../images/logo-cepegra.svg" alt="Logo du Centre de Compétences Cepegra" class="logo"></h1>
      </header>
+
+     <aside>
+        <div class="badge__finished">
+
+        </div>
+
+     </aside>
+
      <main>
          <!-- container principal -->
          <div class="container_print-and-share"><!--blur-->
-             <div class="badge__finished">
-
-
-
-
-             </div>
             <ul class="container_btn-print-and-share">
                 <div class="container_print">
                     <p class="text__pink">presse pour imprimer</p>
@@ -59,6 +61,15 @@
      <script src="../scripts/vendor/dragend.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="../scripts/scripts.min.js"></script>
+    <script language='VBScript'>
+Sub Print()
+       OLECMDID_PRINT = 6
+       OLECMDEXECOPT_DONTPROMPTUSER = 2
+       OLECMDEXECOPT_PROMPTUSER = 1
+       call WB.ExecWB(OLECMDID_PRINT, OLECMDEXECOPT_DONTPROMPTUSER,1)
+End Sub
+document.write "<object ID='WB' WIDTH=0 HEIGHT=0 CLASSID='CLSID:8856F961-340A-11D0-A96B-00C04FD705A2'></object>"
+</script>
 </body>
 </html>
 
