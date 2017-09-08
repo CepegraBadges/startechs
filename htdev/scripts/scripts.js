@@ -13,18 +13,30 @@ $(function() {
  })
  
 
+
+
  /* ANIM INPUT PSEUDO + MAIL */
  myInput = document.querySelectorAll("#pseudo, #mail");
-   $('#pseudo, #mail').on('focusout', function(){
-  if($('#pseudo') || ('#mail').val().length === 0){
-    // $('.input_login').attr('id').addId;
-    $('#pseudo').css('min-width', '120px');
-    $('#mail').css('min-width', '250px');
-  }
- });
+$('#pseudo, #mail').on('focusout', function() {
+    var empty = $(this).parent().find("input").filter(function() {
+        return this.value === "";
+    });
+    if(empty.length) {
+        $('#pseudo').css({
+       'min-width': '120px',
+       'transition': '0.3s'
+     });
+
+    $('#mail').css({
+       'min-width': '250px',
+       'transition': '0.3s'
+     });
+    }
+});
+
  for (element of myInput) {
    element.addEventListener("keyup", function() {
-     this.size = this.value.length;
+     this.size = this.value.length+2;
      //alert(this.value.length);
    });
  }
