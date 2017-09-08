@@ -33,15 +33,15 @@ $('.one').on('click', function(){
     $('hr').css("width", "8.1%");
 });
 $('.two').on('click', function(){
-    $('hr').css("left", "125px");
+    $('hr').css("left", "123px");
     $('hr').css("width", "14.5%");
 });
 $('.three').on('click', function(){
-    $('hr').css("left", "254px");
+    $('hr').css("left", "251px");
     $('hr').css("width", "14.1%");
 });
 $('.four').on('click', function(){
-    $('hr').css("left", "383px");
+    $('hr').css("left", "376px");
     $('hr').css("width", "20%");
 });
 
