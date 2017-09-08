@@ -1,5 +1,5 @@
 $(function() {
-      $("a:not(#shareBtn, btn_start)").on('click', function (event) {
+      $("a:not(#shareBtn, btn_start, .btn_validate)").on('click', function (event) {
         event.preventDefault();
         window.location = $(this).attr("href");
     });
@@ -125,4 +125,5 @@ $('#pseudo, #mail').on('focusout', function() {
   //@prepros-append components/_print-and-share.js
   //@prepros-append components/_creationBadge.js
   //@prepros-append components/_admin.js
+  //@prepros-append components/_svgToImg.js
 });
