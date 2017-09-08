@@ -5,9 +5,19 @@ $(function() {
     });
 
  /* PREVENT SCROLL ON TABLET */
- document.ontouchmove = function(event){
+ $('#swipe').bind("touchmove",function(event){
      event.preventDefault();
- };
+ });
+
+
+ /* SCROLL THUMBNAILS */
+ $('.container_global_thumbnail').on('mousewheel', function(event, delta) {
+   //alert('ok')
+   event.preventDefault();
+   this.scrollLeft -= (delta * 20);
+   return false;
+ });
+
 
  /* SWIPE ADMIN */
  $("#swipe").dragend({
@@ -16,7 +26,6 @@ $(function() {
      $('.parameters').remove('hidden');
    }
  })
-
 
 
  /* ANIM INPUT PSEUDO + MAIL */
@@ -37,13 +46,12 @@ $('#pseudo, #mail').on('focusout', function() {
      });
     }
 });
-
- for (element of myInput) {
-   element.addEventListener("keyup", function() {
-     this.size = this.value.length+2;
-     //alert(this.value.length);
-   });
- }
+for (element of myInput) {
+  element.addEventListener("keyup", function() {
+    this.size = this.value.length+2;
+    //alert(this.value.length);
+  });
+}
 
 
 
@@ -128,6 +136,7 @@ $('#pseudo, #mail').on('focusout', function() {
   /* PUT SVG IN PRINT AND SHARe */
     var myBadge = JSON.parse(localStorage.getItem('myBadge'));
     $(".badge__finished").html(myBadge);
+
 
 
   //@prepros-append components/_photo.js
