@@ -32,8 +32,8 @@ $(function() {
     $(this).addClass('selected');
   })
 
-  // PALETTE COULEUR
 
+  // PALETTE COULEUR 
   $( ".container_btn-palette-test" ).tabs();
   $(".container_btn-palette-test").hide();
   $(".container").click(function(){
@@ -77,14 +77,22 @@ $(function() {
   }
 
   // TEXT BAGDE
-
   myInput = $(".input_name-badge");
   myTxtCircle = $("#myPath");
   myInput.on('keyup', function() {
     myTxtCircle.text($(this).val());
   })
+  $(".input_name-badge").prop('maxLength', 20);
 
-$(".input_name-badge").prop('maxLength', 20);
+
+  /* SCROLL THUMBNAILS */
+  $('.container_global_thumbnail').on('mousewheel', function(event, delta) {
+    //alert('ok')
+    event.preventDefault();
+    this.scrollLeft -= (delta * 20);
+    return false;
+  });
+
 
   //@prepros-append components/_photo.js
   //@prepros-append components/_print-and-share.js
