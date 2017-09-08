@@ -4,10 +4,20 @@ $(function() {
         window.location = $(this).attr("href");
     });
 
- /* PREVENT SCROLL ON TABLET */
- document.ontouchmove = function(event){
-     event.preventDefault();
- };
+//  /* PREVENT SCROLL ON TABLET */
+//  document.ontouchmove = function(event){
+//      event.preventDefault();
+//  };
+
+
+ /* SCROLL THUMBNAILS */
+$('.container_global_thumbnail').on('mousewheel', function(event, delta) {
+  //alert('ok')
+  event.preventDefault();
+  this.scrollLeft -= (delta * 20);
+  return false;
+});
+
 
  /* SWIPE ADMIN */
  $("#swipe").dragend({
@@ -16,7 +26,6 @@ $(function() {
      $('.parameters').remove('hidden');
    }
  })
-
 
 
  /* ANIM INPUT PSEUDO + MAIL */
@@ -37,13 +46,12 @@ $('#pseudo, #mail').on('focusout', function() {
      });
     }
 });
-
- for (element of myInput) {
-   element.addEventListener("keyup", function() {
-     this.size = this.value.length+2;
-     //alert(this.value.length);
-   });
- }
+for (element of myInput) {
+  element.addEventListener("keyup", function() {
+    this.size = this.value.length+2;
+    //alert(this.value.length);
+  });
+}
 
 
 
@@ -110,15 +118,6 @@ $('#pseudo, #mail').on('focusout', function() {
     myTxtCircle.text($(this).val());
   })
   $(".input_name-badge").prop('maxLength', 20);
-
-
-  /* SCROLL THUMBNAILS */
-  $('.container_global_thumbnail').on('mousewheel', function(event, delta) {
-    //alert('ok')
-    event.preventDefault();
-    this.scrollLeft -= (delta * 20);
-    return false;
-  });
 
 
   //@prepros-append components/_photo.js
