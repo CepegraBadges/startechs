@@ -136,7 +136,6 @@ for (element of myInput) {
   //@prepros-append components/_photo.js
   //@prepros-append components/_print-and-share.js
   //@prepros-append components/_creationBadge.js
-  //@prepros-append components/_admin.js
   //@prepros-append components/_svgToImg.js
   //@prepros-append components/_sendMail.js
 });
