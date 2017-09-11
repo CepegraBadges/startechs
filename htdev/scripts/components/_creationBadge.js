@@ -54,6 +54,9 @@ $('.box_item').on('click', function(){
   }
   else{
     $(this).add('.box_thumbnail[data-item='+itemClass+']').addClass('selected');
+    //Scroll to element
+    $('.container_global_thumbnail').scrollTo($(".box_thumbnail[data-item="+itemClass+"]"), 500, {axis:'x'});
+
     highLighter(itemClass);
   }
 })
@@ -112,6 +115,13 @@ $('.container_items_thumbnail').on("click", ".box_thumbnail", function(){
   $('[data-item='+itemClass+']').addClass('selected');
   $('.delete_cross').addClass('hidden');
   $('.box_item[data-item='+itemClass+']').children('.delete_cross').removeClass('hidden');
+  $('.box_item[data-item='+itemClass+']');
+
+  var ariaTrue = "true";
+  var ariaFalse = "false";
+  $('.container_items').attr('aria-hidden="'+ariaTrue+'"');
+  $('.box_item[data-item='+itemClass+']').parent('.container_items').attr('aria-hidden="'+ariaFalse+'"');
+  
 
   highLighter(itemClass);
 });
@@ -133,7 +143,6 @@ $('.btn_trash, .delete_cross').on('click', function(event){
   hiddenTrash();
   autoSelect();
 });
-
 
 /**** FUNCTIONS ****/
 
