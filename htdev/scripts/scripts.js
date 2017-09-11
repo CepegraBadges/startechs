@@ -115,14 +115,6 @@ for (element of myInput) {
   });
 
 
-  // TEXT BAGDE
-  myInput = $(".input_name-badge");
-  myTxtCircle = $("#myPath");
-  myInput.on('keyup', function() {
-    myTxtCircle.text($(this).val());
-  })
-  $(".input_name-badge").prop('maxLength', 20);
-
 
   /* SCROLL THUMBNAILS */
   $('.container_global_thumbnail').on('mousewheel', function(event, delta) {
@@ -131,6 +123,8 @@ for (element of myInput) {
     this.scrollLeft -= (delta * 20);
     return false;
   });
+
+  
 
 
   /* PUT SVG IN PRINT AND SHARe */
