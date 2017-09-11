@@ -32,15 +32,15 @@ $(function() {
 		myLog = myLogField.value; 
         myPassField = document.querySelector('#admin_pass');
         myPass = myPassField.value;
-
+        forgot = document.querySelector('.mdp_oublie');
 		if (myLog == 'Admin' && myPass == 'pass'){
 
-            $('.finger-scroll, .admin_connexion > input, button, a').css("display", "none");
+            $('.print_infos, .finger-scroll, .admin_connexion > input, button, a').css("display", "none");
             $('.title_admin:after').css("display", "block");
             $(".title_admin").html('Paramètres'); // changement h2
             $('#admin_switch').css("display", "flex"); // apparition ON/OFF print
             $('#admin_delog').css("display", "block");// apparitiontitre + button
-
+            $('.container_admin ').addClass('bop-admin');
             
 		}
 		else if (myLog != 'Admin' && myPass == 'pass'){
@@ -55,7 +55,7 @@ $(function() {
 		else{
 			alert("Attention! L'identifiant ou le mot de passe est incorrect")
 		}
-	});
+    });
 
 
  // INPUT DANS "VOTRE PRENOM"
@@ -91,7 +91,5 @@ $(function() {
             return true;
         }
     });
+
 });
-
-
-

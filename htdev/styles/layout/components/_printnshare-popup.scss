@@ -25,7 +25,6 @@
         top: 120px;
         height: 170px;
         width: 170px;
-
     }
 
         .popup_print-and-share{
@@ -83,7 +82,6 @@
 }
 
     .bop{
-
                     animation: bop 1s ;
                     
                     /* Safari 4.0 - 8.0 */
@@ -92,11 +90,15 @@
                         50%  {transform: scale(1.3);}
                         100% {transform: scale(1);}
                     }
+    }
 
-                    /* Standard syntax */
-                    @keyframes bop {
-                        0%   {transform: scale(.6);}
-                        50%  {transform: scale(1.3);}
+        .bop-admin{
+                    animation: bop-admin 1s ;
+                    
+                    /* Safari 4.0 - 8.0 */
+                    @-webkit-keyframes bop-admin {
+                        0%   {transform: scale(.9);}
+                        50%  {transform: scale(1.1);}
                         100% {transform: scale(1);}
                     }
     }
