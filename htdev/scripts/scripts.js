@@ -131,14 +131,33 @@ for (element of myInput) {
 
 $('.btn_print').click(function(){
       print();
+
 });
 
-var colorBgdBadge = function(){
+
+(function() {
+
+    var beforePrint = function() {
+              var colorBgdBadge = function(){
   var bgdBadge = $('#bcgGrad').css('fill');
 
   $('.badge__finished').css("background-color",bgdBadge);
 };
 colorBgdBadge();
+    };
+    if (window.matchMedia) {
+        var mediaQueryList = window.matchMedia('print');
+        mediaQueryList.addListener(function(mql) {
+            if (mql.matches) {
+                beforePrint();
+            }
+          });
+    }
+
+    window.onbeforeprint = beforePrint;
+
+
+}());
 
   //@prepros-append components/_photo.js
   //@prepros-append components/_print-and-share.js

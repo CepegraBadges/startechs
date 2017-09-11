@@ -87,8 +87,9 @@ box-shadow: 0 14px 11px 0 rgba(0,0,0,0.15);
     .badge__finished{
         display: block;
         transform: scale(0.7);
-        width: 83mm;
-        height: 83mm;
+        width: 103mm;
+        height: 103mm;
+        padding: 10mm;
         #light-grad{
             display: none;
         }
