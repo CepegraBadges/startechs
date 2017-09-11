@@ -1,6 +1,8 @@
 .container_badge {
-  width : 315px; height : 315px;
+  width : 314.5px; height : 314.5px;
   margin : 0 auto;
+  box-shadow: 0 14px 11px 0 rgba(0,0,0,0.15);
+  border-radius: 100%;
 
 
 .light-badge {
@@ -16,7 +18,7 @@
 
 .container_photo-parameters {
   position : absolute;
-  z-index : 9999;
+  z-index : 20;
   left : 70%;
   top : 60%;
 

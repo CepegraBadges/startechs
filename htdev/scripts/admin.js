@@ -1,0 +1,95 @@
+$(function() {
+    // Vérification du localstorage print au chargement de la page
+    if(localStorage.getItem('print') !== null){
+        var print = localStorage.getItem('print');
+        
+        if(print == "true"){
+            $('.switch--shadow').prop( "checked", true);
+            $(".input_drive").toggle();
+            $(".etat").html('activé');
+        }
+    }
+
+    // Apparition/disparition du champ google drive + "activé/désactivé"
+    $('.switch--shadow').on('change', function(){
+        $(".input_drive").toggle();
+        if($(this).prop('checked')==false){
+            $(".etat").html('désactivé');
+            localStorage.setItem('print', false);
+        }
+        else {
+            $(".etat").html('activé');
+            localStorage.setItem('print', true);
+        }
+    })
+    
+    // Connexion à la partie admin
+    var myButton = $('#admin_login'); 
+	myButton.on('click', function (event){ 
+		event.preventDefault(); 
+
+		myLogField = document.querySelector('#admin_pseudo'); 
+		myLog = myLogField.value; 
+        myPassField = document.querySelector('#admin_pass');
+        myPass = myPassField.value;
+
+		if (myLog == 'Admin' && myPass == 'pass'){
+
+            $('.finger-scroll, .admin_connexion > input, button, a').css("display", "none");
+            $('.title_admin:after').css("display", "block");
+            $(".title_admin").html('Paramètres'); // changement h2
+            $('#admin_switch').css("display", "flex"); // apparition ON/OFF print
+            $('#admin_delog').css("display", "block");// apparitiontitre + button
+
+            
+		}
+		else if (myLog != 'Admin' && myPass == 'pass'){
+			alert("Attention! L'identifiant est incorrect")
+		}
+        else if (myLog == 'Admin' && myPass != 'pass'){
+			alert("Attention! Le mot de passe est incorrect")
+		}
+        else if (myLog == '' && myPass == ''){
+			alert("Attention! Veuillez renseigner tous les chants")
+		}
+		else{
+			alert("Attention! L'identifiant ou le mot de passe est incorrect")
+		}
+	});
+
+
+ // INPUT DANS "VOTRE PRENOM"
+    myButton = document.querySelector(".btn_start");
+    var myLog = document.querySelector("#pseudo");
+    myFinish = document.querySelector(".btn_finish");
+
+    // Stocker le pseudo
+    $(myButton).on('click',function(event){
+        window.localStorage.setItem("pseudo", myLog.value);
+    });
+
+    /*
+    $(myFinish).on('click', function(event){
+    event.preventDefault();
+    window.localStorage.removeItem("pseudo", myLog.value);
+    });
+    */
+
+
+    // EMAIL verfication
+    $("#mail").keyup(function() {
+        var myRegex = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
+
+        if(!myRegex.test(this.value)){
+            $('.btn_start').addClass("active_go");
+            return false;
+        }
+        else{
+            $('.btn_start').removeClass("active_go");
+            return true;
+        }
+    });
+});
+
+
+

@@ -1,13 +1,23 @@
 $(function() {
-      $("a:not(#shareBtn, btn_start)").on('click', function (event) {
+      $("a:not(#shareBtn, btn_start, .btn_validate)").on('click', function (event) {
         event.preventDefault();
         window.location = $(this).attr("href");
     });
 
  /* PREVENT SCROLL ON TABLET */
- document.ontouchmove = function(event){
+ $('#swipe').bind("touchmove",function(event){
      event.preventDefault();
- };
+ });
+
+
+ /* SCROLL THUMBNAILS */
+ $('.container_global_thumbnail').on('mousewheel', function(event, delta) {
+   //alert('ok')
+   event.preventDefault();
+   this.scrollLeft -= (delta * 20);
+   return false;
+ });
+
 
  /* SWIPE ADMIN */
  $("#swipe").dragend({
@@ -16,7 +26,6 @@ $(function() {
      $('.parameters').remove('hidden');
    }
  })
-
 
 
  /* ANIM INPUT PSEUDO + MAIL */
@@ -37,13 +46,12 @@ $('#pseudo, #mail').on('focusout', function() {
      });
     }
 });
-
- for (element of myInput) {
-   element.addEventListener("keyup", function() {
-     this.size = this.value.length+2;
-     //alert(this.value.length);
-   });
- }
+for (element of myInput) {
+  element.addEventListener("keyup", function() {
+    this.size = this.value.length+2;
+    //alert(this.value.length);
+  });
+}
 
 
 
@@ -59,8 +67,8 @@ $('#pseudo, #mail').on('focusout', function() {
     $(this).addClass('selected');
   })
 
-
   // PALETTE COULEUR
+
   $( ".container_btn-palette-test" ).tabs();
   $(".container_btn-palette-test").hide();
   $(".container").click(function(){
@@ -80,6 +88,9 @@ $('#pseudo, #mail').on('focusout', function() {
     $(".drag-zone_logo-badge").attr("data-fill", fill);
     $(".btn_palette-blue").attr("data-outline", outline);
     $(".mini_logo-palette").attr("data-fill", fill);
+    $("#cepegra").attr("data-fill", fill);
+    $("#text-badge").attr("data-fill", fill);
+    $(".drag").attr("data-fill", fill);
   })
 
   $('#tabs-1').on("click", ".color-fill", function(){
@@ -94,22 +105,6 @@ $('#pseudo, #mail').on('focusout', function() {
     $(this).add('.color-outline.'+itemClass+'').addClass('color-selected');
   });
 
-  /* ANIM INPUT PSEUDO + MAIL */
-  myInput = document.querySelectorAll(".input_login");
-  for (element of myInput) {
-    element.addEventListener("keyup", function() {
-      this.size = this.value.length;
-      //alert(this.value.length);
-    });
-  }
-
-  // TEXT BAGDE
-  myInput = $(".input_name-badge");
-  myTxtCircle = $("#myPath");
-  myInput.on('keyup', function() {
-    myTxtCircle.text($(this).val());
-  })
-  $(".input_name-badge").prop('maxLength', 20);
 
 
   /* SCROLL THUMBNAILS */
@@ -119,6 +114,14 @@ $('#pseudo, #mail').on('focusout', function() {
     this.scrollLeft -= (delta * 20);
     return false;
   });
+
+
+
+
+  /* PUT SVG IN PRINT AND SHARe */
+    var myBadge = JSON.parse(localStorage.getItem('myBadge'));
+    $(".badge__finished").html(myBadge);
+
 
 
 // Print
@@ -133,4 +136,5 @@ $('.btn_print').click(function(){
   //@prepros-append components/_print-and-share.js
   //@prepros-append components/_creationBadge.js
   //@prepros-append components/_admin.js
+  //@prepros-append components/_svgToImg.js
 });
