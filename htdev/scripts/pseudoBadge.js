@@ -11,4 +11,4 @@ if (localStorage.getItem("pseudo").length > 0){
 myPseudoInput.on('keyup', function() {
     myTxtCircle.text($(this).val());
 })
-myPseudoInput.prop('maxLength', 20);
+myPseudoInput.prop('maxLength', 12);

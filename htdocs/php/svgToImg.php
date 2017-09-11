@@ -5,7 +5,8 @@
 
     $decoded = base64_decode(substr($image,22));
 
-    file_put_contents('../../badge.png', $decoded);
+    date_default_timezone_set("Europe/Brussels");
+    file_put_contents('../badges/'.date("Y-m-d_H-i-s").'.png', $decoded);
   }
 
 ?>

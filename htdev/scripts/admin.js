@@ -61,11 +61,13 @@ $(function() {
  // INPUT DANS "VOTRE PRENOM"
     myButton = document.querySelector(".btn_start");
     var myLog = document.querySelector("#pseudo");
+    var myEmail = document.querySelector("#mail");
     myFinish = document.querySelector(".btn_finish");
 
-    // Stocker le pseudo
+    // Stocker le pseudo + mail
     $(myButton).on('click',function(event){
         window.localStorage.setItem("pseudo", myLog.value);
+        window.localStorage.setItem("email", myEmail.value);
     });
 
     /*

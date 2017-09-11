@@ -1,5 +1,5 @@
 $(function() {
-      $("a:not(#shareBtn, btn_start, .btn_validate)").on('click', function (event) {
+      $("a:not(#shareBtn, btn_start, .btn_validate, .btn_mail)").on('click', function (event) {
         event.preventDefault();
         window.location = $(this).attr("href");
     });
@@ -138,4 +138,5 @@ for (element of myInput) {
   //@prepros-append components/_creationBadge.js
   //@prepros-append components/_admin.js
   //@prepros-append components/_svgToImg.js
+  //@prepros-append components/_sendMail.js
 });
