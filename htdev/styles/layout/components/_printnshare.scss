@@ -54,8 +54,6 @@
         }
 
         .badge__finished{
-            width: 315px;
-            height:315px;
             border-radius: 100%;
             position: relative;
         align-self: center;
@@ -79,24 +77,21 @@ box-shadow: 0 14px 11px 0 rgba(0,0,0,0.15);
 }
 
 @media print{
+    .body_print-and-share{
+    background: none;
+}
+
     main, header{
         display: none;
     }
     .badge__finished{
-        .light-grad{
-            display: none,
-        }
-        margin: 10mm;
-        width: 57.5mm;
-        height: 57.5mm;
         display: block;
-            #badge-svg{
-                width: 57.5mm !important;
-                height: 57.5mm !important;
-                #main-svg{
-                    width: 57.5mm;
-                    height: 57.5mm;
-                }
-            }
+        transform: scale(0.7);
+        width: 83mm;
+        height: 83mm;
+        #light-grad{
+            display: none;
+        }
     }
 }
+

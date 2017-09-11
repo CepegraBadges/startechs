@@ -70,7 +70,7 @@ for (element of myInput) {
   // PALETTE COULEUR
 
   $( ".container_btn-palette-test" ).tabs();
-  $(".container_global_creation").on('click',function(){
+  $('.container_global_creation:not(".container_btn-palette-test")').on('click',function(){
     $(".container_btn-palette-test").addClass('hidden');
   });
   $(".container").on('click',function(){
@@ -133,7 +133,12 @@ $('.btn_print').click(function(){
       print();
 });
 
+var colorBgdBadge = function(){
+  var bgdBadge = $('#bcgGrad').css('fill');
 
+  $('.badge__finished').css("background-color",bgdBadge);
+};
+colorBgdBadge();
 
   //@prepros-append components/_photo.js
   //@prepros-append components/_print-and-share.js
