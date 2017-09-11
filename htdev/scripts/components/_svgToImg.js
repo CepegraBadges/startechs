@@ -10,6 +10,8 @@ $('.btn_validate').on('click', function(e){
   $('.drag-zone_logo-badge').attr('fill', outlineColor);
 
 /* SVG DANS LE LOCALSTORAGE POUR IMPRESSION */
+  // Replacer l'élément mis en avant derrière la light
+  $('.light-badge').next('.drag').insertBefore('.light-badge');
   // Selectionner le svg conteneur
   var svgDiv = $(".badge-svg");
   var svg = svgDiv[0].outerHTML;
@@ -24,7 +26,6 @@ $('.btn_validate').on('click', function(e){
   $('#myPath').remove();
 
   svg = svgDiv[0].outerHTML;
-  console.log(svg)
 
   // Selectionner le canvas caché
   var canvas = document.getElementById('hiddenCanvas');

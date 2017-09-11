@@ -318,7 +318,7 @@ $bg: #F2F2F2;
   inset 0 0 0 $push-size/5.5 $push-color,
   inset 0 $push-size/2.5 $push-size/7.5 darken($push-color, 5%),
   inset 0 0 $push-size/10 $push-size/6 darken($push-color, 10%),
-  0 $push-size/20 0 rgba(0, 0, 0, .3);
+  0 $push-size/20 7px rgba(0, 0, 0, .2);
 
   &:after {
     content: '';
