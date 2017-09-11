@@ -7,23 +7,30 @@ $('.btn_validate').on('click', function(e){
   var bcgColor = $('#bcgGrad').css('fill');
   $("#bcgGrad").attr('fill', bcgColor);
   var outlineColor = $('.drag-zone_logo-badge').css('fill');
-  $('.drag-zone_logo-badge').attr('fill', outlineColor);
+  $('.drag-zone_logo-badge, .drag').attr('fill', outlineColor);
+
 
 /* SVG DANS LE LOCALSTORAGE POUR IMPRESSION */
   // Replacer l'élément mis en avant derrière la light
   $('.light-badge').next('.drag').insertBefore('.light-badge');
   // Selectionner le svg conteneur
-  var svgDiv = $(".badge-svg");
+  var svgDiv = $(".badge-svg").clone();
   var svg = svgDiv[0].outerHTML;
 
   localStorage.setItem('myBadge', JSON.stringify(svg));
 
 /* SVG TO IMAGE POUR LE SHARE */
   // Supprimer la light
-  $('linearGradient, .light-badge').remove();
+  svgDiv.find('linearGradient, .light-badge').remove();
 
-  //Supprimer le textPath
-  $('#myPath').remove();
+  //Récupérer le texte du pseudo
+  var myPseudo = $('#myPath').text()
+
+  //Supprimer le textPath + Cepegra
+  svgDiv.find('#myPath, #cepegra').remove();
+
+  //Afficher le text pseudo caché
+  svgDiv.find('.sharePseudoText').text(myPseudo).attr('fill', outlineColor).removeAttr('hidden');
 
   svg = svgDiv[0].outerHTML;
 
@@ -39,7 +46,7 @@ $('.btn_validate').on('click', function(e){
   // REQUETE AJAX
   $.ajax({
     type: 'POST',
-    url: "svgToImg.php",
+    url: "../php/svgToImg.php",
     data: {
       'dataUrl': theImage,
     },
