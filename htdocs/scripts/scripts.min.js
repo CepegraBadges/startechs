@@ -62,35 +62,13 @@ $('#pseudo, #mail').on('focusout', function() {
 
   // PALETTE COULEUR
   $( ".container_btn-palette-test" ).tabs();
-  $(".container_btn-palette-test").hide();
-//$(".container").click(function(){
-//$(".container_btn-palette-test").toggle();
-//});
-
-
-  $('body').click(function(){
-
-      if ($('.container_btn-palette-test').css("display") == "none") {
-
-
-
-        $(".btn_palette-blue").click(function(){
-
-          $(".container_btn-palette-test").toggle();
-          alert('a');
-
-        });
-
-      }
-      else{
-        alert('b');
-        $('body').click(function(){
-        $('.container_btn-palette-test').hide();
-      });
-      }
-
-      })
-
+  $(".container_global_creation").on('click',function(){
+    $(".container_btn-palette-test").addClass('hidden');
+  });
+  $(".container").on('click',function(){
+    event.stopPropagation();
+    $(".container_btn-palette-test").toggleClass('hidden');
+  });
 
   $("#tabs-1 li").click(function(){
     color = $(this).attr("data-color");
