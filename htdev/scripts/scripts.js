@@ -103,14 +103,6 @@ $('#pseudo, #mail').on('focusout', function() {
     });
   }
 
-  // TEXT BAGDE
-  myInput = $(".input_name-badge");
-  myTxtCircle = $("#myPath");
-  myInput.on('keyup', function() {
-    myTxtCircle.text($(this).val());
-  })
-  $(".input_name-badge").prop('maxLength', 20);
-
 
   /* SCROLL THUMBNAILS */
   $('.container_global_thumbnail').on('mousewheel', function(event, delta) {

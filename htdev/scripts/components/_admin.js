@@ -76,27 +76,24 @@ $('#admin_delog').on('click', function(){
  // INPUT DANS "VOTRE PRENOM"
     myButton = document.querySelector(".btn_start");
     var myLog = document.querySelector("#pseudo");
-    myName = document.querySelector("#myPath");
     myFinish = document.querySelector(".btn_finish");
-    var myPseudoInput = document.querySelector("#myPath");
+    
 
+    // Stocker le pseudo
     $(myButton).on('click',function(event){
-
-    window.localStorage.setItem("pseudo", myLog.value);
+        window.localStorage.setItem("pseudo", myLog.value);
     });
+
+    
+    
 
     $(myFinish).on('click', function(event){
     event.preventDefault();
     window.localStorage.removeItem("pseudo", myLog.value);
     });
 
-    // if (localStorage.getItem('pseudo') != null ) {
-    // myLog.value = localStorage.getItem("pseudo");
-// }
 
-// if (localStorage.getItem("pseudo").length > 0 && myPseudoInput.length > 0){
-//     myPseudoInput.value = localStorage.getItem("pseudo")
-// }
+
 
 
 // EMAIL verfication
