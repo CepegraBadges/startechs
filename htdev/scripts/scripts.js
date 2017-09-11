@@ -70,6 +70,7 @@ for (element of myInput) {
   // PALETTE COULEUR
 
   $( ".container_btn-palette-test" ).tabs();
+
   $('.container_global_creation:not(".container_btn-palette-test")').on('click',function(){
     $(".container_btn-palette-test").addClass('hidden');
   });
@@ -140,6 +141,8 @@ $('.btn_print').click(function(){
     var beforePrint = function() {
               var colorBgdBadge = function(){
   var bgdBadge = $('#bcgGrad').css('fill');
+
+  $('.badge__finished').toggleClass('hidden');
 
   $('.badge__finished').css("background-color",bgdBadge);
 };
