@@ -54,7 +54,7 @@ $('#shareBtn').on('click', function(e){
     method: 'share',
     //display: 'iframe',
     mobile_iframe: true,
-    //app_id: 184484190795, 
+    //app_id: 184484190795,
     href: 'https://killer-cepegra.xyz/badges/'+elementLS+'.png',
   }, function(response){
       //return false;
@@ -65,7 +65,7 @@ $('#shareBtn').on('click', function(e){
     $(".text_pop_option").replaceWith("<p class='text_pop text_pop_option'>N'oublie pas de te l'envoyer par email</p>");
   });
 
-   
+
 });
 
 
