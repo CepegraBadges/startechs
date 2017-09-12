@@ -14,6 +14,16 @@
   }
 }
 
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00F3FF, 0 0 30px #00F3FF, 0 0 80px #00F3FF, 0 0 100px #00F3FF, 0 0 150px #00F3FF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00F3FF, 0 0 35px #00F3FF, 0 0 40px #00F3FF, 0 0 50px #00F3FF, 0 0 75px #00F3FF;
+  }
+}
+
 /* BUTTON GENERAL */
 .btn {
   background : none;
@@ -28,21 +38,15 @@
 /* GO */
 
 @keyframes flash{
-    0%{opacity: 0.43;}
-    50%{opacity: 0;}
-    100%{opacity: 0.43;}
-}
-
-@keyframes color{
-    0%{color: #2AAFE5;}
-    50%{color: rgba(199, 199, 199, 0);}
-    100%{color: #2AAFE5;}
+    0%{opacity: 0;}
+    50%{opacity: 0.6;}
+    100%{opacity: 0;}
 }
 
 .btn_start{
-  animation: color 1s infinite;
   text-decoration:none;
-  color: #2AAFE5;
+  animation: neon2 1s ease-in-out infinite alternate;
+  color: #00F3FF;
   font-size:2.9em;
   text-shadow:
     0 0px 1px rgba(199,199,199,1),
@@ -80,25 +84,26 @@
 }
 
 .btn_start:before{
-  animation: flash 1s infinite;
+  animation: flash 1s infinite ease-in;
   position:absolute;
   display:block;
   content:"";
-  top:0.8em;
-  left:0.8em;
+  top:.85em;
+  left:.85em;
   margin: -1.929em;
-  width:6.3em;
-  height:6.3em;
+  width:6.2em;
+  height:6.2em;
   opacity: 0.43;
-background-image: linear-gradient(45deg, blue 0%, #EF2F47 100%);
-
+ background-image: linear-gradient(45deg, #F0302B 0%, #EF2F47 100%);
   border-radius:inherit;
   z-index:-1;
+  // box-shadow:  0 0 10px white;
 
 }
 
 
 .active_go{
+  animation: none;
   color: rgba(199, 199, 199, 0);
 
     box-shadow:
@@ -118,18 +123,19 @@ background-image: linear-gradient(45deg, blue 0%, #EF2F47 100%);
 }
 
 .active_go:before{
+  animation: none;
   top:1.1em;
   left:1.1em;
   width:5.7em;
   height:5.7em;
   background-image: linear-gradient(45deg, #F0302B 0%, #EF2F47 100%);
-  animation: flash 0s infinite;
+  box-shadow: 0 0 0 #fff;
 
 }
 
 .btn_validate{
   text-decoration:none;
-  color: #00ABF6;
+  color: #00D0FC;
   font-size:1.300em;
   text-shadow:
     0 0px 1px rgba(199,199,199,1),
@@ -318,7 +324,7 @@ $bg: #F2F2F2;
   inset 0 0 0 $push-size/5.5 $push-color,
   inset 0 $push-size/2.5 $push-size/7.5 darken($push-color, 5%),
   inset 0 0 $push-size/10 $push-size/6 darken($push-color, 10%),
-  0 $push-size/20 0 rgba(0, 0, 0, .3);
+  0 $push-size/20 7px rgba(0, 0, 0, .2);
 
   &:after {
     content: '';

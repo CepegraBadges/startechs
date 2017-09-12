@@ -1,5 +1,5 @@
 $(function() {
-      $("a:not(#shareBtn, btn_start, .btn_validate)").on('click', function (event) {
+      $("a:not(#shareBtn, .btn_start, .btn_validate, .btn_mail)").on('click', function (event) {
         event.preventDefault();
         window.location = $(this).attr("href");
     });
@@ -115,14 +115,6 @@ for (element of myInput) {
   });
 
 
-  // TEXT BAGDE
-  myInput = $(".input_name-badge");
-  myTxtCircle = $("#myPath");
-  myInput.on('keyup', function() {
-    myTxtCircle.text($(this).val());
-  })
-  $(".input_name-badge").prop('maxLength', 20);
-
 
   /* SCROLL THUMBNAILS */
   $('.container_global_thumbnail').on('mousewheel', function(event, delta) {
@@ -131,6 +123,8 @@ for (element of myInput) {
     this.scrollLeft -= (delta * 20);
     return false;
   });
+
+  
 
 
   /* PUT SVG IN PRINT AND SHARe */
@@ -142,6 +136,6 @@ for (element of myInput) {
   //@prepros-append components/_photo.js
   //@prepros-append components/_print-and-share.js
   //@prepros-append components/_creationBadge.js
-  //@prepros-append components/_admin.js
   //@prepros-append components/_svgToImg.js
+  //@prepros-append components/_sendMail.js
 });
