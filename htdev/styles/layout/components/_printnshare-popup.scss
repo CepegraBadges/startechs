@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+
 
     &:before{
         content: "";
@@ -54,12 +54,12 @@
                         height: 100%;
                         width: 100%;
                         font-size: 0;
-                        
+
                     }
             }
             .li_pop_1{
                 background: #D00AA7;
-                
+
                     a{
                         background: url('images/printer2.svg') no-repeat 50% 50% / 70% ;
                     }
@@ -83,7 +83,7 @@
 
     .bop{
                     animation: bop 1s ;
-                    
+
                     /* Safari 4.0 - 8.0 */
                     @-webkit-keyframes bop {
                         0%   {transform: scale(.6);}
@@ -94,7 +94,7 @@
 
         .bop-admin{
                     animation: bop-admin 1s ;
-                    
+
                     /* Safari 4.0 - 8.0 */
                     @-webkit-keyframes bop-admin {
                         0%   {transform: scale(.9);}
