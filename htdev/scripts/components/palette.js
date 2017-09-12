@@ -1,4 +1,4 @@
-  // PALETTE COULEUR 
+  // PALETTE COULEUR
   $( ".container_btn-palette-test" ).tabs();
   $(".container_btn-palette-test").hide();
   $(".container").click(function(){

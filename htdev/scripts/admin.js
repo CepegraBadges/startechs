@@ -2,7 +2,7 @@ $(function() {
     // Vérification du localstorage print au chargement de la page
     if(localStorage.getItem('print') !== null){
         var print = localStorage.getItem('print');
-        
+
         if(print == "true"){
             $('.switch--shadow').prop( "checked", true);
             $(".input_drive").toggle();
@@ -22,14 +22,14 @@ $(function() {
             localStorage.setItem('print', true);
         }
     })
-    
-    // Connexion à la partie admin
-    var myButton = $('#admin_login'); 
-	myButton.on('click', function (event){ 
-		event.preventDefault(); 
 
-		myLogField = document.querySelector('#admin_pseudo'); 
-		myLog = myLogField.value; 
+    // Connexion à la partie admin
+    var myButton = $('#admin_login');
+	myButton.on('click', function (event){
+		event.preventDefault();
+
+		myLogField = document.querySelector('#admin_pseudo');
+		myLog = myLogField.value;
         myPassField = document.querySelector('#admin_pass');
         myPass = myPassField.value;
         forgot = document.querySelector('.mdp_oublie');
@@ -41,7 +41,7 @@ $(function() {
             $('#admin_switch').css("display", "flex"); // apparition ON/OFF print
             $('#admin_delog').css("display", "block");// apparitiontitre + button
             $('.container_admin ').addClass('bop-admin');
-            
+
 		}
 		else if (myLog != 'Admin' && myPass == 'pass'){
 			alert("Attention! L'identifiant est incorrect")

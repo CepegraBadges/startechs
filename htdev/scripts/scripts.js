@@ -70,13 +70,9 @@ for (element of myInput) {
   // PALETTE COULEUR
 
   $( ".container_btn-palette-test" ).tabs();
-
-  $('.container_global_creation:not(".container_btn-palette-test")').on('click',function(){
-    $(".container_btn-palette-test").addClass('hidden');
-  });
-  $(".container").on('click',function(){
-    event.stopPropagation();
-    $(".container_btn-palette-test").toggleClass('hidden');
+  $( ".container_btn-palette-test" ).hide();
+  $('.container').click(function(){
+    $(".container_btn-palette-test").toggle();
   });
 
   $("#tabs-1 li").click(function(){
@@ -135,32 +131,38 @@ $('.btn_print').click(function(){
 
 });
 
-
-(function() {
-
-    var beforePrint = function() {
-              var colorBgdBadge = function(){
+var colorBgdBadge = function(){
   var bgdBadge = $('#bcgGrad').css('fill');
 
-  $('.badge__finished').toggleClass('hidden');
-
-  $('.badge__finished').css("background-color",bgdBadge);
+  $('.badge__finished_print').css("background-color",bgdBadge);
 };
-colorBgdBadge();
+
+
+
+    var beforePrint = function() {
+        $('.badge__finished_print').removeClass('hidden');
+        colorBgdBadge();
     };
+
+    var afterPrint = function() {
+        $('.badge__finished_print').addClass('hidden');
+    };
+
     if (window.matchMedia) {
         var mediaQueryList = window.matchMedia('print');
         mediaQueryList.addListener(function(mql) {
             if (mql.matches) {
                 beforePrint();
+            } else {
+                afterPrint();
             }
-          });
+        });
     }
 
     window.onbeforeprint = beforePrint;
+    window.onafterprint = afterPrint;
 
 
-}());
 
   //@prepros-append components/_photo.js
   //@prepros-append components/_print-and-share.js

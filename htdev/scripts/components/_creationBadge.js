@@ -7,7 +7,7 @@ $('.box_item').on('click', function(){
   $('.box_thumbnail').removeClass('selected');
   $('.delete_cross').addClass('hidden');
   $(this).children('.delete_cross').removeClass('hidden');
-    
+
   if(!$(this).hasClass('active')){
     // Cloner le svg et lui ajouter un data item
     var cloneSvg = $(this).children('svg').clone();
@@ -84,7 +84,7 @@ $('.badge-svg').droppable({
 
 // Click sur le reset - activation shake + popup
 $( ".btn_reset" ).on('click', function(){
-  $(".container_items_thumbnail").children().addClass("shake"); 
+  $(".container_items_thumbnail").children().addClass("shake");
   $(".background-popup, .popup").removeAttr("hidden");
 });
 
@@ -129,7 +129,7 @@ $('.btn_trash, .delete_cross').on('click', function(event){
       $(this).remove();
     }
   })
-  
+
   hiddenTrash();
   autoSelect();
 });
@@ -151,7 +151,7 @@ function hiddenTrash(){
   }
 }
 
-// Auto séléction 
+// Auto séléction
 function autoSelect(){
   if($('.container_items_thumbnail').find('li').length > 0){
     var lastLi = $('.box_thumbnail').last();
