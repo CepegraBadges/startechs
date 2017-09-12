@@ -141,6 +141,7 @@ $('.btn_trash, .delete_cross').on('click', function(event){
 function highLighter(itemClass){
   $('.light-badge').next('.drag').insertBefore('.light-badge');
   $('.drag.'+itemClass+'').insertAfter('.light-badge');
+  // $('.drag.'+itemClass+'').css("fill", "red");
 }
 
 // Disparition de la poubelle quand il n'y a plus d'éléments

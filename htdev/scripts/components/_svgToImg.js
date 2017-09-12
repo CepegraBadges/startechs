@@ -31,6 +31,8 @@ $('.btn_validate').on('click', function(e){
 
   //Afficher le text pseudo caché
   svgDiv.find('.sharePseudoText').text(myPseudo).attr('fill', outlineColor).removeAttr('hidden');
+  svgDiv.find('.hiddenCepegra').removeAttr('hidden');
+  svgDiv.find(".circle-txt").attr('fill', outlineColor);
 
   svg = svgDiv[0].outerHTML;
 
