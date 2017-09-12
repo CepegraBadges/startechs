@@ -53,6 +53,7 @@ $('.btn_validate').on('click', function(e){
       'dataUrl': theImage,
     },
     success: function(data){
+      localStorage.setItem('fileName', data);
       location.href='print_and_share.html';
     }
   })
