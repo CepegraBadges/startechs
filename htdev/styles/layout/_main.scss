@@ -24,6 +24,11 @@ ul{
     display: none;
 }
 
+// .disabled {
+//    pointer-events: none;
+//    cursor: default;
+// }
+
 //-------------------------------------  FONTS COLORS
 .container_login, .input_login::placeholder, .input_login{
     color: $color_light_font;
