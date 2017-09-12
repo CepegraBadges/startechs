@@ -45,3 +45,45 @@ $('.four').on('click', function(){
     $('hr').css("width", "20%");
 });
 
+$('#shareBtn').on('click', function(e){
+    var elementLS = window.localStorage.getItem("filename");
+    e.preventDefault();
+    alert('facebook');
+    //FB.init();
+  FB.ui({
+    method: 'share',
+    //display: 'iframe',
+    mobile_iframe: true,
+    //app_id: 184484190795, 
+    href: 'https://killer-cepegra.xyz/badges/'+elementLS+'.png',
+  }, function(response){
+      //return false;
+       $('.li_pop_1').css("display", "block");
+    $('.li_pop_2').css("display", "block");
+    $('.li_pop_3').css("display", "none");
+    $(".text_pop_action").replaceWith("<p class='text_pop text_pop_action'>Ton avatar a bien été publié sur facebook!</p>");
+    $(".text_pop_option").replaceWith("<p class='text_pop text_pop_option'>N'oublie pas de te l'envoyer par email</p>");
+  });
+
+   
+});
+
+
+// SHARE FACEBOOK
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '1948586515423473',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
