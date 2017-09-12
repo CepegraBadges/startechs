@@ -66,6 +66,7 @@ $(function() {
 
     // Stocker le pseudo + mail
     $(myButton).on('click',function(event){
+        alert('test');
         window.localStorage.setItem("pseudo", myLog.value);
         window.localStorage.setItem("email", myEmail.value);
     });

@@ -1,5 +1,5 @@
 $(function() {
-      $("a:not(#shareBtn, btn_start, .btn_validate, .btn_mail)").on('click', function (event) {
+      $("a:not(#shareBtn, .btn_start, .btn_validate, .btn_mail)").on('click', function (event) {
         event.preventDefault();
         window.location = $(this).attr("href");
     });
