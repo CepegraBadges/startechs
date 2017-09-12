@@ -59,10 +59,11 @@ $(function() {
 
 
  // INPUT DANS "VOTRE PRENOM"
-    myButton = document.querySelector(".btn_start");
+    // myButton = document.querySelector(".btn_start");
     var myLog = document.querySelector("#pseudo");
     var myEmail = document.querySelector("#mail");
     myFinish = document.querySelector(".btn_finish");
+
 
     // Stocker le pseudo + mail
     $(myButton).on('click',function(event){
@@ -71,16 +72,21 @@ $(function() {
         window.localStorage.setItem("email", myEmail.value);
     });
 
-    /*
+
+
+    
     $(myFinish).on('click', function(event){
-    event.preventDefault();
-    window.localStorage.removeItem("pseudo", myLog.value);
+        event.preventDefault();
+        window.localStorage.removeItem("pseudo");
+        window.localStorage.removeItem("email");
+        window.localStorage.removeItem("myBadge");
     });
-    */
+
 
 
     // EMAIL verfication
     $("#mail").keyup(function() {
+        
         var myRegex = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
 
         if(!myRegex.test(this.value)){
@@ -89,7 +95,15 @@ $(function() {
         }
         else{
             $('.btn_start').removeClass("active_go");
+                // Stocker le pseudo + mail
+                $(".btn_start").on('click',function(event){
+                    event.preventDefault();
+                    window.localStorage.setItem("pseudo", myLog.value);
+                    window.localStorage.setItem("email", myEmail.value);
+                    window.location='pages/badge_creation.html';
+                });
             return true;
+
         }
     });
 
