@@ -1,0 +1,342 @@
+@keyframes animtxt {
+  from {
+    color: rgba(255, 255, 255, .5);
+  }
+  to {
+    color: rgba(255, 255, 255, .8);
+  }
+}
+
+//=====================inscription========================
+
+.toto {
+  top: 0;
+  transition: all .7s;
+  transform: translate(0, 0px);
+}
+.hide {
+  top: -25rem;
+  transition: all .7s;
+  transform: translate(0, -200vh);
+}
+.container_login{
+  &:before {
+    content: "";
+    display: block;
+    top: 100vh;
+    left: 0;
+    position: absolute;
+    background: url("images/background-home1.svg") repeat-x 0rem 4rem;
+    width: 100vw;
+    min-height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+// btn admin connexion
+.btn_admin {}
+
+.container_login form {
+  position: relative;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  margin-top: 9.5rem; 
+  min-height: calc(100vh - 4rem);
+  justify-content: space-between;
+  &>div {
+    display: flex;
+    min-width: 50%;
+    justify-content: center;
+    [class] {
+    }
+  }
+  .form_pseudo {
+    width: 15rem;
+    margin-left: 5rem;
+    margin-right: 2rem;
+    input {
+      width: 15rem;
+    }
+  }
+  .form_email {
+    width: 15rem;
+    input {
+      width: 15rem;
+      & + span::before {
+        content: "\f003";
+      }
+    }
+  }
+  [class^="form"] {
+    position: relative;
+  }
+  input {
+    font-family:  Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 1.9rem;
+    width: 200px;
+    transition: all 1s;
+    padding-left: 1.6rem;
+    position: absolute;
+    & + span::before {
+      top: 3.5rem;
+      left: .2rem;
+      position: absolute;
+      font-size: .8rem;
+      font-family: "fontAwesome";
+      content: "\f2c0";
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      -webkit-animation: animtxt .5s infinite alternate;
+    }
+  }
+  input::-webkit-input-placeholder {
+    font: 600 1.3rem "Raleway", sans-serif;
+    color: rgb(255, 255, 255);
+    transition: all 1s;
+    letter-spacing: 1px;
+  }
+  input:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+  label {
+    color: rgba(165, 0, 118, 0.8);
+    transition: 1s;
+  }
+  input:not(:focus):not(:placeholder-shown) ~ label {
+    color:white;
+  }
+  input:focus:valid:not(:placeholder-shown) ~ label {
+    color:rgb(255, 220, 80);
+    &:after {
+      font-family: "fontAwesome";
+      content: "\f00c";
+      margin-left: .3rem;
+    }
+  }
+  input:not(:focus):valid:not(:placeholder-shown) ~ label {
+    &:after {
+      font-family: "fontAwesome";
+      content: "\f00c";
+      margin-left: .3rem;
+    }
+  }
+
+
+  .btn_arcade {
+    margin: 0 ; // opacity: 0;
+    flex: 0 0 auto;
+    margin-left: 0rem;
+    margin-right: 8rem;
+  }
+}
+#Verif {
+  display: flex;
+  
+  &>div {
+    flex: 1 0 auto;
+    
+  }
+  .active_go {
+    font-size: 0;
+    opacity: 0;
+  }
+}
+
+.disabled {
+  // opacity: 0;
+}
+
+.header_index-connexion {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  background: transparent;
+  box-shadow: none;
+  height: auto;
+  top: 130vh;
+  //  border: 6px solid #000;
+  h2 {
+    margin: 0;
+  }
+}
+
+.container_login {
+  border: .5rem solid rgba(255, 255, 255, .03);
+  h2.title_index {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    text-align: center;
+    font: 6.5rem/.6 'Knewave', cursive;
+    [class^="txt_"] {
+      position: relative;
+      display: block;
+      &:before {
+        display: block;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+      }
+    }
+    .txt_the {
+      letter-spacing: -2px;
+      font: 2.6rem/.6 'choplinextralight-demo', sans-serif;
+      transform: translate(-135px, -5px);
+      &:before {
+        content: "the";
+        color: rgba(135, 0, 83, 0.475);
+        transform: translate(1px, 3px) scale(.99, .9) skewX(-10deg) rotate(0deg);
+      }
+    }
+    .txt_badge  {
+      letter-spacing: -6px;
+      font-size: 9rem;
+      transform: translate(-85px, -35px) scale(.95, .8) skewX(5deg) rotate(-6deg);
+      position: relative;
+      z-index: 200;
+      span {
+        margin-left: -.4rem;
+      }
+      &:before {
+        content: "Badge";
+        color: rgba(135, 0, 83, 0.192);
+        transform: translate(-10px, 25px) scale(.95, .8) skewX(10deg) rotate(2deg);
+      }
+    }
+    .txt_factory  {
+      letter-spacing: -1px;
+      text-indent: 1rem;
+      position: relative;
+      z-index: 1000;
+      transform: translate(20px, -20px) scaleY(1) skewX(3deg) rotate(-1.5deg);
+      span:nth-of-type(2) {
+        display: inline-block;
+        z-index: -1;
+        position: absolute;
+        transform: translate(-55px, 10px) scaleY(1) skewX(1deg) rotate(-1.5deg);
+        &:before {
+          content: "t";
+          position: absolute;
+          z-index: -1;
+          color: rgba(135, 0, 135, 0.358);
+          transform: translate(-16px, 14px) scale(.98, .85) skewX(0deg) rotate(-2deg);
+        }
+      }
+      span:nth-of-type(3) {
+
+      }
+      &:before {
+        content: "fac ory";
+        color: rgba(135, 0, 135, 0.358);
+        transform: translate(2px, 15px) scale(.98, .8) skewX(-2deg) rotate(1deg);
+      }
+    }
+  }
+}
+
+.index {
+  background-image: linear-gradient(-45deg, #ff7600 0%, #ff5c00 30%, #ff0075 100%);
+}
+.brand {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  &:before {
+    content: "by";
+    font: 1.2rem 'Knewave', cursive;
+    display: block;
+    display: inline-block;
+    position: absolute;
+    top: -1rem;
+    left:  -1.5rem;
+  }
+  img {
+    width: 2rem;
+  }
+}
+
+
+//===================creation=============
+// hauteur tetiere
+body {
+  overflow: hidden;
+}
+.btn_return {
+  position: absolute;
+  top: 3rem;
+  left: 2rem;
+}
+.section-left_header {
+  padding: 2.3rem 0rem 1.3rem 6rem;
+}
+.container_page-badge {
+  height: 87.5vh;
+}
+.section-left-main-bottom {
+  .btn_arcade.btn_validate {
+    width: 16rem;
+    position: absolute;
+    bottom: 2rem;
+    left: calc(50% - 8rem);
+    background-image: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(245,245,245,1) 51%,rgba(246,246,246,1) 100%);
+    line-height: 3rem;
+    color: #777;
+    text-shadow: none;
+    font: 1.5rem arial;
+    line-height: 4rem;
+    height: 4rem;
+    letter-spacing: 3px;
+    text-transform: lowercase;
+    border-radius: 60px;
+    box-shadow: 0 0 20px #ddd,
+                0 0 3px #999
+    ;
+      &:hover {
+        box-shadow: 0 0 20px rgba(0, 221, 221, 0.515),
+        0 0 3px rgba(0, 221, 221, 0.563)
+      }
+    }
+}
+.section-left {
+  background: none;
+  width: 49%;
+}
+.container_global_thumbnail_btn .container_global_thumbnail .container_items_thumbnail {
+  /* Rectangle: */
+  background: #f0f0f0;
+  background: transparent;
+  // box-shadow: inset 0 1px 12px 0 rgba(0,0,0,0.09);
+  padding: 0;
+//  border-radius: 100px;
+}
+.section-left_header  {
+  background: transparent;
+}
+// container_items container_items-eyes ui-tabs-panel ui-corner-bottom ui-widget-content
+.section-right .container_items .box_item {
+  border-radius: 20px;
+  box-shadow: 0 0 30px #ddd;
+  width: calc(33.333% - 24px);
+  height: 150px;
+  margin: 8px;
+}
+
+
+.section-right .container_categories {
+  background: transparent;
+  padding: 48px 20px 40px 0;
+}
+.section-left .container_categories {
+  background: transparent;
+}
+.logo {
+  //position: absolute;
+  right: 3rem;
+  bottom: 2.5rem;
+}

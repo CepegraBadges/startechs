@@ -7,6 +7,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <title>Badge-toi !</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Raleway:400,700|Knewave" rel="stylesheet">
     <link href="styles/styles.min.css" rel="stylesheet">
 </head>
 <body class="index">
@@ -27,7 +29,7 @@
                 <input type="text" name="login" placeholder="identifiant" class="input_admin input_admin_style" id="admin_pseudo">
                 <input type="password" name="password" placeholder="mot de passe" class="input_admin input_admin_style" id="admin_pass">
                 <button id="admin_login" class="btn btn_admin">Connexion</button>
-                <a class="mdp_oublie" onClick="alert('Appelle ,le Cepegra petit génie!')">Mot de passe oublié?</a>
+                <a class="mdp_oublie" onClick="alert('fonction re-init?')">Mot de passe oublié?</a>
             </form>
 
             <form action="" method="post" class="admin_deconnexion">
@@ -53,36 +55,38 @@
 
     <!-- DIV BADGE-TOI -->
     <div class="container_login first dragend-page">
-        <header class="header_index-connexion">
-            <h1>
-                <img src="images/logo-cepegra.svg" alt="Logo du Centre de Compétences Cepegra" class="logo">
-            </h1>
+        <header class="header_index-connexion" id="brand">
+            <h2 class="title_index toto"><span class="txt_the">the </span><span class="txt_badge">Bad<span>ge</span> </span><span class="txt_factory"><span>fac </span><span>t</span><span>ory</span></span></h2>
         </header>
         <form id="Verif" name="Verif" action="" method="post" onSubmit="return VerifMail();">
             <div>
-                <h2 class="title_index">Badge-toi !</h2>
+                
                 <div class="form form_pseudo">
-                    <label for="">Votre pseudo</label>
-
-                    <input type="text" name="pseudo" size="8" placeholder="#Pseudo" id="pseudo" class="input_login">
-
+                    
+                    
+                    <input type="text" name="pseudo" size="8" placeholder="#Pseudo" id="pseudo" class="input_login" pattern="[A-Za-z]{3,}" ><span></span>
+                    <label for="pseudo">pseudo</label>
                 </div>
                 <div class="form form_email">
-                    <label for="">Votre email</label>
-
-                    <input type="email" name="email" size="18" placeholder="user@cepegra.com" id="mail" class="input_login">
+                    
+                    
+                    <input type="email" name="email" size="18" placeholder="user@yourmail.ext" id="mail" class="input_login" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" ><span></span>
+                    <label for="mail">email</label>
                 </div>
+
             </div>
             <a href="#" class="btn_arcade btn_start active_go disabled" >Go</a>
         </form>
+        <h1 class="brand"><img src="images/logo-cepegra-white.svg" alt="Cepegra" class="logo"></h1>
     </div>
 </main>
-
     <!--<script src="https://use.fontawesome.com/fb946b7104.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="scripts/vendor/dragend.js"></script>
     <script src="scripts/scripts.min.js"></script>
     <script src="scripts/admin.min.js"></script>
+
 </body>
+
 </html>

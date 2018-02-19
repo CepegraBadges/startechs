@@ -1,4 +1,5 @@
 $(function() {
+
       $("a:not(#shareBtn, .btn_start, .btn_validate, .btn_mail)").on('click', function (event) {
         event.preventDefault();
         window.location = $(this).attr("href");
@@ -28,24 +29,24 @@ $(function() {
  })
 
 
- /* ANIM INPUT PSEUDO + MAIL */
+ /* ANIM INPUT PSEUDO + MAIL  */
  myInput = document.querySelectorAll("#pseudo, #mail");
-$('#pseudo, #mail').on('focusout', function() {
-    var empty = $(this).parent().find("input").filter(function() {
-        return this.value === "";
-    });
-    if(empty.length) {
-        $('#pseudo').css({
-       'min-width': '120px',
-       'transition': '0.3s'
-     });
+// $('#pseudo, #mail').on('focusout', function() {
+//     var empty = $(this).parent().find("input").filter(function() {
+//         return this.value === "";
+//     });
+//     if(empty.length) {
+//         $('#pseudo').css({
+//        'min-width': '120px',
+//        'transition': '0.3s'
+//      });
 
-    $('#mail').css({
-       'min-width': '250px',
-       'transition': '0.3s'
-     });
-    }
-});
+//     $('#mail').css({
+//        'min-width': '250px',
+//        'transition': '0.3s'
+//      });
+//     }
+// });
 for (element of myInput) {
   element.addEventListener("keyup", function() {
     this.size = this.value.length+2;
@@ -169,4 +170,13 @@ var colorBgdBadge = function(){
   //@prepros-append components/_creationBadge.js
   //@prepros-append components/_svgToImg.js
   //@prepros-append components/_sendMail.js
+
+  $(".input_login").focus(function () {
+    $(".title_index").toggleClass("hide");
+  });
+
+  $(".input_login").blur(function () {
+    $(".title_index").toggleClass("hide");
+  });
+
 });
