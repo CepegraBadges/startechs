@@ -13,7 +13,7 @@
   <html>
     <body>
       <p>Merci <strong>'.$pseudo.'</strong> de nous avoir rendu visite! Voilà le magnifique badge que tu as créé :</p>
-      <img src="https://killer-cepegra.xyz/badges/badges/'.$fileName.'.png" alt="Votre badge Cepegra">
+      <img src="https://killer-cepegra.xyz/badges/htdocs/badges/'.$fileName.'.png" alt="Votre badge Cepegra">
       <p>Pour continuer à nous suivre, rejoins-nous sur <a href="https://formation-cepegra.be/">www.formation-cepegra.be</a></p>
     </body>
   </html>
@@ -21,9 +21,10 @@
 
   $headers = 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-  $headers .= 'From: Cepegra <cpg@example.com>' . "\r\n";
+  $headers .= 'From: Cepegra <info@cepegra.be>' . "\r\n";
 
   mail($to , $subject , $message, $headers);
 echo $pseudo;
 echo $to;
+echo $fileName;
 ?>

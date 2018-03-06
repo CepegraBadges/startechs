@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="162px" viewBox="0 0 100 162" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 1 Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-18.3067322%" y1="120.008935%" x2="102.725693%" y2="-1.24069283%" id="linearGradient-1">
+            <stop stop-color="#FAD961" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="30.4587851%"></stop>
+            <stop stop-color="#E94E95" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="21-copy-7" transform="translate(-212.000000, -142.000000)" fill="url(#linearGradient-1)">
+            <path d="M299.829403,151.643878 C290.131815,171.252612 280.669195,190.385563 270.952516,210.032301 L320.309839,210.032301 L320.725439,210.891051 C289.02012,239.10848 257.314801,267.325179 225.609482,295.542608 C225.412696,295.416171 225.216644,295.289733 225.019858,295.164027 C234.42961,276.047156 243.838627,256.931015 253.499501,237.302547 L202.465091,237.302547 C202.879223,235.986285 203.065729,235.107802 203.421853,234.303865 C215.143841,207.844864 226.913557,181.407057 238.567257,154.918822 C239.698777,152.346957 241.038831,151.346422 243.984014,151.374194 C261.233634,151.537174 278.486192,151.450933 295.73728,151.461165 C296.90992,151.461165 298.083293,151.562753 299.829403,151.643878" id="Fill-1-Copy-2" transform="translate(261.595265, 223.458120) rotate(-23.000000) translate(-261.595265, -223.458120) "></path>
+        </g>
+    </g>
+</svg>
