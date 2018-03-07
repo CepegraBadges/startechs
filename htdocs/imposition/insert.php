@@ -1,5 +1,5 @@
 <?php
-$bdd = mysqli_connect('localhost', 'root', '', 'badges');
+require("config.php");
 $sql = sprintf("INSERT INTO badges SET pseudo = '%s', email = '%s', svg = '%s', png = '%s'",
 	addslashes($_POST['pseudo']),
 	$_POST['email'],

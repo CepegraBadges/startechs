@@ -10,7 +10,7 @@ function vignettes () {
 		let texte="";
 		let i=0;
 		for (item of newBadges) {
-			texte += '<img src="../htdocs/badges/'+item.png+'.png" title="'+item.pseudo+'">';
+			texte += '<img src="../badges/'+item.png+'.png" title="'+item.pseudo+'">';
 			i++;
 		}
 		$("#history span").html(texte);
