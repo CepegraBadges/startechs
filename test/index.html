@@ -1,13 +1,1046 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>index</title></head><body><article class="markdown-body"><?php
+
+<p>// IMPOSITION FILE</p>
+<p>require(&ldquo;config.php&rdquo;);</p>
+<p>$sql = &ldquo;SELECT * FROM badges WHERE printed = &lsquo;n&rsquo; ORDER BY date DESC LIMIT 0,6&rdquo;;<br />
+if (isset($_POST[&lsquo;pseudo&rsquo;]) AND $_POST[&lsquo;pseudo&rsquo;] != &lsquo;&rsquo; ) :<br />
+  $sql = sprintf(&ldquo;SELECT * FROM badges WHERE pseudo LIKE &lsquo;%%%s%%&rsquo;&ldquo;,$_POST[&lsquo;pseudo&rsquo;]);<br />
+endif;<br />
+if (isset($_GET[&lsquo;ID&rsquo;]) AND $_GET[&lsquo;ID&rsquo;] != &lsquo;&rsquo; ) :<br />
+  $sql = sprintf(&ldquo;SELECT * FROM badges WHERE ID = %s&rdquo;, $_GET[&lsquo;ID&rsquo;]);<br />
+endif;<br />
+$myQuery = mysqli_query($bdd, $sql);<br />
+//print_r($myQuery);<br />
+$nb_badges = $myQuery-&gt;num_rows;<br />
+$listeBadges = array();<br />
+?&gt;</p>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <link href="styles/styles.css" rel="stylesheet">
+  <link href="///D://xampp/htdocs/badges_new/test/styles/styles.css" rel="stylesheet">
   <style>
   main {
-    display: flex;
+    display: none;
     align-items: flex-start;
+    flex-wrap: wrap;
   }
   .badge__finished {
     margin-right: 15px;
@@ -26,210 +1059,84 @@
                     font-style: normal;
                   }
 
-    .sharePseudoText,
-    #text-badge {
-        font-family: 'Canaro', Arial;
-                  }
-  </style>
-</head>
-<body>
-<main>
-  <div class="badge__finished  badge_1">
-  <svg class="badge-svg ui-droppable" version="1.1" width="315px" height="315px">
-                <style type="text/css">
-                 
-                </style>
+<pre><code>.sharePseudoText,
+#text-badge {
+    font-family: 'Canaro', Arial;
+              }
+</code></pre>
+<h1 id="history"><a name="user-content-history" href="#history" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>history {</h1>
+<p>display: flex;<br />
+}</p>
+<h1 id="history-img"><a name="user-content-history-img" href="#history-img" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>history img {</h1>
+<p>width: 100px;<br />
+  height: 100px;<br />
+  margin-right: 15px;<br />
+}<br />
+    @media print {<br />
+   #tools, #history {display:none;}<br />
+  }<br />
+  </style><br />
+</head><br />
+<body><br />
+<div id="history"><br />
+    <span class="badgeVignettes"></span><br />
+    <button class="noWait">Ne pas attendre</button><br />
+  </div><br />
+<div id="tools"><br />
+&lt;?php if (!isset($_GET[&lsquo;ID&rsquo;]) OR $_GET[&lsquo;ID&rsquo;] == &lsquo;&rsquo; ) :?&gt;<br />
+<form action="" id="search" method="post"><br />
+  <label for="pseudo">Pseudo : </label><br />
+  <input type="text" id="pseudo" name="pseudo" required><br />
+  <button>Go</button><br />
+</form><br />
+&lt;?php else :?&gt;<br />
+   <button id="nombre">Ajouter un badge</button> <a href="///D://xampp/htdocs/badges_new/test/index.php">Return</a><br />
+  &lt;?php endif;?&gt;<br />
+  <button id="print">Print</button> <br />
+</div><br />
+<main><br />
+&lt;?php if ($nb_badges &gt; 0) :?&gt;<br />
+    &lt;?php $i= 1 ; while( $row = mysqli_fetch_object($myQuery) ) : $listeBadges[] = $row-&gt;ID;?&gt;<br />
+    <div class="badge__finished  badge_<?php echo $i;?>&ldquo;&gt;<br />
+    &lt;?php if ( isset( $_POST[&lsquo;pseudo&rsquo;] ) ) : ?&gt;<br />
+      <a href="index.php?ID=<?php echo $row->ID;?&gt;&rdquo;&gt;<br />
+      &lt;?php echo $row-&gt;svg;?&gt;<br />
+      </a><br />
+    &lt;?php else : echo $row-&gt;svg; endif;?&gt;<br />
+   </div><br />
+<!-- NEW BADGE --><br />
+ &lt;?php endwhile;?&gt;<br />
+&lt;?php else : echo &lsquo;<p>Pas de badges à imprimer</p>&lsquo;; endif;?&gt;<br />
+<div class="team"></div><br />
+</main><br />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><br />
+<script src="///D://xampp/htdocs/badges_new/test/imposition.js"></script><br />
+<script><br />
+        allSvg = document.querySelectorAll(&ldquo;.badge__finished&rdquo;);<br />
+        for(item of allSvg) {<br />
+         mySvg =  item.querySelector(&lsquo;.badge-svg&rsquo;);<br />
+         item.querySelector(&ldquo;style&rdquo;).remove();</p>
+<pre><code>    myColor = item.querySelector(".badge__finished circle").getAttribute("fill");
+    //alert(myColor);
+    //console.log(mySvg);
+    mySvg.style.backgroundColor = myColor;
+    }
 
-                <!-- gradients -->
-                <defs>
+    myRange = document.querySelector("#nombre");
+    myRange.onclick = function() {
 
-                  <!-- light gradient -->
-                  <linearGradient id="light-grad" x1="100%" y1="85%" x2="0%" y2="15%">
-                    <stop offset="0" style="stop-color:white" stop-opacity="0"></stop>
-                    <stop offset="1" style="stop-color:white"></stop>
-                  </linearGradient>
+      let mySVG_clone = document.querySelector(".badge__finished").cloneNode(true);
 
-                </defs>
-
-                <!-- background -->
-                <circle id="bcgGrad" class="drag-zone" cx="157.5" cy="157.5" r="157.5" fill="rgb(240, 136, 20)"></circle>
-
-                <!-- outline -->
-                <svg class="drag-zone_logo-badge" x="52.25" y="50" width="209px" height="236px" viewBox="0 0 209 236" fill="rgb(46, 46, 46)">
-                  <g id="11" transform="translate(-153.000000, -285.000000)">
-                    <g id="Group" transform="translate(127.000000, 260.000000)">
-                      <path d="M83.3708501,83.3228875 C109.541515,56.6698706 151.972521,56.6698706 178.143186,83.3228875 C204.313851,109.975904 204.313851,153.188958 178.143186,179.841975 C151.972521,206.494992 109.541515,206.494992 83.3708501,179.841975 C57.2001855,153.188958 57.2001855,109.975904 83.3708501,83.3228875 L83.3708501,83.3228875 Z M204.447159,206.630757 C245.141908,165.18265 245.14516,97.9822123 204.447159,56.5374168 C163.849952,15.1886502 97.6640842,15.1886502 57.0668773,56.5374168 C16.3721279,97.9822123 16.3721279,165.18265 57.0701287,206.630757 C73.3369737,223.197417 93.64208,233.138075 114.756789,236.462665 C122.433388,237.667995 129.563748,241.234314 135.055393,246.827176 L147.878986,259.890432 C149.059251,261.09245 150.971085,261.09245 152.151349,259.890432 L204.447159,206.630757 Z" id="Fill-1"></path>
-                    </g>
-                  </g>
-                </svg>
-
-                <!-- Lien cepegra caché -->
-                <svg class="hiddenCepegra" x="0px" y="0px" width="315px" height="315px" viewBox="0 0 315 315" style="enable-background:new 0 0 315 315;" xml:space="preserve" hidden="">
-                  <rect fill="none" class="frame" width="315" height="315"></rect>
-                  <path class="circle-txt" d="M34.7,142.3c-0.1,0.8-0.1,1.8,0.1,2.8l-4-0.3l-0.1,1.5l11.5,1l0.1-1.5l-6.2-0.5c-0.2-0.9-0.2-1.7-0.1-2.5
-                              c0.1-1.2,1-1.9,2.2-1.8l4.4,0.4l0.1-1.5l-4.8-0.4C36.2,139.3,34.9,140.4,34.7,142.3z M43,130.9c0,0.5,0,1-0.1,1.4
-                              c-0.2,1.1-0.8,1.4-2,1.2l-3.4-0.6l0.4-2.6l-1.3-0.2l-0.4,2.6l-3-0.5l-0.2,1.5l3,0.5l-0.3,1.7L37,136l0.3-1.7l3.5,0.6
-                              c1.9,0.3,3.1-0.4,3.4-2.2c0.1-0.8,0.1-1.2,0.1-1.9L43,130.9z M44.7,124c-0.3,1-0.9,1.3-2.1,1l-3.3-0.8l0.6-2.5l-1.3-0.3l-0.6,2.5
-                              l-3-0.7l-0.4,1.5l3,0.7l-0.4,1.7l1.3,0.3l0.4-1.7l3.5,0.8c1.9,0.5,3.1-0.2,3.5-1.9c0.2-0.8,0.2-1.2,0.2-1.9l-1.2-0.1
-                              C44.9,123.1,44.8,123.6,44.7,124z M48.5,115.5c0.7-2.1-0.3-4.1-2.5-4.8c-2.3-0.7-4.3,0.1-5,2.4c-0.5,1.5-0.8,2.9-0.9,4l10.6,3.6
-                              l0.5-1.4l-3.6-1.2C48,116.9,48.2,116.3,48.5,115.5z M47.2,115.3c-0.2,0.7-0.4,1.2-1,2.3l-4.8-1.6c0.1-0.8,0.3-1.5,0.6-2.3
-                              c0.6-1.7,1.9-2.1,3.5-1.5C46.9,112.6,47.7,113.8,47.2,115.3z M51.6,105c-0.6-0.2-1.2,0-1.5,0.6c-0.2,0.6,0,1.2,0.6,1.5
-                              c0.6,0.2,1.2,0,1.5-0.6C52.4,105.9,52.2,105.2,51.6,105z M45.3,104.7c0.6,0.2,1.2,0,1.5-0.6s0-1.2-0.5-1.5c-0.6-0.2-1.2,0-1.5,0.6
-                              C44.5,103.8,44.7,104.5,45.3,104.7z M46.3,89.6l10.2,10.7l0.7-1.4L47.1,88.2L46.3,89.6z M49.9,83.7L59.5,95l0.8-1.3l-9.6-11.3
-                              L49.9,83.7z M65.9,80.9c-1,1.3-2.6,1.6-3.9,0.5c-1.3-1-1.5-2.6-0.4-4c0.4-0.5,1-1.1,1.7-1.6l-0.8-0.9c-0.7,0.5-1.5,1.2-1.9,1.8
-                              c-1.6,2-1.4,4.4,0.6,5.9c2,1.5,4.3,1.1,5.8-0.9c0.5-0.7,1-1.6,1.3-2.5l-1.1-0.6C66.7,79.5,66.2,80.4,65.9,80.9z M72,73.6
-                              c-1,1.1-2.3,1.2-3.4,0.5l4-4.5c-0.3-0.4-0.4-0.5-0.8-0.8c-1.6-1.4-3.6-1.2-5.1,0.4c-1.5,1.7-1.5,4,0.3,5.7c1.7,1.6,4,1.6,5.9-0.4
-                              c0.7-0.8,1.1-1.6,1.6-2.6l-1-0.6C72.9,72.3,72.5,73,72,73.6z M67.6,70.1c0.9-1,2.2-1.1,3.3-0.2l-3.2,3.5
-                              C66.7,72.4,66.7,71.1,67.6,70.1z M80.5,61.4c-1.7-1.7-3.8-2-5.6-0.4c-1.1,1-2.1,2.2-2.7,3l7.6,8.3l1.1-1l-2.6-2.8
-                              c1-0.7,1.4-1.1,2.1-1.7C82,65.3,82,63.1,80.5,61.4z M79.4,66.1c-0.5,0.5-0.9,0.9-1.9,1.5L74,63.9c0.5-0.6,1-1.1,1.6-1.7
-                              c1.3-1.2,2.7-0.9,3.8,0.3C80.4,63.6,80.5,65,79.4,66.1z M87.9,59.1c-1.2,0.9-2.5,0.8-3.5-0.1l4.8-3.6c-0.2-0.4-0.3-0.5-0.6-1
-                              c-1.3-1.7-3.4-1.8-5.1-0.5c-1.8,1.4-2.2,3.7-0.7,5.6c1.4,1.9,3.7,2.3,5.9,0.7c0.8-0.6,1.4-1.3,2.1-2.3l-0.9-0.8
-                              C89.1,58,88.6,58.6,87.9,59.1z M84.3,54.8c1.1-0.8,2.4-0.7,3.2,0.4l-3.8,2.9C83,56.9,83.2,55.6,84.3,54.8z M96.2,45.8
-                              c-0.9,0.4-1.9,0.7-3.6,1.8c-2.1,1.3-2.4,3.4-1.1,5.4c1.2,2,3.4,2.5,5.3,1.4c0.7-0.5,1.3-0.8,2.1-1.6c0.9,1.5,0.6,3-0.9,3.9
-                              c-0.7,0.4-1.5,0.7-2.3,1l0.4,1.2c0.9-0.2,1.8-0.5,2.7-1c2.3-1.5,2.7-3.7,1.4-5.8L96.2,45.8z M96.2,53.3c-1.3,0.8-2.7,0.3-3.5-0.9
-                              c-0.9-1.4-0.8-2.8,0.7-3.7c0.7-0.5,1.4-0.8,2.1-1.1l2.7,4.3C97.3,52.6,96.8,52.9,96.2,53.3z M104.4,42.7l-0.7-1.3
-                              c-1.3,0.7-2.7,1.6-3.8,2.4l3.4,6.6l1.3-0.7l-2.9-5.5C102.7,43.6,103.5,43.2,104.4,42.7z M109.7,38.7c-2.2,0.9-2.9,3-2,5.2
-                              c1,2.3,3,3.2,5,2.3c0.9-0.4,1.5-1,2.1-1.8l0.2,0.6l1.4-0.6l-2.9-6.9C112,37.9,111.1,38.1,109.7,38.7z M112.4,45
-                              c-1.4,0.6-2.7-0.1-3.4-1.6c-0.6-1.5-0.3-2.9,1.3-3.6c0.8-0.3,1.5-0.5,2.2-0.7l1.8,4.2C113.8,44.2,113.2,44.7,112.4,45z M120.3,41
-                              c-0.6,0.2-0.9,0.8-0.7,1.4s0.8,0.9,1.4,0.7c0.6-0.2,0.9-0.8,0.7-1.4C121.6,41.1,120.9,40.8,120.3,41z M127.4,32.8
-                              c-0.8,0.2-1.6,0.5-2.3,0.9l-1-3.9l-1.4,0.4l2.8,11.1c2.2-0.2,3-0.4,4.1-0.7c2.1-0.5,3.3-2.4,2.6-4.9
-                              C131.6,33.4,129.9,32.2,127.4,32.8z M129,39.4c-0.5,0.1-1.1,0.3-2.3,0.4l-1.3-4.9c0.7-0.4,1.5-0.7,2.1-0.8c1.8-0.5,2.9,0.5,3.3,2
-                              C131.2,37.7,130.6,39,129,39.4z M142.5,36.3c-1.1,0.4-1.8,0.7-2.7,0.8c-1.5,0.2-2.6-0.5-3-1.7l5.9-0.9c0-0.5,0-0.6-0.1-1.1
-                              c-0.3-2.1-2.1-3.2-4.2-2.9c-2.3,0.4-3.7,2.2-3.3,4.6c0.4,2.3,2.1,3.8,4.8,3.4c1-0.2,1.9-0.5,2.9-1L142.5,36.3z M138.7,31.7
-                              c1.3-0.2,2.4,0.5,2.6,1.9l-4.7,0.7C136.6,33,137.3,31.9,138.7,31.7z"></path>
-                </svg>
-
-                <!-- text caché pour le pseudo -->
-                <text style="font-family: Arial; font-weight: bold" y="52" x="-15" class="sharePseudoText" transform="matrix(0.7071 -0.7071 0.7071 0.7071 157.271 242.6415) scale(1.2)" hidden=""></text>
-
-                <!-- texte dynamique + cepegra -->
-                <svg version="1.1" x="0px" y="0px" viewBox="0 0 317.9 319">
-                  <defs>
-                    <path id="MyPath" d="M41.7,172.5C34.6,106.3,82,46.9,147.7,39.8c10.5-1.1,20.7-0.9,30.7,0.7"></path>
-                  </defs>
-
-                  <text id="text-badge" font-size="23" fill="#2E2E2E">
-                    <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MyPath" id="myPath">#pierre</textPath>
-                  </text>
-
-                  <path id="cepegra" transform="translate(195.000000, 230.000000)" fill="#2E2E2E" d="M7.39,54.7a2.7,2.7,0,0,1-1.83.88,2.33,2.33,0,0,1-1.78-.76A2.41,2.41,0,0,1,3,53a2.82,2.82,0,0,1,1-2,18.65,18.65,0,0,1,2.12-1.69l-1.46-2a10.66,10.66,0,0,0-2.79,2A5.78,5.78,0,0,0,0,53.25,4.84,4.84,0,0,0,1.57,57a4.89,4.89,0,0,0,3.8,1.57A5.65,5.65,0,0,0,9.2,56.75a10.93,10.93,0,0,0,2-2.87l-2-1.5A15.46,15.46,0,0,1,7.39,54.7Z M14.38,47.8a2.31,2.31,0,0,1-2.74.68l4.6-4.6a9.84,9.84,0,0,0-1.17-1.43,4.08,4.08,0,0,0-3.2-1.27,5,5,0,0,0-3.3,1.6l0,0A4.87,4.87,0,0,0,8.6,50a4.94,4.94,0,0,0,3.72,1.61,5.69,5.69,0,0,0,3.94-1.9,13.06,13.06,0,0,0,2.26-3.34l-2-1.37A18.46,18.46,0,0,1,14.38,47.8ZM9.74,45.74a2.23,2.23,0,0,1,2-1.92,1.76,1.76,0,0,1,1.31.5l-2.84,2.83A2.19,2.19,0,0,1,9.74,45.74Z M26,37.75a5,5,0,0,0-1.6-3.58,5.55,5.55,0,0,0-3.59-1.67A4.54,4.54,0,0,0,17.36,34a46.35,46.35,0,0,0-3.74,4.38l9.91,9.91L25.82,46,22.6,42.89a23.65,23.65,0,0,0,2-1.82A4.58,4.58,0,0,0,26,37.75Zm-3.64,1.86h0A15.07,15.07,0,0,1,20.77,41L17.5,37.69q.74-.88,1.33-1.47a2.11,2.11,0,0,1,1.71-.74,2.82,2.82,0,0,1,1.71.91A2.39,2.39,0,0,1,23,38,2,2,0,0,1,22.36,39.61Z M31.22,31a2.31,2.31,0,0,1-2.74.6l4.6-4.6a10,10,0,0,0-1.18-1.33,4.08,4.08,0,0,0-3.2-1.27A5,5,0,0,0,25.4,26l0,0a4.87,4.87,0,0,0,0,7.24,4.94,4.94,0,0,0,3.68,1.58A5.69,5.69,0,0,0,33,32.87a13.12,13.12,0,0,0,2.34-3.3l-2-1.37A18.29,18.29,0,0,1,31.22,31Zm-4.65-2a2,2,0,0,1,.64-1.29v-.05A2,2,0,0,1,28.52,27a1.77,1.77,0,0,1,1.31.5L27,30.32A2.17,2.17,0,0,1,26.57,29Z M44.28,21l-6.64-6.62-1.38,1.08c-.61.5-1.18.94-1.61,1.31s-.91.83-1.45,1.37a4.58,4.58,0,0,0-1.47,3.48,5.38,5.38,0,0,0,1.68,3.56A5,5,0,0,0,37,26.81a4.61,4.61,0,0,0,3.34-1.39q1.15-1.19,1.81-2A2.3,2.3,0,0,1,42,27a21.73,21.73,0,0,1-2.4,1.84L41,30.92a12.16,12.16,0,0,0,3-2.11,6,6,0,0,0,2-4A5.11,5.11,0,0,0,44.28,21Zm-5.45,2.11a2,2,0,0,1-1.58.64A2.39,2.39,0,0,1,35.64,23a2.82,2.82,0,0,1-.92-1.71,2.11,2.11,0,0,1,.74-1.71h0q.6-.59,1.45-1.33l3.28,3.28A15.32,15.32,0,0,1,38.83,23.11Z M45.86,10,43.64,7.77a37.75,37.75,0,0,0-4.24,5.08l6.6,6.6,2.34-2.28L43.6,12.43Q44.67,11.19,45.86,10Z M52,0q-3.25,2.6-4.41,3.76a4.56,4.56,0,0,0-1.49,3.5,5.45,5.45,0,0,0,1.67,3.58,5.22,5.22,0,0,0,3.66,1.73,4.51,4.51,0,0,0,4.57-4l.45.43,2.28-2.27Zm1.28,8.83a2,2,0,0,1-1.59.63A2.56,2.56,0,0,1,50,8.63a2.78,2.78,0,0,1-.88-1.73,2.12,2.12,0,0,1,.73-1.7h0q.61-.61,1.45-1.32l2.86,2.88A3.2,3.2,0,0,1,53.28,8.83Z"></path>
-                </svg>
-
-                <!-- light -->
-                <svg data-width="117" data-x="98" data-y="-5" alt="eye4" class="item_eye_4 drag item4 ui-draggable ui-draggable-handle" viewBox="0 0 83.58 30.1" width="117" x="98" y="-5" fill="rgb(46, 46, 46)" style="position: relative;" stroke-width="0px">
-            <path class="cls-1" d="M81.26,7.75C74.47-2.75,52-1.88,47.9,6.15c-2.8,5.43,3.21,13.35,4.16,14.61,4.23,5.58,12.68,11.22,21,8.74,1-.29,6.66-2.1,9.28-7.78A15,15,0,0,0,81.26,7.75Zm-78.95,0a15,15,0,0,0-1.07,14c2.61,5.68,8.3,7.49,9.27,7.78,8.32,2.48,16.77-3.16,21-8.74.95-1.25,7-9.17,4.16-14.61C31.55-1.88,9.11-2.75,2.32,7.75ZM42.15,3.41c-2.91-.11-5.23,2.85-5,3.27s1.89-1,4.81-1c2.75,0,4.35,1.22,4.55.86S44.78,3.5,42.15,3.41Z"></path>
-          </svg><svg data-width="94" data-x="175" data-y="-75" alt="hair1" class="item_hair_1 drag item10 ui-draggable ui-draggable-handle" viewBox="0 0 136.95 126.92" width="94" x="175" y="-75" fill="rgb(46, 46, 46)" style="position: relative;" stroke-width="0px">
-            <path class="cls-1" d="M116.89,81.73c3.59,0,7.46.16,11.57.54,3,.27,5.82.63,8.49,1.05a66,66,0,0,0-25-25.61l12.78-3.58a54.36,54.36,0,0,0-19-15.37A53.72,53.72,0,0,0,90,34a48.64,48.64,0,0,0-9.73-23.71c-1.55,1.46-3.17,3.12-4.8,5-1,1.19-2,2.36-2.86,3.5A38.23,38.23,0,0,0,63.59,0a23.35,23.35,0,0,0-11,5.24A22.78,22.78,0,0,0,48,10.78a26.26,26.26,0,0,0-20.16-6.9,17.34,17.34,0,0,0,1.87,11.83,43.49,43.49,0,0,0-9.27-3.24A44.77,44.77,0,0,0,0,12.73,65.27,65.27,0,0,0,27.29,35.14a62.57,62.57,0,0,0,16.46,4.52A19.58,19.58,0,0,0,31.4,51.59a87.52,87.52,0,0,0,21.34,7.07,87.14,87.14,0,0,0,14,1.54A47.13,47.13,0,0,0,65.21,69a47.61,47.61,0,0,0,1.36,15.68A32.09,32.09,0,0,0,86.29,78.3a88.19,88.19,0,0,0,8.38,16.44c11.62,17.87,27.17,27.46,36.59,32.18a79.35,79.35,0,0,0-5.35-28.36A78.73,78.73,0,0,0,116.89,81.73Z"></path>
-          </svg><svg data-width="55" data-x="127" data-y="20" alt="mouth5" class="item_mouth_5 drag item24 ui-draggable ui-draggable-handle" viewBox="0 0 78 22.5" width="55" x="127" y="20" fill="rgb(46, 46, 46)" style="position: relative;">
-            <rect class="cls-1" width="78" height="22.5" rx="11.25" ry="11.25"></rect>
-          </svg><circle id="light-grad" class="light-badge" cx="157.5" cy="157.5" r="157.5" fill="url(#light-grad)" style="mix-blend-mode:soft-light"></circle>
-
-              </svg></div>
-<!-- NEW BADGE -->
-
-           <div class="badge__finished badge_2"><svg class="badge-svg ui-droppable" version="1.1" width="315px" height="315px">
-                <style type="text/css">
-                 
-               
-                </style>
-
-                <!-- gradients -->
-                <defs>
-
-                  <!-- light gradient -->
-                  <linearGradient id="light-grad" x1="100%" y1="85%" x2="0%" y2="15%">
-                    <stop offset="0" style="stop-color:white" stop-opacity="0"></stop>
-                    <stop offset="1" style="stop-color:white"></stop>
-                  </linearGradient>
-
-                </defs>
-
-                <!-- background -->
-                <circle id="bcgGrad" class="drag-zone" cx="157.5" cy="157.5" r="157.5" fill="rgb(209, 4, 61)" data-color="color_red_fill"></circle>
-
-                <!-- outline -->
-                <svg class="drag-zone_logo-badge" x="52.25" y="50" width="209px" height="236px" viewBox="0 0 209 236" fill="rgb(172, 201, 15)" data-fill="color_green_outline">
-                  <g id="11" transform="translate(-153.000000, -285.000000)">
-                    <g id="Group" transform="translate(127.000000, 260.000000)">
-                      <path d="M83.3708501,83.3228875 C109.541515,56.6698706 151.972521,56.6698706 178.143186,83.3228875 C204.313851,109.975904 204.313851,153.188958 178.143186,179.841975 C151.972521,206.494992 109.541515,206.494992 83.3708501,179.841975 C57.2001855,153.188958 57.2001855,109.975904 83.3708501,83.3228875 L83.3708501,83.3228875 Z M204.447159,206.630757 C245.141908,165.18265 245.14516,97.9822123 204.447159,56.5374168 C163.849952,15.1886502 97.6640842,15.1886502 57.0668773,56.5374168 C16.3721279,97.9822123 16.3721279,165.18265 57.0701287,206.630757 C73.3369737,223.197417 93.64208,233.138075 114.756789,236.462665 C122.433388,237.667995 129.563748,241.234314 135.055393,246.827176 L147.878986,259.890432 C149.059251,261.09245 150.971085,261.09245 152.151349,259.890432 L204.447159,206.630757 Z" id="Fill-1"></path>
-                    </g>
-                  </g>
-                </svg>
-
-                <!-- Lien cepegra caché -->
-                <svg class="hiddenCepegra" x="0px" y="0px" width="315px" height="315px" viewBox="0 0 315 315" style="enable-background:new 0 0 315 315;" xml:space="preserve" hidden="">
-                  <rect fill="none" class="frame" width="315" height="315"></rect>
-                  <path class="circle-txt" d="M34.7,142.3c-0.1,0.8-0.1,1.8,0.1,2.8l-4-0.3l-0.1,1.5l11.5,1l0.1-1.5l-6.2-0.5c-0.2-0.9-0.2-1.7-0.1-2.5
-                              c0.1-1.2,1-1.9,2.2-1.8l4.4,0.4l0.1-1.5l-4.8-0.4C36.2,139.3,34.9,140.4,34.7,142.3z M43,130.9c0,0.5,0,1-0.1,1.4
-                              c-0.2,1.1-0.8,1.4-2,1.2l-3.4-0.6l0.4-2.6l-1.3-0.2l-0.4,2.6l-3-0.5l-0.2,1.5l3,0.5l-0.3,1.7L37,136l0.3-1.7l3.5,0.6
-                              c1.9,0.3,3.1-0.4,3.4-2.2c0.1-0.8,0.1-1.2,0.1-1.9L43,130.9z M44.7,124c-0.3,1-0.9,1.3-2.1,1l-3.3-0.8l0.6-2.5l-1.3-0.3l-0.6,2.5
-                              l-3-0.7l-0.4,1.5l3,0.7l-0.4,1.7l1.3,0.3l0.4-1.7l3.5,0.8c1.9,0.5,3.1-0.2,3.5-1.9c0.2-0.8,0.2-1.2,0.2-1.9l-1.2-0.1
-                              C44.9,123.1,44.8,123.6,44.7,124z M48.5,115.5c0.7-2.1-0.3-4.1-2.5-4.8c-2.3-0.7-4.3,0.1-5,2.4c-0.5,1.5-0.8,2.9-0.9,4l10.6,3.6
-                              l0.5-1.4l-3.6-1.2C48,116.9,48.2,116.3,48.5,115.5z M47.2,115.3c-0.2,0.7-0.4,1.2-1,2.3l-4.8-1.6c0.1-0.8,0.3-1.5,0.6-2.3
-                              c0.6-1.7,1.9-2.1,3.5-1.5C46.9,112.6,47.7,113.8,47.2,115.3z M51.6,105c-0.6-0.2-1.2,0-1.5,0.6c-0.2,0.6,0,1.2,0.6,1.5
-                              c0.6,0.2,1.2,0,1.5-0.6C52.4,105.9,52.2,105.2,51.6,105z M45.3,104.7c0.6,0.2,1.2,0,1.5-0.6s0-1.2-0.5-1.5c-0.6-0.2-1.2,0-1.5,0.6
-                              C44.5,103.8,44.7,104.5,45.3,104.7z M46.3,89.6l10.2,10.7l0.7-1.4L47.1,88.2L46.3,89.6z M49.9,83.7L59.5,95l0.8-1.3l-9.6-11.3
-                              L49.9,83.7z M65.9,80.9c-1,1.3-2.6,1.6-3.9,0.5c-1.3-1-1.5-2.6-0.4-4c0.4-0.5,1-1.1,1.7-1.6l-0.8-0.9c-0.7,0.5-1.5,1.2-1.9,1.8
-                              c-1.6,2-1.4,4.4,0.6,5.9c2,1.5,4.3,1.1,5.8-0.9c0.5-0.7,1-1.6,1.3-2.5l-1.1-0.6C66.7,79.5,66.2,80.4,65.9,80.9z M72,73.6
-                              c-1,1.1-2.3,1.2-3.4,0.5l4-4.5c-0.3-0.4-0.4-0.5-0.8-0.8c-1.6-1.4-3.6-1.2-5.1,0.4c-1.5,1.7-1.5,4,0.3,5.7c1.7,1.6,4,1.6,5.9-0.4
-                              c0.7-0.8,1.1-1.6,1.6-2.6l-1-0.6C72.9,72.3,72.5,73,72,73.6z M67.6,70.1c0.9-1,2.2-1.1,3.3-0.2l-3.2,3.5
-                              C66.7,72.4,66.7,71.1,67.6,70.1z M80.5,61.4c-1.7-1.7-3.8-2-5.6-0.4c-1.1,1-2.1,2.2-2.7,3l7.6,8.3l1.1-1l-2.6-2.8
-                              c1-0.7,1.4-1.1,2.1-1.7C82,65.3,82,63.1,80.5,61.4z M79.4,66.1c-0.5,0.5-0.9,0.9-1.9,1.5L74,63.9c0.5-0.6,1-1.1,1.6-1.7
-                              c1.3-1.2,2.7-0.9,3.8,0.3C80.4,63.6,80.5,65,79.4,66.1z M87.9,59.1c-1.2,0.9-2.5,0.8-3.5-0.1l4.8-3.6c-0.2-0.4-0.3-0.5-0.6-1
-                              c-1.3-1.7-3.4-1.8-5.1-0.5c-1.8,1.4-2.2,3.7-0.7,5.6c1.4,1.9,3.7,2.3,5.9,0.7c0.8-0.6,1.4-1.3,2.1-2.3l-0.9-0.8
-                              C89.1,58,88.6,58.6,87.9,59.1z M84.3,54.8c1.1-0.8,2.4-0.7,3.2,0.4l-3.8,2.9C83,56.9,83.2,55.6,84.3,54.8z M96.2,45.8
-                              c-0.9,0.4-1.9,0.7-3.6,1.8c-2.1,1.3-2.4,3.4-1.1,5.4c1.2,2,3.4,2.5,5.3,1.4c0.7-0.5,1.3-0.8,2.1-1.6c0.9,1.5,0.6,3-0.9,3.9
-                              c-0.7,0.4-1.5,0.7-2.3,1l0.4,1.2c0.9-0.2,1.8-0.5,2.7-1c2.3-1.5,2.7-3.7,1.4-5.8L96.2,45.8z M96.2,53.3c-1.3,0.8-2.7,0.3-3.5-0.9
-                              c-0.9-1.4-0.8-2.8,0.7-3.7c0.7-0.5,1.4-0.8,2.1-1.1l2.7,4.3C97.3,52.6,96.8,52.9,96.2,53.3z M104.4,42.7l-0.7-1.3
-                              c-1.3,0.7-2.7,1.6-3.8,2.4l3.4,6.6l1.3-0.7l-2.9-5.5C102.7,43.6,103.5,43.2,104.4,42.7z M109.7,38.7c-2.2,0.9-2.9,3-2,5.2
-                              c1,2.3,3,3.2,5,2.3c0.9-0.4,1.5-1,2.1-1.8l0.2,0.6l1.4-0.6l-2.9-6.9C112,37.9,111.1,38.1,109.7,38.7z M112.4,45
-                              c-1.4,0.6-2.7-0.1-3.4-1.6c-0.6-1.5-0.3-2.9,1.3-3.6c0.8-0.3,1.5-0.5,2.2-0.7l1.8,4.2C113.8,44.2,113.2,44.7,112.4,45z M120.3,41
-                              c-0.6,0.2-0.9,0.8-0.7,1.4s0.8,0.9,1.4,0.7c0.6-0.2,0.9-0.8,0.7-1.4C121.6,41.1,120.9,40.8,120.3,41z M127.4,32.8
-                              c-0.8,0.2-1.6,0.5-2.3,0.9l-1-3.9l-1.4,0.4l2.8,11.1c2.2-0.2,3-0.4,4.1-0.7c2.1-0.5,3.3-2.4,2.6-4.9
-                              C131.6,33.4,129.9,32.2,127.4,32.8z M129,39.4c-0.5,0.1-1.1,0.3-2.3,0.4l-1.3-4.9c0.7-0.4,1.5-0.7,2.1-0.8c1.8-0.5,2.9,0.5,3.3,2
-                              C131.2,37.7,130.6,39,129,39.4z M142.5,36.3c-1.1,0.4-1.8,0.7-2.7,0.8c-1.5,0.2-2.6-0.5-3-1.7l5.9-0.9c0-0.5,0-0.6-0.1-1.1
-                              c-0.3-2.1-2.1-3.2-4.2-2.9c-2.3,0.4-3.7,2.2-3.3,4.6c0.4,2.3,2.1,3.8,4.8,3.4c1-0.2,1.9-0.5,2.9-1L142.5,36.3z M138.7,31.7
-                              c1.3-0.2,2.4,0.5,2.6,1.9l-4.7,0.7C136.6,33,137.3,31.9,138.7,31.7z"></path>
-                </svg>
-
-                <!-- text caché pour le pseudo -->
-                <text style="font-family: Arial; font-weight: bold" y="52" x="-15" class="sharePseudoText" transform="matrix(0.7071 -0.7071 0.7071 0.7071 157.271 242.6415) scale(1.2)" hidden=""></text>
-
-                <!-- texte dynamique + cepegra -->
-                <svg version="1.1" x="0px" y="0px" viewBox="0 0 317.9 319">
-                  <defs>
-                    <path id="MyPath" d="M41.7,172.5C34.6,106.3,82,46.9,147.7,39.8c10.5-1.1,20.7-0.9,30.7,0.7"></path>
-                  </defs>
-
-                  <text id="text-badge" font-size="23" fill="#2E2E2E" data-fill="color_green_outline">
-                    <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#MyPath" id="myPath">#Mitch</textPath>
-                  </text>
-
-                  <path id="cepegra" transform="translate(195.000000, 230.000000)" fill="#2E2E2E" d="M7.39,54.7a2.7,2.7,0,0,1-1.83.88,2.33,2.33,0,0,1-1.78-.76A2.41,2.41,0,0,1,3,53a2.82,2.82,0,0,1,1-2,18.65,18.65,0,0,1,2.12-1.69l-1.46-2a10.66,10.66,0,0,0-2.79,2A5.78,5.78,0,0,0,0,53.25,4.84,4.84,0,0,0,1.57,57a4.89,4.89,0,0,0,3.8,1.57A5.65,5.65,0,0,0,9.2,56.75a10.93,10.93,0,0,0,2-2.87l-2-1.5A15.46,15.46,0,0,1,7.39,54.7Z M14.38,47.8a2.31,2.31,0,0,1-2.74.68l4.6-4.6a9.84,9.84,0,0,0-1.17-1.43,4.08,4.08,0,0,0-3.2-1.27,5,5,0,0,0-3.3,1.6l0,0A4.87,4.87,0,0,0,8.6,50a4.94,4.94,0,0,0,3.72,1.61,5.69,5.69,0,0,0,3.94-1.9,13.06,13.06,0,0,0,2.26-3.34l-2-1.37A18.46,18.46,0,0,1,14.38,47.8ZM9.74,45.74a2.23,2.23,0,0,1,2-1.92,1.76,1.76,0,0,1,1.31.5l-2.84,2.83A2.19,2.19,0,0,1,9.74,45.74Z M26,37.75a5,5,0,0,0-1.6-3.58,5.55,5.55,0,0,0-3.59-1.67A4.54,4.54,0,0,0,17.36,34a46.35,46.35,0,0,0-3.74,4.38l9.91,9.91L25.82,46,22.6,42.89a23.65,23.65,0,0,0,2-1.82A4.58,4.58,0,0,0,26,37.75Zm-3.64,1.86h0A15.07,15.07,0,0,1,20.77,41L17.5,37.69q.74-.88,1.33-1.47a2.11,2.11,0,0,1,1.71-.74,2.82,2.82,0,0,1,1.71.91A2.39,2.39,0,0,1,23,38,2,2,0,0,1,22.36,39.61Z M31.22,31a2.31,2.31,0,0,1-2.74.6l4.6-4.6a10,10,0,0,0-1.18-1.33,4.08,4.08,0,0,0-3.2-1.27A5,5,0,0,0,25.4,26l0,0a4.87,4.87,0,0,0,0,7.24,4.94,4.94,0,0,0,3.68,1.58A5.69,5.69,0,0,0,33,32.87a13.12,13.12,0,0,0,2.34-3.3l-2-1.37A18.29,18.29,0,0,1,31.22,31Zm-4.65-2a2,2,0,0,1,.64-1.29v-.05A2,2,0,0,1,28.52,27a1.77,1.77,0,0,1,1.31.5L27,30.32A2.17,2.17,0,0,1,26.57,29Z M44.28,21l-6.64-6.62-1.38,1.08c-.61.5-1.18.94-1.61,1.31s-.91.83-1.45,1.37a4.58,4.58,0,0,0-1.47,3.48,5.38,5.38,0,0,0,1.68,3.56A5,5,0,0,0,37,26.81a4.61,4.61,0,0,0,3.34-1.39q1.15-1.19,1.81-2A2.3,2.3,0,0,1,42,27a21.73,21.73,0,0,1-2.4,1.84L41,30.92a12.16,12.16,0,0,0,3-2.11,6,6,0,0,0,2-4A5.11,5.11,0,0,0,44.28,21Zm-5.45,2.11a2,2,0,0,1-1.58.64A2.39,2.39,0,0,1,35.64,23a2.82,2.82,0,0,1-.92-1.71,2.11,2.11,0,0,1,.74-1.71h0q.6-.59,1.45-1.33l3.28,3.28A15.32,15.32,0,0,1,38.83,23.11Z M45.86,10,43.64,7.77a37.75,37.75,0,0,0-4.24,5.08l6.6,6.6,2.34-2.28L43.6,12.43Q44.67,11.19,45.86,10Z M52,0q-3.25,2.6-4.41,3.76a4.56,4.56,0,0,0-1.49,3.5,5.45,5.45,0,0,0,1.67,3.58,5.22,5.22,0,0,0,3.66,1.73,4.51,4.51,0,0,0,4.57-4l.45.43,2.28-2.27Zm1.28,8.83a2,2,0,0,1-1.59.63A2.56,2.56,0,0,1,50,8.63a2.78,2.78,0,0,1-.88-1.73,2.12,2.12,0,0,1,.73-1.7h0q.61-.61,1.45-1.32l2.86,2.88A3.2,3.2,0,0,1,53.28,8.83Z" data-fill="color_green_outline"></path>
-                </svg>
-
-                <!-- light -->
-                <svg data-width="125" data-x="95" data-y="-10" al="eye1" class="item_eye_1 drag item1 ui-draggable ui-draggable-handle" viewBox="0 0 79.56 31.53" width="125" x="95" y="-10" fill="rgb(172, 201, 15)" style="position: relative;" stroke-width="0px">
-            <path class="cls-1" d="M60.57,31.47a15.22,15.22,0,0,1-10.19-3.66,15.53,15.53,0,0,1-4.88-7.64c-1.19-4.31-3.71-4.7-5.11-4.7h-1.2c-1.4,0-3.93.39-5.11,4.7a15.9,15.9,0,0,1-4.88,7.76A15.18,15.18,0,0,1,19,31.53c-9.51,0-14.37-7.87-15.32-13.14l0-.09c0-.23-.11-.81-.19-.81H2.77c-1,0-2.68-.06-2.73-1.62C0,15,0,12.41,0,11.67v-.11a1.4,1.4,0,0,1,1.42-1.51l1,0,.79,0C4,10,4,9.91,4.5,9.15c.14-.23.31-.5.52-.8l.35-.52C7.15,5.2,10.47.3,18.64,0h.59A16,16,0,0,1,32.74,7.63c1.23,2.37,2.11,2.55,7,2.55,5.34,0,5.91-.35,7-2.55A16,16,0,0,1,60.33,0h.59C69.09.3,72.41,5.2,74.19,7.83l.35.52c.21.3.37.57.52.8.47.76.5.81,1.24.83l.79,0,1,0a1.4,1.4,0,0,1,1.42,1.5v.1c.06.7,0,3.25,0,4.22-.05,1.57-1.73,1.62-2.73,1.62H76.1c-.08,0-.15.56-.19.79l0,.1C74.94,23.65,70.07,31.47,60.57,31.47ZM60.44,4.78a11,11,0,1,0,11,11A11,11,0,0,0,60.44,4.78Zm-41.32,0a11,11,0,1,0,11,11A11,11,0,0,0,19.12,4.78Z"></path>
-          </svg><svg data-width="80" data-x="185" data-y="-80" alt="hair3" class="item_hair_3 drag item12 ui-draggable ui-draggable-handle" viewBox="0 0 66.19 60.08" width="80" x="185" y="-80" fill="rgb(172, 201, 15)" style="position: relative;" stroke-width="0px">
-            <path class="cls-1" d="M66.09,51.86c.12-1.51,1.24-8.29-8.54-10.28S34.62,28.68,34.62,28.68,21.57,17.6,17.93,8.33,7.79,1.33,6.32,1.7-6,8.17,4.62,22.4A162.59,162.59,0,0,0,24.18,41.77,162.59,162.59,0,0,0,46,57.13C51.06,60.5,56.9,61,61.17,58.56A10.41,10.41,0,0,0,66.09,51.86ZM19,8.81c4.46,10.75,15.54,19.93,15.54,19.93s11,9.32,22.32,11.85L58.25,39S72,23.54,52.59,7.25s-32.21-.06-32.21-.06Z"></path>
-            <path class="cls-1" d="M66.09,51.86c.12-1.51,1.24-8.29-8.54-10.28S34.62,28.68,34.62,28.68,21.57,17.6,17.93,8.33,7.79,1.33,6.32,1.7-6,8.17,4.62,22.4A162.59,162.59,0,0,0,24.18,41.77,162.59,162.59,0,0,0,46,57.13C51.06,60.5,56.9,61,61.17,58.56A10.41,10.41,0,0,0,66.09,51.86ZM19,8.81c4.46,10.75,15.54,19.93,15.54,19.93s11,9.32,22.32,11.85L58.25,39S72,23.54,52.59,7.25s-32.21-.06-32.21-.06Z"></path>
-          </svg><circle id="light-grad" class="light-badge" cx="157.5" cy="157.5" r="157.5" fill="url(#light-grad)" style="mix-blend-mode:soft-light"></circle>
-
-              </svg></div>
-              </main>
-              <script>
-              allSvg = document.querySelectorAll(".badge__finished");
-              for(item of allSvg) {
-               mySvg =  item.querySelector('.badge-svg');
-               item.querySelector("style").remove();
-              
-              myColor = item.querySelector(".badge__finished circle").getAttribute("fill");
-              //alert(myColor);
-              //console.log(mySvg);
-              mySvg.style.backgroundColor = myColor;
-            }
-
-              </script>
-</body>
-</html>
+        document.querySelector(".team").after(mySVG_clone);
+    }
+    document.querySelector("#print").onclick = function() {
+      print();
+    }
+</code></pre>
+<p></script><br />
+&lt;?php <br />
+  $sql = sprintf(&ldquo;UPDATE badges SET printed = &lsquo;o&rsquo; WHERE ID IN (%s)&rdquo;, implode(&ldquo;,&rdquo;,$listeBadges));<br />
+  //$bdd-&gt;query($sql);<br />
+?&gt;<br />
+</body><br />
+</html></p></article></body></html>

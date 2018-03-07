@@ -5,8 +5,9 @@
 require("config.php");
 
 $sql = "SELECT * FROM badges WHERE printed = 'n' ORDER BY date DESC LIMIT 0,6";
-if (isset($_POST['pseudo']) AND $_POST['pseudo'] != '' ) :
-  $sql = sprintf("SELECT * FROM badges WHERE pseudo LIKE '%%%s%%'",$_POST['pseudo']);
+
+if (isset($_GET['pseudo']) AND $_GET['pseudo'] != '' ) :
+ $sql = sprintf("SELECT * FROM badges WHERE pseudo LIKE '%%%s%%'",$_GET['pseudo']);
 endif;
 if (isset($_GET['ID']) AND $_GET['ID'] != '' ) :
   $sql = sprintf("SELECT * FROM badges WHERE ID = %s", $_GET['ID']);
@@ -26,7 +27,7 @@ $listeBadges = array();
   <link href="styles/styles.css" rel="stylesheet">
   <style>
   main {
-    display: flex;
+    display: none;
     align-items: flex-start;
     flex-wrap: wrap;
   }
@@ -50,30 +51,78 @@ $listeBadges = array();
     .sharePseudoText,
     #text-badge {
         font-family: 'Canaro', Arial;
+    
                   }
-    @media print {
-   #tools {display:none;}
+
+#history {
+  background-color: silver;
+  display: none;
+}
+#confirm {
+  display:none;
+}
+#history, #history span, form, #btn {
+  padding: 1em;
+}
+#history span {
+  display: flex;
+}
+#history img {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+}
+main a {
+  opacity: 0.5;
+}
+main a:hover {
+  opacity: 1;
+}
+#print {
+  position: absolute;
+  right:5em;
+  bottom:5em;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+}
+@media print {
+   #tools, #history, .principal {display:none;}
   }
   </style>
 </head>
 <body>
+<h1 class="principal">Imposition des badges</h1>
+<?php if ( !isset($_GET['ID']) ) : ?>
+<div id="history">
+  <h2>Badges en attente</h2>
+    <span class="badgeVignettes"></span>
+    <button class="noWait">Ne pas attendre</button>
+</div>
+<?php endif;?>
 <div id="tools">
 <?php if (!isset($_GET['ID']) OR $_GET['ID'] == '' ) :?>
-<form action="" id="search" method="post">
+  <h2>Retrouver un badge</h2>
+<form action="" id="search" method="get">
   <label for="pseudo">Pseudo : </label>
   <input type="text" id="pseudo" name="pseudo" required>
   <button>Go</button>
 </form>
 <?php else :?>
-   <button id="nombre">Ajouter un badge</button> <a href="index.php">Return</a>
+  <div id="btn">
+   <button id="nombre">Dupliquer le badge</button> <a href="index.php">Annuler</a>
+   </div>
   <?php endif;?>
   <button id="print">Print</button>
 </div>
 <main>
 <?php if ($nb_badges > 0) :?>
     <?php $i= 1 ; while( $row = mysqli_fetch_object($myQuery) ) : $listeBadges[] = $row->ID;?>
-    <div class="badge__finished  badge_<?php echo $i;?>">
-    <?php if ( isset( $_POST['pseudo'] ) ) : ?>
+    <div class="badge__finished  badge_<?php echo $i;?>" data-id="<?php echo $row->ID;?>">
+    <?php if ( isset( $_GET['pseudo'] ) ) : ?>
       <a href="index.php?ID=<?php echo $row->ID;?>">
       <?php echo $row->svg;?>
       </a>
@@ -84,8 +133,10 @@ $listeBadges = array();
 <?php else : echo '<p>Pas de badges à imprimer</p>'; endif;?>
 <div class="team"></div>
 </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>  
+<script src="imposition.js"></script>
 <script>
-        allSvg = document.querySelectorAll(".badge__finished");
+        /*allSvg = document.querySelectorAll(".badge__finished");
         for(item of allSvg) {
          mySvg =  item.querySelector('.badge-svg');
          item.querySelector("style").remove();
@@ -105,10 +156,11 @@ $listeBadges = array();
         }
         document.querySelector("#print").onclick = function() {
           print();
-        }
+        }*/
+         <?php if( isset($_GET['pseudo']) OR isset($_GET['ID']) ) : ?>
+            impose();
+         <?php endif;?>
 </script>
-<?php $sql = sprintf("UPDATE badges SET printed = 'o' WHERE ID IN (%s)", implode(",",$listeBadges));
-$bdd->query($sql);
-?>
+
 </body>
 </html>
