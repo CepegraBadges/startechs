@@ -32,7 +32,7 @@ function impose(newBadges) {
 function formatage() {
 	 allSvg = document.querySelectorAll(".badge__finished");
         for(item of allSvg) {
-         mySvg =  item.querySelector('.badge-svg');
+         mySvg =  item.querySelector('.content');
         //item.querySelector("style").remove();
 
         myColor = item.querySelector(".badge__finished circle").getAttribute("fill");
@@ -57,8 +57,9 @@ function formatage() {
 intervalID = window.setInterval(vignettes,1000);
 
 $(".noWait").on("click", function() {
-	//location.reload();
-	impose();
+	document.location.href='index.php?nowait';
+	//alert("nowait");
+	//impose();
 });
 
 $("#print").on("click", function() {

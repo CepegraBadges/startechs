@@ -1839,8 +1839,8 @@ header {
   top: 58%; }
 
 .badge__finished {
-  width: 315px;
-  height: 315px; }
+  /*width: 315px;
+  height: 315px;*/ }
 
 .container_global_thumbnail_btn {
   display: -webkit-box;
