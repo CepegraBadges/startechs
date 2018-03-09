@@ -14,7 +14,7 @@ function vignettes () {
 			i++;
 		}
 		$("#history span").html(texte);
-		if (i == 6) {
+		if (i > 5) {
 			window.clearInterval(intervalID);
 			$("#history").hide();
 			impose(newBadges);
